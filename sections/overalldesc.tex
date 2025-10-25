@@ -1,0 +1,101 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\chapter{Overall Description}
+
+\section{Product Perspective}
+IICT WEBSITE is the replacement of the manual hard copy result process. The data have been stored in the hard file or papers, this website will store all of those in the website. Main goal of this project is to minimize the work and maximize the result of this result processing system.
+
+\section{User Classes and Characteristics}
+IICT WEBSITE has basically 4 types of users. 
+\begin{itemize}
+  \item Teachers
+    \begin{itemize}
+        \item Director
+        \item Course Teacher
+    \end{itemize}
+  \item Students
+  \item Official Staff
+\end{itemize}
+Teacher has 2 types - Director defines the course teachers who will take the courses. Student fulfill all the requirements like- fees, informations can take advantages of the website. 
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{assets/2.JPG}
+    \caption{type of users}
+    \label{fig:type of users}
+\end{figure}
+
+\section{Product Functions}
+IICT WEBSITE store all the results of the students of program PGD, MIT. Also others programs can be included if necessary.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{assets/3.JPG}
+    \caption{Data Flow Diagram}
+    \label{fig:Data Flow Diagram}
+\end{figure}
+Before using the main function of the software result process, users have to be registered. 
+\newline
+All users have - login\_parameter, user\_name, first\_name, last\_name, user\_id, role, post, email, phone\_number, present\_address, parmanent\_address, blood\_group, password\_hash and timeStamp.
+\newline
+Students have some extra informations after complete his/her registration , such as - user\_id(foreign key), registration\_id, year, semester, course\_array and drop\_course\_array. These are the information that contains his/her result of his taken courses and program.
+\newline
+Each programs has some data - program\_name, program\_id, course\_id, nunmber\_of\_semester, total\_credit and course\_length. There will be onew or many course\_id in each programs.
+\newline
+Courses table contains - course\_name, course\_id, course\_code, credit, semester and teacher\_id.
+\newline
+Every course has its own Credit Values. Those have been 2 types - lab, theory.
+\newline
+Result is the main feature of all. It contains the values of all the exams of a particular student. It has data field - student\_id, course\_id, term\_test, attendance, marks(A), marks(B), teacher\_id(A), teacher\_id(B), entry\_date(A), entry\_date(B), publish\_date, semester	and result\_state.
+
+\section{Operating Environment}
+The website will be operate in any Operating Environment - Mac, Windows, Linux etc. 
+
+\section{Design}
+Student activities have 3 steps -
+\begin{itemize}
+    \item From Fill Up Process
+    \item Courses Payment
+    \item Student Profile
+\end{itemize}
+Top selected Student first fill his/her form, bank payment. After verification, student pays for their selected courses. Then he can enter his profile. 
+\newline
+Every student profile contains his/her personal information, results, taken courses, dropped courses and notice.
+\newline
+Notice will contain all the news of IICT.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{assets/4.JPG}
+    \caption{Student Activities}
+    \label{fig:Students Activites}
+\end{figure}
+\newpage
+Teacher activities have 2 steps - 
+\begin{itemize}
+    \item Director
+    \item Course Teacher
+\end{itemize}
+Director can re-view the result, publish result, give notice and also create teacher. He can also perform course teacher activities.
+\newline
+Teacher creates results, view students and create notice.
+\newline
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=10cm]{assets/5.JPG}
+    \caption{Teacher Activities}
+    \label{fig:Teacher Activities}
+\end{figure}
+\newline
+Staff has only one activity - 
+\begin{itemize}
+    \item Notice
+\end{itemize} 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=5cm]{assets/6.JPG}
+    \caption{Staff Activities}
+    \label{fig:Staff Activities}
+\end{figure}
+
+\end{document}
