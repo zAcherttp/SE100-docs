@@ -1,5 +1,6 @@
 \documentclass{scrreprt}
 
+\usepackage{indentfirst}
 \usepackage{listings}
 \usepackage{underscore}
 \usepackage{graphicx}
@@ -17,7 +18,7 @@
     filecolor=black,        % color of file links
     urlcolor=purple,        % color of external links
 }%
-\def\myversion{1.0 }
+\def\myversion{1.0}
 \date{}
 %\title{%
 
@@ -27,25 +28,7 @@
 
 \begin{document}
 
-\begin{flushright}
-    \rule{\linewidth}{5pt}\vskip1cm
-    \begin{bfseries}
-        \Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
-        \vspace{1.5cm}
-        for\\
-        \vspace{1.5cm}
-        IICT WEBSITE\\
-        \vspace{1.5cm}
-        \LARGE{Version \myversion}\\
-        \vspace{1.5cm}
-        Prepared by: 1. Md. Yasmi Tohabar (2016831021)\\
-        2. Akaash (2016831034)\\
-        \vspace{1.5cm}
-        Submitted to: Fazle Mohammed Tawsif \\Lecturer\\
-        \vspace{1.5cm}
-        \today\\
-    \end{bfseries}
-\end{flushright}
+\subfile{sections/cover}
 
 \tableofcontents
 
