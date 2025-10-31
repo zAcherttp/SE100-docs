@@ -1,0 +1,44 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-02 \\
+\hline
+\textbf{Tên UC} & Quên mật khẩu \\
+\hline
+\textbf{Mô tả tóm tắt} & Khi quên mật khẩu, người dùng có thể lấy lại mật khẩu thông qua chức năng này. \\
+\hline
+\textbf{Tác nhân tham gia} & Admin, chủ cửa hàng, nhân viên của cửa hàng \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \item Người dùng chọn chức năng quên mật khẩu.
+    \item Nhập tên đăng nhập
+    \item Hệ thống kiểm tra tên đăng nhập
+    \item Nhập mã xác nhận
+    \item Hệ thống kiểm tra mã xác nhận
+    \item Nhập mật khẩu mới.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{itemize}
+    \item[4a.] Hiển thị thông báo sai tên đăng nhập.
+    \item[6a.] Hiển thị thông báo sai mã xác nhận.
+\end{itemize} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Sau 60 giây khi mã xác nhận được gửi, nếu không được sử dụng sẽ tự động huỷ \\
+\hline
+\textbf{Trạng thái hệ thống khi bắt đầu thực hiện} & Tài khoản đăng nhập đã được tạo \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Mật khẩu được thay đổi. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
