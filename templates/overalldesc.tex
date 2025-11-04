@@ -1,5 +1,5 @@
 \documentclass[../main.tex]{subfiles}
-\graphicspath{{\subfix{../images/}}}
+\graphicspath{{\subfix{../assets/}}}
 \begin{document}
 
 \chapter{Overall Description}
@@ -18,7 +18,7 @@ IICT WEBSITE has basically 4 types of users.
   \item Students
   \item Official Staff
 \end{itemize}
-Teacher has 2 types - Director defines the course teachers who will take the courses. Student fulfill all the requirements like- fees, informations can take advantages of the website. 
+Teacher has 2 types---Director defines the course teachers who will take the courses. Student fulfill all the requirements like fees, information, and can take advantages of the website. 
 \begin{figure}
     \centering
     \includegraphics[width=10cm]{assets/2.JPG}
@@ -35,21 +35,21 @@ IICT WEBSITE store all the results of the students of program PGD, MIT. Also oth
     \label{fig:Data Flow Diagram}
 \end{figure}
 Before using the main function of the software result process, users have to be registered. 
-\newline
-All users have - login\_parameter, user\_name, first\_name, last\_name, user\_id, role, post, email, phone\_number, present\_address, parmanent\_address, blood\_group, password\_hash and timeStamp.
-\newline
-Students have some extra informations after complete his/her registration , such as - user\_id(foreign key), registration\_id, year, semester, course\_array and drop\_course\_array. These are the information that contains his/her result of his taken courses and program.
-\newline
-Each programs has some data - program\_name, program\_id, course\_id, nunmber\_of\_semester, total\_credit and course\_length. There will be onew or many course\_id in each programs.
-\newline
-Courses table contains - course\_name, course\_id, course\_code, credit, semester and teacher\_id.
-\newline
+
+All users have the following attributes: \code{login\_parameter}, \code{user\_name}, \code{first\_name}, \code{last\_name}, \code{user\_id}, \code{role}, \code{post}, \code{email}, \code{phone\_number}, \code{present\_address}, \code{parmanent\_address}, \code{blood\_group}, \code{password\_hash}, and \code{timeStamp}.
+
+Students have additional information after completing registration: \code{user\_id} (foreign key), \code{registration\_id}, \code{year}, \code{semester}, \code{course\_array}, and \code{drop\_course\_array}. These contain the student's results and program information.
+
+Each program has the following data: \code{program\_name}, \code{program\_id}, \code{course\_id}, \code{nunmber\_of\_semester}, \code{total\_credit}, and \code{course\_length}. There will be one or many \code{course\_id} in each program.
+
+Courses table contains: \code{course\_name}, \code{course\_id}, \code{course\_code}, \code{credit}, \code{semester}, and \code{teacher\_id}.
+
 Every course has its own Credit Values. Those have been 2 types - lab, theory.
-\newline
-Result is the main feature of all. It contains the values of all the exams of a particular student. It has data field - student\_id, course\_id, term\_test, attendance, marks(A), marks(B), teacher\_id(A), teacher\_id(B), entry\_date(A), entry\_date(B), publish\_date, semester	and result\_state.
+
+Result is the main feature of all. It contains the values of all the exams of a particular student. It has the following data fields: \code{student\_id}, \code{course\_id}, \code{term\_test}, \code{attendance}, \code{marks(A)}, \code{marks(B)}, \code{teacher\_id(A)}, \code{teacher\_id(B)}, \code{entry\_date(A)}, \code{entry\_date(B)}, \code{publish\_date}, \code{semester}, and \code{result\_state}.
 
 \section{Operating Environment}
-The website will be operate in any Operating Environment - Mac, Windows, Linux etc. 
+The website will operate in any Operating Environment\,---\,\mbox{Mac, Windows, Linux}, etc. 
 
 \section{Design}
 Student activities have 3 steps -
@@ -59,10 +59,10 @@ Student activities have 3 steps -
     \item Student Profile
 \end{itemize}
 Top selected Student first fill his/her form, bank payment. After verification, student pays for their selected courses. Then he can enter his profile. 
-\newline
+
 Every student profile contains his/her personal information, results, taken courses, dropped courses and notice.
-\newline
-Notice will contain all the news of IICT.
+
+Notice will contain all the news of IICT\@.
 
 \begin{figure}[h!]
     \centering

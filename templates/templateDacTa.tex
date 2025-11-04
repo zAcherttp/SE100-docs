@@ -4,9 +4,10 @@
 
 \begin{table}[h]
 \centering
+\caption{Đặc tả use case}
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
-\textbf{Mã UC} & UC01-02 \\
+\textbf{Mã UC} & UC01--02 \\
 \hline
 \textbf{Tên UC} & Quên mật khẩu \\
 \hline
@@ -16,6 +17,7 @@
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
+    \vspace{-18pt}
     \item Người dùng chọn chức năng quên mật khẩu.
     \item Nhập tên đăng nhập
     \item Hệ thống kiểm tra tên đăng nhập
@@ -25,14 +27,15 @@
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & 
-\begin{itemize}
+\begin{enumerate}
+    \vspace{-18pt}
     \item[4a.] Hiển thị thông báo sai tên đăng nhập.
     \item[6a.] Hiển thị thông báo sai mã xác nhận.
-\end{itemize} \\
+\end{enumerate} \\
 \hline
 \textbf{Yêu cầu đặc biệt} & Sau 60 giây khi mã xác nhận được gửi, nếu không được sử dụng sẽ tự động huỷ \\
 \hline
-\textbf{Trạng thái hệ thống khi bắt đầu thực hiện} & Tài khoản đăng nhập đã được tạo \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tài khoản đăng nhập đã được tạo \\
 \hline
 \textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Mật khẩu được thay đổi. \\
 \hline
