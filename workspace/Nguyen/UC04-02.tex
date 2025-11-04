@@ -1,0 +1,43 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC04-02 \\
+\hline
+\textbf{Tên UC} & Sửa đơn đặt hàng \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhân viên thu mua chỉnh sửa nội dung của đơn đặt hàng trước khi gửi phê duyệt. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên thu mua \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn đơn đặt hàng ở trạng thái “Nháp”.
+    \item Chỉnh sửa thông tin: sản phẩm, số lượng, giá hoặc nhà cung cấp.
+    \item Lưu lại thay đổi.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu đơn hàng đã gửi duyệt → không cho phép chỉnh sửa.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn hàng ở trạng thái “Nháp”. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin đơn hàng được cập nhật. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC04-03 Gửi đơn đặt hàng. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

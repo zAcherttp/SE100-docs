@@ -1,0 +1,43 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC05-06 \\
+\hline
+\textbf{Tên UC} & Đính kèm tài liệu \\
+\hline
+\textbf{Mô tả tóm tắt} & Đính kèm chứng từ, hình ảnh, biên bản giao hàng cho phiên nhập. \\
+\hline
+\textbf{Tác nhân tham gia} & Chuyên viên nhận hàng \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn chức năng đính kèm trong phiên nhập.
+    \item Tải lên file (PDF/hình ảnh) hoặc chụp ảnh trực tiếp.
+    \item Hệ thống lưu liên kết tài liệu vào phiên nhập.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] File quá lớn hoặc định dạng không hợp lệ → thông báo lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên nhập đang hoạt động. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Tài liệu liên quan được lưu và có thể xem lại khi cần. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

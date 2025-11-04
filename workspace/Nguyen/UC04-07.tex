@@ -1,0 +1,43 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC04-07 \\
+\hline
+\textbf{Tên UC} & Tạo cảnh báo tồn kho thấp (Hệ thống) \\
+\hline
+\textbf{Mô tả tóm tắt} & Khi số lượng hàng tồn thấp hơn ROP, hệ thống tự động tạo cảnh báo để nhắc người quản lý thực hiện mua hàng. \\
+\hline
+\textbf{Tác nhân tham gia} & (Hệ thống) \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Hệ thống so sánh tồn kho thực tế với điểm ROP.
+    \item Nếu tồn kho < ROP → tạo cảnh báo tồn kho thấp.
+    \item Gửi thông báo đến nhân viên thu mua.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu không cấu hình người nhận cảnh báo → lưu thông báo hệ thống. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần hệ thống gửi thông báo nội bộ hoạt động. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có dữ liệu ROP hợp lệ. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Cảnh báo tồn kho được tạo và hiển thị. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC04-08 Tự động tính ROP. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

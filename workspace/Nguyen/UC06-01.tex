@@ -1,0 +1,44 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC06-01 \\
+\hline
+\textbf{Tên UC} & Tạo đơn hàng xuất \\
+\hline
+\textbf{Mô tả tóm tắt} & Chuyên viên giao hàng hoặc nhân viên kho tạo một đơn hàng xuất mới để chuẩn bị hàng hóa giao cho khách hàng hoặc chi nhánh khác. \\
+\hline
+\textbf{Tác nhân tham gia} & Chuyên viên giao hàng, Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn chức năng “Tạo đơn hàng xuất”.
+    \item Nhập thông tin khách hàng, mặt hàng và số lượng cần xuất.
+    \item Hệ thống kiểm tra tồn kho.
+    \item Hệ thống tạo đơn hàng xuất và chuyển sang trạng thái “Chờ xử lý”.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu tồn kho không đủ → hệ thống hiển thị thông báo và không tạo đơn hàng.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Người dùng cần có quyền tạo đơn xuất. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có hàng tồn kho sẵn sàng để xuất. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Đơn hàng xuất được tạo và chờ xử lý tiếp theo. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC06-02 Tạo phiên lấy hàng. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

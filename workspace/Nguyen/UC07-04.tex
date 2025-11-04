@@ -1,0 +1,43 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-04 \\
+\hline
+\textbf{Tên UC} & Xem tồn kho thời gian thực \\
+\hline
+\textbf{Mô tả tóm tắt} & Quản lý hoặc nhân viên có thể xem tình trạng hàng tồn kho theo thời gian thực để đối chiếu và theo dõi. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho, Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn chức năng “Xem tồn kho”.
+    \item Hệ thống lấy dữ liệu tồn kho hiện tại.
+    \item Hiển thị bảng tổng hợp theo khu vực và sản phẩm.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu mất kết nối cơ sở dữ liệu → hiển thị thông báo lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần đường truyền ổn định để cập nhật dữ liệu thời gian thực. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Hệ thống hoạt động bình thường. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hiển thị thông tin tồn kho chính xác. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC07-05 Xác thực phiên kiểm kê. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
