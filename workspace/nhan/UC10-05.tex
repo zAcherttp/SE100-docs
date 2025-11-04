@@ -1,0 +1,40 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC10-05 \\
+\hline
+\textbf{Tên UC} & Thực thi Mẫu Báo cáo (Execute Report Template) \\
+\hline
+\textbf{Mô tả tóm tắt} & Chạy một mẫu báo cáo (chuẩn hoặc tùy chỉnh) để xem dữ liệu. \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager, Accountant, Report Viewer \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng chọn một mẫu báo cáo đã lưu và nhấn "Chạy". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn mẫu báo cáo.
+    \item Hệ thống hiển thị tham số/bộ lọc đã định nghĩa.
+    \item Người dùng nhập giá trị tham số và nhấn "Xem Báo cáo".
+    \item Hệ thống thực thi mẫu và hiển thị kết quả.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Phải tồn tại ít nhất một mẫu báo cáo. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Dữ liệu báo cáo được hiển thị. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

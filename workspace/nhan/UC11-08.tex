@@ -1,0 +1,40 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-08 \\
+\hline
+\textbf{Tên UC} & Tạo Thông báo Phiên Hoàn tất (Create Session Complete Notifications) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Hệ thống) Tự động thông báo cho Quản lý khi một phiên (VD: Kiểm kê, Nhận hàng) được hoàn tất. \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Một phiên (VD: Phiên Kiểm kê) được cập nhật trạng thái "SESSION_COMPLETED" (UC07-03). \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item NV Kho hoàn tất phiên kiểm kê (UC07-03).
+    \item Hệ thống tạo một bản ghi thông báo mới.
+    \item Gán loại thông báo: "SESSION_COMPLETE".
+    \item Gán người nhận: (Vai trò) Người có quyền xác minh (VD: Warehouse Manager).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Một phiên được hoàn thành bởi nhân viên. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo hoàn tất phiên được tạo và gửi đến người dùng liên quan. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

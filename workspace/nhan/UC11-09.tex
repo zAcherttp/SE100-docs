@@ -1,0 +1,40 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-09 \\
+\hline
+\textbf{Tên UC} & Tạo Thông báo Lỗi Hệ thống (Create System Error Notifications) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Hệ thống) Tự động thông báo cho Admin khi có lỗi nghiêm trọng xảy ra. \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Hệ thống bắt (catch) được một lỗi nghiêm trọng (VD: Không thể kết nối CSDL, Lỗi API...). \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Một tác vụ tự động (VD: UC10-07) bị lỗi (exception).
+    \item Hệ thống tạo một bản ghi thông báo mới.
+    \item Gán loại thông báo: "SYSTEM_ERROR", mức độ ưu tiên "CRITICAL".
+    \item Gán người nhận: (Vai trò) System Administrator.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & (Không có) \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & (Không có) \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

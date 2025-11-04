@@ -1,0 +1,38 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC09-05 \\
+\hline
+\textbf{Tên UC} & Nhận hàng Chuyển kho (Receive Transfer) \\
+\hline
+\textbf{Mô tả tóm tắt} & NV Kho tại kho đích thực hiện nhận hàng (receiving). \\
+\hline
+\textbf{Tác nhân tham gia} & Receiving Specialist (NV Nhận hàng - Kho Đích) \\
+\hline
+\textbf{Sự kiện kích hoạt} & NV Kho Đích chọn đơn chuyển kho (trạng thái "SHIPPED" / "IN_TRANSIT") để bắt đầu nhận. \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item NV Kho quét SKU, Lô, Serial và nhập số lượng thực nhận.
+    \item Sau khi nhận xong, NV Kho hoàn tất phiên.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Xem UC04-01) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_SHIPPED" hoặc "TRANSFER_IN_TRANSIT". \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Hàng hóa được nhận và (tạm thời) đưa vào kho đích; đơn cập nhật trạng thái "TRANSFER_RECEIVED". \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Xem UC04-01) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

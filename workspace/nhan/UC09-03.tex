@@ -1,0 +1,39 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC09-03 \\
+\hline
+\textbf{Tên UC} & Đánh dấu Đã Gửi hàng (Mark Transfer as Shipped) \\
+\hline
+\textbf{Mô tả tóm tắt} & Quản lý kho nguồn xác nhận hàng đã được gửi đi. \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho - Nguồn) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Quản lý mở đơn chuyển kho (đã lấy hàng xong) và chọn "Đánh dấu Đã Gửi". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Quản lý xác nhận hàng đã được bàn giao cho đơn vị vận chuyển.
+    \item Người dùng nhập Mã vận đơn (Tracking Number) (nếu có).
+    \item Hệ thống cập nhật trạng thái đơn thành "TRANSFER_SHIPPED".
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Đơn chuyển kho đã được lấy hàng (UC09-02). \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Đơn hàng ở trạng thái "TRANSFER_SHIPPED". \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

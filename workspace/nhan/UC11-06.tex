@@ -1,0 +1,39 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-06 \\
+\hline
+\textbf{Tên UC} & Tạo Cảnh báo Tồn kho thấp (Create Low Stock Alerts) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Hệ thống) Tự động tạo thông báo khi phát hiện SKU dưới mức tồn kho tối thiểu (ROP). \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Kích hoạt bởi Tác vụ Cảnh báo Tồn kho thấp (UC07-11). \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item UC07-11 phát hiện một SKU có tồn kho <= ROP.
+    \item Hệ thống tạo một bản ghi thông báo mới (type: LOW_STOCK).
+    \item Gán người nhận: Bộ phận Mua hàng.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & UC07-11 chạy và có kết quả. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo tồn kho thấp được tạo và gửi đến người dùng liên quan. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
