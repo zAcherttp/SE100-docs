@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-18 \\
+\hline
+\textbf{Tên UC} & Edit Supplier (Chỉnh sửa Nhà cung cấp) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép chỉnh sửa thông tin của một nhà cung cấp đã tồn tại. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho / Nhân viên thu mua \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân chọn một nhà cung cấp từ danh sách và nhấn "Chỉnh sửa".
+    \item Tác nhân thay đổi thông tin (ví dụ: email, thời gian giao hàng mặc định).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống cập nhật bản ghi nhà cung cấp.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền "MANAGE_SUPPLIERS". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin nhà cung cấp được cập nhật. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

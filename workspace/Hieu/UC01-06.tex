@@ -1,0 +1,48 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-06 \\
+\hline
+\textbf{Tên UC} & Reset Password (Đặt lại mật khẩu) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng tạo mật khẩu mới bằng cách sử dụng token đã nhận qua email. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò / Bất kỳ Actor nào đã đăng ký \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng nhấp vào liên kết trong email (từ UC01-05).
+    \item Hệ thống hiển thị trang đặt lại mật khẩu (yêu cầu mật khẩu mới và xác nhận mật khẩu).
+    \item Người dùng nhập mật khẩu mới và nhấn "Lưu".
+    \item Hệ thống (qua better-auth) xác thực token (còn hạn, hợp lệ).
+    \item Hệ thống băm mật khẩu mới và cập nhật vào CSDL.
+    \item Hệ thống vô hiệu hóa token đã sử dụng.
+    \item Hệ thống thông báo thành công và chuyển hướng đến trang Đăng nhập.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Hệ thống thông báo thành công và chuyển hướng đến trang Đăng nhập.
+    \item[4a.] Token không hợp lệ hoặc hết hạn -> Hệ thống hiển thị lỗi và yêu cầu người dùng bắt đầu lại luồng "Quên mật khẩu".
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Token đặt lại mật khẩu phải có thời gian hết hạn. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng có một token đặt lại mật khẩu hợp lệ. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Mật khẩu của người dùng được cập nhật. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

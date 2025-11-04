@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-19 \\
+\hline
+\textbf{Tên UC} & View Supplier Performance (Xem Hiệu suất Nhà cung cấp) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép xem các chỉ số thống kê về hiệu suất của nhà cung cấp (tỷ lệ giao đúng hạn, chất lượng...). \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho / Nhân viên thu mua \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân chọn một nhà cung cấp từ danh sách.
+    \item Tác nhân chọn tab "Hiệu suất" (Performance).
+    \item Hệ thống tổng hợp và hiển thị dữ liệu lịch sử:
+    \item[3a.] On-Time Delivery Rate (Tỷ lệ giao hàng đúng hạn).
+    \item[3b.] Quality Metrics (Chỉ số chất lượng, ví dụ: phần trăm trả hàng).
+    \item[3c.] Price History (Lịch sử giá của các SKU).
+    \item[3d.] Order Statistics (Thống kê đơn hàng).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Các chỉ số này được tính toán từ các PO đã hoàn thành và lịch sử nhận hàng. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền xem nhà cung cấp. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Tác nhân xem được báo cáo hiệu suất. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

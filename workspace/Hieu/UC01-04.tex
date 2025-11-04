@@ -1,0 +1,49 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-04 \\
+\hline
+\textbf{Tên UC} & Login with GitHub OAuth (Đăng nhập bằng GitHub) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng đăng nhập hoặc đăng ký nhanh thông qua tài khoản GitHub của họ. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò / Bất kỳ Actor nào đã đăng ký \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng truy cập trang Đăng nhập.
+    \item Người dùng chọn "Đăng nhập bằng GitHub".
+    \item Hệ thống chuyển hướng người dùng đến trang xác thực của GitHub.
+    \item Người dùng cấp quyền cho ứng dụng trên GitHub.
+    \item GitHub chuyển hướng trở lại ứng dụng với mã ủy quyền (auth code).
+    \item Hệ thống «include» OAuth Flow (better-auth) (trao đổi mã, lấy thông tin người dùng GitHub).
+    \item Hệ thống tạo (nếu chưa có) hoặc liên kết tài khoản.
+    \item Hệ thống «include» Generate JWT Token.
+    \item Hệ thống tạo phiên và chuyển hướng đến Dashboard.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Người dùng từ chối cấp quyền trên GitHub -> GitHub chuyển hướng về trang đăng nhập, luồng kết thúc.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Hệ thống phải được cấu hình OAuth client ID và secret với GitHub. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng chưa được xác thực. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Người dùng được xác thực, có phiên làm việc và được cấp JWT token. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
