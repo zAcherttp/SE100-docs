@@ -53,6 +53,11 @@
     \end{tabular}
 \end{table}
 
+% Dashes
+-           % Hyphen (for compound words: well-known)
+--          % En dash (for ranges: pages 10--20)
+---         % Em dash (for breaks in thought --- like this)
+
 % References
 See Table~\ref{tab:label} or Figure~\ref{fig:label}
 ```
