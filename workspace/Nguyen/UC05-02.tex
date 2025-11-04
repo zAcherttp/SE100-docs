@@ -1,0 +1,44 @@
+% !TEX root = ../../main.tex
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC05-02 \\
+\hline
+\textbf{Tên UC} & Quét mã vạch \\
+\hline
+\textbf{Mô tả tóm tắt} & Quét mã vạch/mã QR để nhận diện SKU và số lượng hàng nhập. \\
+\hline
+\textbf{Tác nhân tham gia} & Chuyên viên nhận hàng \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Mở chức năng quét trên thiết bị (mobile/scan).
+    \item Quét mã; hệ thống nhận diện SKU, mô tả và đơn vị tính.
+    \item Nhập/điều chỉnh số lượng nếu cần và xác nhận.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[2a.] Mã không hợp lệ → hệ thống thông báo; người dùng có thể nhập thủ công.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Cần có phiên nhập đang hoạt động. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Các mặt hàng được liên kết vào phiên nhập với thông tin SKU và số lượng. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC05-03 Quét số seri \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

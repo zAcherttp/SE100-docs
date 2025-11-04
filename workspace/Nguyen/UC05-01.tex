@@ -1,0 +1,45 @@
+% !TEX root = ../../main.tex
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC05-01 \\
+\hline
+\textbf{Tên UC} & Tạo phiên nhập hàng \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhân viên nhận hàng tạo phiên nhập hàng mới, liên kết với đơn mua hàng (PO) để bắt đầu quá trình nhận hàng. \\
+\hline
+\textbf{Tác nhân tham gia} & Chuyên viên nhận hàng, Quản lý kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn chức năng 'Tạo phiên nhập hàng'.
+    \item Nhập mã PO hoặc chọn PO liên quan, nhà cung cấp, ngày dự kiến và người thực hiện.
+    \item Hệ thống tạo phiên nhập và lưu trạng thái 'Đang nhập'.
+    \item Hệ thống hiển thị giao diện để quét mã/số seri và nhập số lượng.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[2a.] Nếu PO không tồn tại hoặc không hợp lệ → hệ thống báo lỗi và yêu cầu nhập lại.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập và có quyền tạo phiên nhập. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên nhập được tạo trong trạng thái 'Đang nhập'. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC05-02 Quét mã vạch \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
