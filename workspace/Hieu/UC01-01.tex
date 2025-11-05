@@ -1,0 +1,48 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-01 \\
+\hline
+\textbf{Tên UC} & Register Account (Đăng ký tài khoản) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng mới (chưa được phân công) tạo một tài khoản ban đầu trong hệ thống. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn "Đăng ký" trên trang chủ.
+    \item Hệ thống hiển thị biểu mẫu đăng ký (Username, Email, Password, Full Name).
+    \item Người dùng điền thông tin và nhấn "Đăng ký".
+    \item Hệ thống «include» Validate Email Format (xác thực định dạng email).
+    \item Hệ thống băm mật khẩu (sử dụng better-auth).
+    \item Hệ thống tạo bản ghi người dùng mới trong CSDL.
+    \item Hệ thống chuyển hướng người dùng đến luồng "Join Workspace" (UC01-07).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Email không hợp lệ -> Hệ thống hiển thị thông báo lỗi định dạng.
+    \item[4b.] Email hoặc Username đã tồn tại -> Hệ thống hiển thị thông báo lỗi "Email/Username đã được sử dụng".
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Email và Username phải là duy nhất. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng là khách (chưa được xác thực). \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một tài khoản người dùng mới được tạo. Người dùng vẫn chưa được xác thực (chờ đăng nhập) và chưa thuộc tổ chức nào. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

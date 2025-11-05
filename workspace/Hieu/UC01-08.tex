@@ -1,0 +1,45 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-08 \\
+\hline
+\textbf{Tên UC} & Manage User Preferences (Quản lý tùy chọn cá nhân) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng cập nhật các cài đặt cá nhân của họ (ví dụ: ngôn ngữ, theme, thông báo). \\
+\hline
+\textbf{Tác nhân tham gia} & Bất kỳ Actor nào đã đăng nhập \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng điều hướng đến trang "Hồ sơ" hoặc "Cài đặt".
+    \item Người dùng thay đổi các tùy chọn (ví dụ: đổi mật khẩu, bật/tắt thông báo, đăng ký passkey).
+    \item Người dùng nhấn "Lưu".
+    \item Hệ thống cập nhật các thay đổi vào bản ghi người dùng (cột JSONB preferences).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Người dùng hủy bỏ -> Các thay đổi không được lưu.
+    \item[3b.] (Nếu đổi mật khẩu) Mật khẩu cũ không đúng -> Hiển thị lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Tài khoản người dùng phải tồn tại và đang hoạt động. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Các tùy chọn cá nhân của người dùng được cập nhật. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

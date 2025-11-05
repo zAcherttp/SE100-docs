@@ -1,0 +1,46 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-13 \\
+\hline
+\textbf{Tên UC} & Manage Barcodes (Quản lý Mã vạch) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép gán nhiều mã vạch (UPC, EAN, nội bộ, QR) cho một SKU. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân điều hướng đến trang chi tiết của một SKU.
+    \item Tác nhân chọn "Quản lý Mã vạch".
+    \item Tác nhân «include» Add Multiple Barcodes (thêm giá trị mã vạch mới).
+    \item Tác nhân «include» Specify Barcode Type (chỉ định loại: UPC, EAN, QR, Internal).
+    \item Tác nhân nhấn "Lưu".
+    \item (Tùy chọn) Hệ thống «include» Generate QR Code (tự động tạo QR code nếu là loại 'Internal').
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Mã vạch đã tồn tại (được gán cho SKU khác) -> Hệ thống báo lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần có bảng product_barcodes riêng để lưu quan hệ nhiều-một với SKU. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập. SKU đã tồn tại. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & SKU được liên kết với một hoặc nhiều mã vạch. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

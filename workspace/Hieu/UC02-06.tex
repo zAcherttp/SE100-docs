@@ -1,0 +1,41 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-06 \\
+\hline
+\textbf{Tên UC} & Edit Brand (Chỉnh sửa Thương hiệu) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép quản trị viên chỉnh sửa thông tin của một thương hiệu đã tồn tại. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Thương hiệu".
+    \item Tác nhân chọn một thương hiệu và nhấn "Chỉnh sửa".
+    \item Tác nhân thay đổi thông tin (ví dụ: tên).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống cập nhật bản ghi thương hiệu.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý dữ liệu chủ. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin thương hiệu được cập nhật. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

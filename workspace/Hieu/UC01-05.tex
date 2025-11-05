@@ -1,0 +1,45 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-05 \\
+\hline
+\textbf{Tên UC} & Forgot Password (Quên mật khẩu) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cung cấp luồng cho người dùng đặt lại mật khẩu nếu họ quên mật khẩu hiện tại. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò / Bất kỳ Actor nào đã đăng ký \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn "Quên mật khẩu" trên trang Đăng nhập.
+    \item Hệ thống yêu cầu người dùng nhập địa chỉ email.
+    \item Người dùng nhập email và nhấn "Gửi yêu cầu".
+    \item Hệ thống (qua better-auth) tạo một token đặt lại mật khẩu duy nhất và gửi email chứa liên kết đặt lại đến người dùng.
+    \item (Xem UC01-06 để tiếp tục).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Email không tồn tại trong hệ thống -> Hệ thống vẫn hiển thị thông báo "Nếu email tồn tại, bạn sẽ nhận được liên kết" (để bảo mật).
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Dịch vụ gửi email (SMTP) phải được cấu hình. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng chưa được xác thực. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một token đặt lại mật khẩu đã được tạo và gửi qua email. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

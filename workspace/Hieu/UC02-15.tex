@@ -1,0 +1,41 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-15 \\
+\hline
+\textbf{Tên UC} & Set Custom Field Values (Đặt giá trị Trường tùy chỉnh) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng nhập giá trị cho các trường tùy chỉnh đã được định nghĩa (từ UC02-10) cho một SKU. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân đang ở trang tạo (UC02-12) hoặc chỉnh sửa (UC02-14) SKU.
+    \item Hệ thống hiển thị các trường tùy chỉnh (ví dụ: "Màu sắc", "Kích thước") dựa trên mẫu (template) của sản phẩm.
+    \item Tác nhân nhập các giá trị (ví dụ: "Đỏ", "XL").
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống lưu các giá trị này vào cột custom_fields (JSONB) của SKU.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập. Mẫu trường tùy chỉnh đã được định nghĩa cho loại sản phẩm này. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Các giá trị tùy chỉnh của SKU được lưu lại. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

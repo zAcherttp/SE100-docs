@@ -1,0 +1,49 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC03-03 \\
+\hline
+\textbf{Tên UC} & Edit Storage Zone (Chỉnh sửa Khu vực Lưu trữ) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép quản lý thay đổi vị trí, kích thước, hoặc các thuộc tính của một khu vực lưu trữ đã tồn tại. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân nhấp chuột vào một khu vực trên sơ đồ 2D.
+    \item Tác nhân chọn "Chỉnh sửa".
+    \item Tác nhân thực hiện thay đổi:
+    \item[3a.] Kéo thả để thay đổi vị trí (Move Zone Position).
+    \item[3b.] Kéo các cạnh để thay đổi kích thước (Resize Zone).
+    \item[3c.] Xoay khu vực (Rotate Zone).
+    \item[3d.] Cập nhật thuộc tính trong biểu mẫu (Update Attributes, ví dụ: nhiệt độ).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống cập nhật bản ghi khu vực (tọa độ, JSONB attributes).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Khu vực đang chứa hàng tồn kho -> Hệ thống có thể chặn thay đổi các thuộc tính quan trọng (như nhiệt độ) hoặc yêu cầu xác nhận.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền "CONFIGURE_WAREHOUSE". Khu vực đã tồn tại. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin/vị trí của khu vực lưu trữ được cập nhật. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

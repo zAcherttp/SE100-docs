@@ -1,0 +1,49 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-08 \\
+\hline
+\textbf{Tên UC} & Create Product (Tạo Sản phẩm) \\
+\hline
+\textbf{Mô tả tóm tắt} & Tạo một bản ghi sản phẩm chủ (master record), xác định các thuộc tính chung trước khi tạo các biến thể (SKU). \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Sản phẩm" và chọn "Tạo mới".
+    \item Hệ thống hiển thị biểu mẫu tạo sản phẩm.
+    \item Tác nhân nhập Tên, Mô tả.
+    \item Tác nhân «include» Assign Category (gán vào danh mục).
+    \item Tác nhân «include» Assign Brand (gán vào thương hiệu).
+    \item Tác nhân «include» Set Storage Requirements (đặt yêu cầu lưu trữ: khô, lạnh...).
+    \item Tác nhân «include» Set Tracking Method (chọn SERIAL, BATCH, hoặc NONE).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống tạo bản ghi sản phẩm chủ.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[8a.] Thiếu thông tin bắt buộc -> Hệ thống báo lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý sản phẩm. Danh mục và Thương hiệu đã tồn tại. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một bản ghi sản phẩm chủ được tạo. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

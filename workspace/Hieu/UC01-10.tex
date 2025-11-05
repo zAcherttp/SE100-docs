@@ -1,0 +1,41 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-10 \\
+\hline
+\textbf{Tên UC} & Generate Workspace Invitation Code (Tạo mã mời tham gia) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên tạo một mã mời (dạng văn bản và QR) để gửi cho nhân viên mới. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản trị viên hệ thống \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Admin điều hướng đến trang "Quản lý Người dùng" -> "Mời".
+    \item Admin nhấn "Tạo mã mời mới".
+    \item Hệ thống «include» Set Validity Duration (cho phép Admin đặt thời hạn cho mã, ví dụ: 24 giờ).
+    \item Hệ thống tạo một mã mời duy nhất và lưu vào bảng workspace_invitations.
+    \item Hệ thống «include» Generate QR Code (hiển thị mã QR tương ứng).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Mã mời phải là duy nhất và có thời gian hết hạn. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "INVITE_USERS". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một mã mời mới được tạo và sẵn sàng để chia sẻ. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
