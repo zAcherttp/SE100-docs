@@ -1,0 +1,282 @@
+// title
+title IMS DB Schema for PostgreSQL
+
+// Bảng Quản lý Tổ chức & Chi nhánh
+organizations [icon: building] {
+  organization_id int pk
+  name string unique
+  address string
+  phone_number string
+  is_active bool
+  created_at timestamp //default now()
+  updated_at timestamp //default now()
+}
+
+branches [icon: building] {
+  branch_id int pk
+  organization_id int fk
+  name string unique
+  address string
+  phone_number string
+  is_active bool
+  created_at timestamp //default now()
+  updated_at timestamp //default now()
+}
+
+organization_settings [icon: settings] {
+  organization_id bigint pk fk
+  setting_key string pk
+  setting_value string
+  updated_at timestamp //default now()
+}
+
+branch_settings [icon: cog] {
+  branch_id int fk pk
+  setting_key string pk
+  setting_value string
+  updated_at timestamp //default now()
+}
+
+// Bảng Quản lý Vận chuyển Nội bộ
+transfer_orders [icon: truck] {
+  transfer_order_id int pk
+  code string unique
+  source_branch_id int fk
+  destination_branch_id int fk
+  created_by_user_id int fk
+  created_at timestamp
+  expected_delivery_at timestamp
+  actual_delivery_at timestamp
+  transfer_status_type_id int fk
+}
+
+transfer_order_details [icon: package] {
+  transfer_order_detail_id int pk
+  transfer_order_id int fk
+  sku_id int fk
+  quantity_requested int
+  quantity_shipped int
+  quantity_received int
+}
+
+// Bảng Dữ liệu gốc (Master Data)
+products [icon: package] {
+  product_id int pk
+  name string
+  description string
+  category_id int fk
+  brand_id int fk
+  storage_requirement_type_id int fk
+  is_batch_tracked bool
+  shelf_life_days int
+  reorder_point int
+  is_active bool
+}
+
+product_variants [icon: copy] {
+  sku_id int pk
+  product_id int fk
+  sku string unique
+  barcode string unique
+  description string
+  cost_price decimal
+  selling_price decimal
+  unit_of_measure_id int fk
+  weight_kg decimal
+  volume_m3 decimal
+}
+
+categories [icon: tag] {
+  category_id int pk
+  name string
+  path ltree // PostgreSQL ltree type for efficient hierarchy queries. Requires a GiST index.
+}
+
+brands [icon: award] {
+  brand_id int pk
+  name string
+}
+
+suppliers [icon: truck] {
+  supplier_id int pk
+  name string
+  contact_person string
+  email string
+  phone string
+}
+
+// Bảng Nghiệp vụ Nhập hàng (Purchasing)
+purchase_orders [icon: clipboard] {
+  purchase_order_id int pk
+  code string unique
+  supplier_id int fk
+  ordered_at timestamp
+  expected_delivery_at timestamp
+  purchase_order_status_type_id int fk
+}
+
+purchase_order_details [icon: list] {
+  purchase_order_detail_id int pk
+  purchase_order_id int fk
+  sku_id int fk
+  quantity_ordered int
+  unit_cost decimal
+}
+
+// Bảng Quản lý Kho & Vị trí (Storage & Inventory)
+storage_zones [icon: map-pin] {
+  zone_id int pk
+  branch_id int fk
+  name string
+  path ltree // PostgreSQL ltree type for efficient hierarchy queries. Requires a GiST index.
+  zone_type_id int fk
+}
+
+inventory_batches [icon: layers] {
+  batch_id int pk
+  sku_id int fk
+  zone_id int fk
+  quantity int
+  supplier_batch_number string
+  internal_batch_number string
+  received_at date
+  expires_at date
+  batch_status_type_id int fk
+}
+
+inventory_transactions [icon: activity] {
+  transaction_id bigint pk
+  batch_id int fk
+  quantity_before int // State before transaction for auditability
+  quantity_change int
+  quantity_after int // State after transaction for auditability
+  inventory_transaction_type_id int fk
+  created_at timestamp
+  user_id int fk
+  notes string
+  purchase_order_detail_id int fk // Nullable FK, replaces polymorphism
+  transfer_order_detail_id int fk // Nullable FK, replaces polymorphism
+  // A CHECK constraint ensures exactly one source FK is populated.
+}
+
+// Bảng Loại (Lookup/Type Tables)
+system_lookups [icon: type] {
+  id int pk //increments
+  lookup_type string //not null // e.g., STATUS, ITEM_TYPE
+  lookup_code string //not null
+  lookup_value string
+  description string
+  sort_order int //default 0
+}
+
+// Bảng Người dùng, Quyền hạn & Ghi vết (Users, Permissions & Auditing)
+users [icon: user] {
+  user_id int pk
+  organization_id int fk
+  username string unique
+  password_hash string
+  full_name string
+  email string unique
+  role_id int fk
+  preferences string
+  is_active bool
+  created_at timestamp
+  updated_at timestamp
+}
+
+user_preferences [icon: settings] {
+  user_id string fk
+  setting_key string pk
+  setting_value string
+  updated_at timestamp //default now()
+}
+
+roles [icon: shield] {
+  role_id int pk
+  name string unique
+  description string
+}
+
+permissions [icon: key] {
+  permission_id int pk
+  name string unique
+  description string
+}
+
+role_permissions [icon: link] {
+  role_id int fk pk
+  permission_id int fk pk
+}
+
+audit_logs [icon: file-text, color: gray] {
+  log_id bigint pk
+  user_id int fk
+  action_type_id int fk
+  details jsonb
+  ip_address string
+  created_at timestamp
+  product_id int fk // Nullable FK, replaces polymorphism
+  user_id_target int fk // Nullable FK, for auditing user actions
+  purchase_order_id int fk // Nullable FK, replaces polymorphism
+  // A CHECK constraint ensures one target FK is populated.
+}
+
+user_branch_assignments [icon: users] {
+  user_id int fk pk
+  branch_id int fk pk
+  status string //default 'active'
+  added_at timestamp //default now()
+}
+
+// Mối quan hệ giữa các bảng
+// Tổ chức & Chi nhánh
+branches.organization_id > organizations.organization_id
+organization_settings.organization_id > organizations.organization_id
+branch_settings.branch_id > branches.branch_id
+
+// Dữ liệu gốc
+products.category_id > categories.category_id
+products.brand_id > brands.brand_id
+products.storage_requirement_type_id > system_lookups.id
+product_variants.product_id > products.product_id
+product_variants.unit_of_measure_id > system_lookups.id
+
+// Nghiệp vụ
+purchase_orders.supplier_id > suppliers.supplier_id
+purchase_orders.purchase_order_status_type_id > system_lookups.id
+purchase_order_details.purchase_order_id > purchase_orders.purchase_order_id
+purchase_order_details.sku_id > product_variants.sku_id
+
+// Vận chuyển Nội bộ
+transfer_orders.source_branch_id > branches.branch_id
+transfer_orders.destination_branch_id > branches.branch_id
+transfer_orders.created_by_user_id > users.user_id
+transfer_orders.transfer_status_type_id > system_lookups.id
+transfer_order_details.transfer_order_id > transfer_orders.transfer_order_id
+transfer_order_details.sku_id > product_variants.sku_id
+
+// Quản lý Kho
+storage_zones.branch_id > branches.branch_id
+storage_zones.zone_type_id > system_lookups.id
+inventory_batches.sku_id > product_variants.sku_id
+inventory_batches.zone_id > storage_zones.zone_id
+inventory_batches.batch_status_type_id > system_lookups.id
+inventory_transactions.batch_id > inventory_batches.batch_id
+inventory_transactions.inventory_transaction_type_id > system_lookups.id
+inventory_transactions.user_id > users.user_id
+inventory_transactions.purchase_order_detail_id > purchase_order_details.purchase_order_detail_id
+inventory_transactions.transfer_order_detail_id > transfer_order_details.transfer_order_detail_id
+
+// Người dùng & Quyền hạn
+users.preferences > user_preferences.user_id
+users.organization_id > organizations.organization_id
+users.role_id > roles.role_id
+user_branch_assignments.user_id > users.user_id
+user_branch_assignments.branch_id > branches.branch_id
+role_permissions.role_id > roles.role_id
+role_permissions.permission_id > permissions.permission_id
+audit_logs.user_id > users.user_id
+audit_logs.action_type_id > system_lookups.id
+audit_logs.product_id > products.product_id
+audit_logs.user_id_target > users.user_id
+audit_logs.purchase_order_id > purchase_orders.purchase_order_id

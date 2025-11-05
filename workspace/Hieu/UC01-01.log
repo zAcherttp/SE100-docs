@@ -1,0 +1,39 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.4)  5 NOV 2025 21:00
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**e:/LaTeX/SE100/SE100-docs/workspace/Hieu/UC01-01.tex
+(e:/LaTeX/SE100/SE100-docs/workspace/Hieu/UC01-01.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-10-09>
+(C:\Users\Salad\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `../main.tex'
+(C:\Users\Salad\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
+Package: import 2020/04/01  v 6.2
+) (../../main.tex
+
+! LaTeX Error: File `se100doc.cls' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
+
+Enter file name: 
+../../main.tex:2: Emergency stop.
+<read *> 
+         
+l.2 ^^M
+       
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 88 strings out of 468080
+ 2050 string characters out of 5425772
+ 433722 words of memory out of 5000000
+ 28842 multiletter control sequences out of 15000+600000
+ 627721 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,0n,61p,186b,20s stack positions out of 10000i,1000n,20000p,200000b,200000s
+../../main.tex:2:  ==> Fatal error occurred, no output PDF file produced!

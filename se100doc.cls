@@ -36,6 +36,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{tikz-uml}
 \RequirePackage{underscore}
+\RequirePackage{morefloats} % Increase float capacity
 \usetikzlibrary{calc}
 
 % Define color and column type
