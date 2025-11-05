@@ -1,0 +1,39 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC10-02 \\
+\hline
+\textbf{Tên UC} & Xem Báo cáo Vận hành (View Operational Reports) \\
+\hline
+\textbf{Mô tả tóm tắt} & Xem các báo cáo chuẩn liên quan đến hiệu suất vận hành kho. \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager, Report Viewer \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng chọn một báo cáo trong nhóm "Báo cáo Vận hành". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn loại báo cáo (VD: Hiệu suất Nhận hàng, Hiệu suất Lấy hàng, Kết quả Kiểm kê...).
+    \item Người dùng nhập các bộ lọc (VD: Ngày, Kho, Nhân viên).
+    \item Nhấn "Xem Báo cáo"; hệ thống hiển thị kết quả.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Người dùng đã đăng nhập và có quyền "VIEW_REPORTS". \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Dữ liệu báo cáo được hiển thị. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-09 \\
+\hline
+\textbf{Tên UC} & Từ chối Yêu cầu Điều chỉnh (Reject Adjustment Request) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cấp có thẩm quyền từ chối một yêu cầu điều chỉnh. \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho), Inventory Administrator (có quyền APPROVE) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người phê duyệt mở yêu cầu "ADJ_PENDING_APPROVAL". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người phê duyệt xem xét yêu cầu.
+    \item Người phê duyệt nhấn "Từ chối" (Reject).
+    \item Hệ thống yêu cầu nhập "Lý do Từ chối" (bắt buộc).
+    \item Người phê duyệt nhập lý do và xác nhận.
+    \item Hệ thống cập nhật trạng thái "ADJ_REJECTED".
+    \item Gửi thông báo (kèm lý do) cho người tạo.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Yêu cầu ở trạng thái "ADJ_PENDING_APPROVAL". \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Yêu cầu có trạng thái "ADJ_REJECTED".
+    \item Tồn kho không thay đổi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu phi chức năng} & Phải bắt buộc nhập lý do từ chối. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

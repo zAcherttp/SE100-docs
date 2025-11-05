@@ -1,0 +1,40 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-11 \\
+\hline
+\textbf{Tên UC} & Cảnh báo Tồn kho thấp (Hệ thống) \\
+\hline
+\textbf{Mô tả tóm tắt} & Hệ thống tự động cảnh báo khi tồn kho của SKU giảm dưới mức tối thiểu (ROP). \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Kích hoạt mỗi khi có giao dịch làm giảm tồn kho (xuất kho, điều chỉnh giảm). \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Một giao dịch làm thay đổi số lượng tồn kho của SKU.
+    \item Hệ thống so sánh tổng tồn kho hiện tại với Điểm Tái đặt hàng (ROP) của SKU đó.
+    \item Nếu Tồn kho <= ROP, hệ thống tạo một thông báo (UC11-06).
+    \item Gửi thông báo đến Bộ phận Mua hàng.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Một sự kiện (transaction) làm thay đổi (giảm) tồn kho.\\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo tồn kho thấp được tạo ra. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & Việc kiểm tra phải diễn ra tức thì (real-time) sau giao dịch. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

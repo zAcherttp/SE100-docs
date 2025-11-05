@@ -1,0 +1,39 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC09-04 \\
+\hline
+\textbf{Tên UC} & Cập nhật Đang Vận chuyển (Update to In Transit) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Tùy chọn) Cập nhật trạng thái hàng đang trên đường vận chuyển. \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho - Nguồn) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Quản lý theo dõi vận đơn và cập nhật trạng thái. \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Quản lý chọn đơn "TRANSFER_SHIPPED".
+    \item Quản lý nhấn "Cập nhật Đang Vận chuyển".
+    \item Hệ thống cập nhật trạng thái "TRANSFER_IN_TRANSIT".
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Tự động cập nhật nếu tích hợp API vận chuyển. \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Đơn hàng ở trạng thái "TRANSFER_SHIPPED". \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Đơn hàng ở trạng thái "TRANSFER_IN_TRANSIT". \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

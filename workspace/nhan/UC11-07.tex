@@ -1,0 +1,40 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-07 \\
+\hline
+\textbf{Tên UC} & Tạo Thông báo Chờ Phê duyệt (Create Pending Approval Notifications) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Hệ thống) Tự động tạo thông báo khi một đối tượng được gửi đi chờ phê duyệt. \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Một đối tượng (VD: Yêu cầu Điều chỉnh, Yêu cầu Trả hàng) được cập nhật trạng thái "PENDING_APPROVAL" hoặc "SUBMITTED". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng gửi Yêu cầu Điều chỉnh (UC07-07).
+    \item Hệ thống tạo một bản ghi thông báo mới.
+    \item Gán loại thông báo: "PENDING_APPROVAL".
+    \item Gán người nhận: (Vai trò) Người có quyền phê duyệt (VD: Warehouse Manager).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Một hành động (VD: UC07-07, UC08-02) kích hoạt trạng thái chờ phê duyệt. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo chờ phê duyệt được tạo và gửi đến người dùng liên quan. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[\subfix{../../main.tex}]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC10-03 \\
+\hline
+\textbf{Tên UC} & Xem Báo cáo Hiệu suất NCC (View Supplier Performance Reports) \\
+\hline
+\textbf{Mô tả tóm tắt} & Xem các báo cáo chuẩn liên quan đến hiệu suất của nhà cung cấp. \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager, Purchasing Agent, Report Viewer \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng chọn một báo cáo trong nhóm "Báo cáo NCC". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn loại báo cáo và nhập bộ lọc (VD: Nhà cung cấp, Danh mục, Khoảng thời gian).
+    \item Nhấn "Xem Báo cáo"; hệ thống hiển thị kết quả.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Người dùng đã đăng nhập và có quyền "VIEW_REPORTS". \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Dữ liệu báo cáo được hiển thị. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
