@@ -1,0 +1,42 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC04-03 \\
+\hline
+\textbf{Tên UC} & Gửi đơn đặt hàng \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhân viên thu mua gửi đơn đặt hàng đã hoàn thiện lên quản lý hoặc kế toán để phê duyệt. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên thu mua, Kế toán \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn đơn hàng cần gửi.
+    \item Nhấn “Gửi duyệt”.
+    \item Hệ thống gửi thông báo đến người phê duyệt và cập nhật trạng thái đơn hàng thành “Chờ duyệt”.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu thông tin đơn hàng chưa đầy đủ → không cho phép gửi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần cấu hình quyền gửi phê duyệt. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn hàng ở trạng thái “Nháp”. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Đơn hàng ở trạng thái “Chờ duyệt”. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC04-04 Hủy đơn đặt hàng. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{Đặc tả use case}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC04-06 \\
+\hline
+\textbf{Tên UC} & Tính điểm đặt hàng lại (Hệ thống) \\
+\hline
+\textbf{Mô tả tóm tắt} & Hệ thống tự động tính toán điểm đặt hàng lại (ROP) dựa trên dữ liệu tồn kho, nhu cầu và thời gian giao hàng. \\
+\hline
+\textbf{Tác nhân tham gia} & (Hệ thống) \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Hệ thống định kỳ truy xuất dữ liệu tồn kho và mức tiêu thụ.
+    \item Tính điểm ROP cho từng sản phẩm.
+    \item Lưu kết quả và gợi ý đơn đặt hàng mới.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu dữ liệu tồn kho thiếu → bỏ qua sản phẩm đó. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Yêu cầu dữ liệu tồn kho cập nhật chính xác. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Hệ thống hoạt động định kỳ. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Điểm đặt hàng lại được tính và lưu trữ. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC04-07 Tạo cảnh báo tồn kho thấp. \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
