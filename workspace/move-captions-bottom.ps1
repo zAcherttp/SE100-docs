@@ -13,18 +13,15 @@ foreach ($file in $texFiles) {
     # Read file content
     $content = Get-Content -Path $file.FullName -Raw
     
-    # Pattern to match caption line and remove it
-    $captionPattern = '\\caption\{[^}]+\}\s*\n'
-    
-    # Extract the caption if it exists
-    if ($content -match $captionPattern) {
-        $captionMatch = $matches[0].Trim()
+    # Check if caption exists
+    if ($content -match '\\caption\{[^}]+\}') {
+        $caption = $matches[0]
         
-        # Remove caption from current position
-        $contentWithoutCaption = $content -replace [regex]::Escape($captionMatch) + '\s*', ''
+        # Remove caption from anywhere in the file
+        $contentWithoutCaption = $content -replace '\\caption\{[^}]+\}\s*', ''
         
         # Add caption before \end{table}
-        $newContent = $contentWithoutCaption -replace '(\\end\{tabular\}\s*\n)', "`$1$captionMatch`n"
+        $newContent = $contentWithoutCaption -replace '(\\end\{tabular\}\s*)', "`$1`n$caption`n"
         
         # Write back to file
         Set-Content -Path $file.FullName -Value $newContent -NoNewline
