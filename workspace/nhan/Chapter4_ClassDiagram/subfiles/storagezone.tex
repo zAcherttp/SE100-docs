@@ -1,0 +1,43 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{StorageZone}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh khu vực lưu trữ \\
+\hline
+2 & name & string & & Tên khu vực \\
+\hline
+3 & path & string & & Đường dẫn phân cấp \\
+\hline
+4 & type & ZoneType & & Loại khu vực \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{addBatch(InventoryBatch)}: Thêm lô hàng
+    \item \texttt{getCapacityUtilization()}: Lấy tỷ lệ sử dụng công suất
+    \item \texttt{getSubzones()}: Lấy các khu vực con
+\end{itemize}
+
+\end{document}
