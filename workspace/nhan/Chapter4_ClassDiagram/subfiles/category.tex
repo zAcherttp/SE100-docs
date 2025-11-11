@@ -1,0 +1,40 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{Category}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh danh mục \\
+\hline
+2 & name & string & & Tên danh mục \\
+\hline
+3 & path & string & & Đường dẫn phân cấp \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{getSubcategories()}: Lấy danh mục con
+    \item \texttt{getParentCategory()}: Lấy danh mục cha
+\end{itemize}
+
+\end{document}

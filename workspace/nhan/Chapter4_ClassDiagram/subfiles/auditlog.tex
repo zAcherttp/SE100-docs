@@ -1,0 +1,43 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{AuditLog}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & bigint & PK & Mã định danh nhật ký \\
+\hline
+2 & createdAt & datetime & & Thời gian ghi nhật ký \\
+\hline
+3 & ipAddress & string & & Địa chỉ IP \\
+\hline
+4 & details & Map & & Chi tiết hành động \\
+\hline
+5 & actionType & ActionType & & Loại hành động \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{record(user, action, target)}: Ghi nhật ký hệ thống
+\end{itemize}
+
+\end{document}

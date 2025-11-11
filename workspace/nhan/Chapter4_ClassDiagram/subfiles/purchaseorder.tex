@@ -1,0 +1,47 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{PurchaseOrder}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh đơn đặt hàng \\
+\hline
+2 & code & string & unique & Mã đơn đặt hàng \\
+\hline
+3 & orderedAt & datetime & & Thời gian đặt hàng \\
+\hline
+4 & expectedDeliveryAt & datetime & & Thời gian giao hàng dự kiến \\
+\hline
+5 & status & PurchaseOrderStatus & & Trạng thái đơn hàng \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{addItem(sku, quantity, unitCost)}: Thêm mặt hàng vào đơn
+    \item \texttt{submit()}: Gửi đơn đặt hàng
+    \item \texttt{receive(receiptDetails)}: Nhận hàng
+    \item \texttt{cancel()}: Hủy đơn hàng
+    \item \texttt{getTotal()}: Tính tổng giá trị đơn hàng
+\end{itemize}
+
+\end{document}
