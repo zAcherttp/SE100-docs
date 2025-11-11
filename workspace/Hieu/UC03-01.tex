@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC03-01 \\
+\hline
+\textbf{Tên UC} & Create 2D Warehouse Layout (Tạo Sơ đồ Kho 2D) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép quản lý cấu hình sơ đồ mặt bằng tổng thể (2D) của kho. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân điều hướng đến "Cấu hình Kho" -> "Sơ đồ".
+    \item Tác nhân chọn chi nhánh/kho để cấu hình.
+    \item Tác nhân «include» Define Floor Plan Dimensions (đặt kích thước tổng thể Dài x Rộng).
+    \item Tác nhân «include» Set Entry/Exit Points (đặt điểm Vào/Ra).
+    \item Tác nhân «include» Define Pathways (vẽ các lối đi/hành lang để tính toán tuyến đường).
+    \item Tác nhân nhấn "Lưu".
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần một giao diện đồ họa (canvas/drag-drop) để thực hiện. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền "CONFIGURE_WAREHOUSE". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Sơ đồ mặt bằng kho 2D cơ bản được lưu lại. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC03-01}
+\end{table}
+
+\end{document}

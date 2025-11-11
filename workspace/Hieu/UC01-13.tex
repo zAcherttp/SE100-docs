@@ -1,0 +1,49 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-13 \\
+\hline
+\textbf{Tên UC} & Manage Roles (Quản lý Vai trò) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên tạo, chỉnh sửa và xóa các vai trò tùy chỉnh và các quyền đi kèm. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản trị viên hệ thống \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Admin điều hướng đến trang "Quản lý Vai trò và Phân quyền".
+    \item Admin chọn "Tạo Vai trò Mới" (Create Custom Role).
+    \item Admin nhập tên vai trò (ví dụ: "Kế toán Chi nhánh A").
+    \item Hệ thống hiển thị danh sách tất cả các quyền (permissions).
+    \item Admin «include» Configure Bitwise Permissions (chọn các quyền cho vai trò, ví dụ: "VIEW_REPORTS", "EXPORT_DATA").
+    \item Admin «include» Set Permission Scope (GLOBAL/BRANCH) (thiết lập phạm vi quyền là toàn tổ chức hay chỉ chi nhánh cụ thể).
+    \item Admin nhấn "Lưu".
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[2a.] Admin chọn một vai trò hiện có để Chỉnh sửa hoặc Xóa (Delete Role).
+    \item[2b.] (Nếu xóa) Hệ thống kiểm tra xem vai trò có đang được gán cho người dùng nào không. Nếu có, yêu cầu gán lại vai trò trước khi xóa.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Các vai trò mặc định của hệ thống (is_system_default = true) không thể bị xóa. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "ASSIGN_ROLES". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Vai trò được tạo/cập nhật/xóa. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC01-13}
+\end{table}
+
+\end{document}

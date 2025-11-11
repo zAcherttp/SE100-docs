@@ -1,0 +1,46 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-05 \\
+\hline
+\textbf{Tên UC} & Create Brand (Tạo Thương hiệu) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép quản trị viên thêm một thương hiệu mới vào hệ thống. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Thương hiệu".
+    \item Tác nhân chọn "Tạo Thương hiệu mới".
+    \item Tác nhân nhập tên thương hiệu và các thông tin liên quan (nếu có).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống lưu thương hiệu mới vào CSDL.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Tên thương hiệu trống hoặc đã tồn tại -> Hệ thống hiển thị lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý dữ liệu chủ. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một thương hiệu mới được thêm vào hệ thống. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC02-05}
+\end{table}
+
+\end{document}

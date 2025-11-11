@@ -1,0 +1,45 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC05-08 \\
+\hline
+\textbf{Tên UC} & Xác minh phiên nhập \\
+\hline
+\textbf{Mô tả tóm tắt} & Quản lý kho kiểm tra, phê duyệt hoặc từ chối phiên nhập đã hoàn tất. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Quản lý mở phiên nhập đã hoàn tất để xem chi tiết.
+    \item Kiểm tra sai lệch, tài liệu và số lượng.
+    \item Phê duyệt hoặc từ chối; nếu phê duyệt cập nhật tồn kho chính thức.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu từ chối → gửi trả lại yêu cầu chỉnh sửa cho nhân viên nhận hàng.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có phiên nhập ở trạng thái 'Hoàn tất'. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & 
+Nếu phê duyệt: tạo giao dịch tồn kho chính thức; nếu từ chối: phiên nhập trở về 'Đang nhập' hoặc 'Bị từ chối'. \\
+\hline
+\textbf{Điểm mở rộng} & Mở rộng: Tạo điều chỉnh tồn kho khi cần \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC05-08}
+\end{table}
+
+\end{document}

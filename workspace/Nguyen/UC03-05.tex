@@ -1,0 +1,44 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC03-05 \\
+\hline
+\textbf{Tên UC} & Xem phân cấp khu vực \\
+\hline
+\textbf{Mô tả tóm tắt} & Người dùng có thể xem cấu trúc phân cấp của các khu vực lưu trữ trong kho để dễ dàng quản lý. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho, Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn chức năng “Xem phân cấp khu vực”.
+    \item Hệ thống truy xuất dữ liệu khu vực từ cơ sở dữ liệu.
+    \item Hiển thị phân cấp dưới dạng cây (kho → khu → vị trí → ô chứa hàng).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu không có dữ liệu khu vực → hiển thị thông báo “Chưa có khu vực được cấu hình”.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Giao diện cần hỗ trợ hiển thị dạng cây và thao tác cuộn. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Các khu vực đã được cấu hình trong hệ thống. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phân cấp khu vực được hiển thị rõ ràng. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC03-06 Trực quan hóa sơ đồ 2D. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC03-05}
+\end{table}
+
+\end{document}

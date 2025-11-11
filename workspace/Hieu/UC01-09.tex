@@ -1,0 +1,48 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-09 \\
+\hline
+\textbf{Tên UC} & Create Organization/Workspace (Tạo Tổ chức/Không gian làm việc) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng (thường là sau khi đăng ký) tạo một tổ chức/không gian làm việc mới, và trở thành quản trị viên của tổ chức đó. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản trị viên Hệ thống \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng (sau khi đăng ký) chọn "Tạo Workspace mới".
+    \item Hệ thống hiển thị biểu mẫu tạo Workspace (Tên tổ chức, địa chỉ...).
+    \item Người dùng điền thông tin và nhấn "Tạo".
+    \item Hệ thống tạo bản ghi Tổ chức (Organization) mới.
+    \item Hệ thống «include» Configure Organization Settings (cấu hình cài đặt mặc định).
+    \item Hệ thống «include» Create Initial Branch (tạo chi nhánh mặc định).
+    \item Hệ thống gán người dùng hiện tại làm System Administrator của tổ chức này.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Tên tổ chức không hợp lệ/đã tồn tại -> Hiển thị lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập nhưng chưa thuộc tổ chức nào (hoặc hệ thống cho phép 1 người dùng thuộc nhiều tổ chức). \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một tổ chức mới được tạo, và người dùng trở thành Admin của tổ chức đó. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC01-09}
+\end{table}
+
+\end{document}

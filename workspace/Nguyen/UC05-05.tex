@@ -1,0 +1,45 @@
+
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC05-05 \\
+\hline
+\textbf{Tên UC} & Xử lý sai lệch \\
+\hline
+\textbf{Mô tả tóm tắt} & So sánh thực tế vs số liệu PO và xử lý chênh lệch (thiếu/thừa). \\
+\hline
+\textbf{Tác nhân tham gia} & Chuyên viên nhận hàng, Quản lý kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Sau khi quét, hệ thống so sánh số lượng thực tế với PO.
+    \item Nếu chênh lệch, nhân viên ghi nhận lý do và thêm ghi chú.
+    \item Tạo báo cáo sai lệch hoặc yêu cầu điều chỉnh tồn kho.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Chênh lệch lớn → yêu cầu xác minh của quản lý.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên nhập có dữ liệu so sánh với PO. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Sai lệch được ghi nhận; nếu cần tạo yêu cầu điều chỉnh hay thông báo nhà cung cấp. \\
+\hline
+\textbf{Điểm mở rộng} & Tạo yêu cầu điều chỉnh (nếu cần) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC05-05}
+\end{table}
+
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC04-05 \\
+\hline
+\textbf{Tên UC} & Xem đơn đặt hàng \\
+\hline
+\textbf{Mô tả tóm tắt} & Người dùng có thể xem danh sách hoặc chi tiết các đơn đặt hàng đã tạo hoặc đã phê duyệt. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên thu mua, Quản lý kho, Kế toán \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Mở chức năng “Xem đơn đặt hàng”.
+    \item Hệ thống hiển thị danh sách đơn theo trạng thái.
+    \item Người dùng có thể chọn để xem chi tiết từng đơn.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu không có dữ liệu → hiển thị thông báo “Không có đơn hàng”. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Giao diện phải cho phép lọc theo trạng thái và nhà cung cấp. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có dữ liệu đơn hàng trong hệ thống. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Danh sách đơn hàng hiển thị chính xác. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC04-06 Tính điểm đặt hàng lại (Hệ thống). \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC04-05}
+\end{table}
+
+
+\end{document}
