@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\subsection{Nghiệp vụ Luân chuyển Kho Nội bộ}
+
+\subsubsection{Biểu mẫu (BM)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM10: Phiếu Luân chuyển kho}} \\
+\hline
+Mã phiếu: ................................. & Người tạo: .................................... \\
+\hline
+Ngày điều chuyển: .................... & Trạng thái: [ ] Chờ xuất [ ] Đang chuyển [ ] Đã nhận \\
+\hline
+Kho xuất: ................................. & Kho nhập: .................................... \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Chi tiết Hàng hóa luân chuyển:}} \\
+\hline
+\textit{Mã SP} & \textit{Lô/Serial (nếu có)} \\
+\hline
+............. & .................................. \\
+\hline
+............. & .................................. \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiếu luân chuyển kho}
+\label{tab:bm10-phieu-luan-chuyen-kho}
+\end{table}
+
+\subsubsection{Quy định (QĐ)}
+
+\textbf{QĐ4: Quy định về Luân chuyển kho}
+
+\begin{itemize}
+    \item Mọi hoạt động chuyển hàng giữa các kho, chi nhánh bắt buộc phải lập Phiếu Luân chuyển kho.
+    \item Kho xuất thực hiện nghiệp vụ "Xuất kho" và Kho nhập thực hiện nghiệp vụ "Nhập kho" dựa trên cùng một Phiếu Luân chuyển.
+    \item Hệ thống chỉ tự động cập nhật tồn kho (trừ kho xuất, cộng kho nhập) khi Kho nhập xác nhận "Đã nhận hàng".
+\end{itemize}
+
+\end{document}

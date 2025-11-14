@@ -1,0 +1,44 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\textbf{QUY MÔ 4: MÔ HÌNH NHƯỢNG QUYỀN (FRANCHISE)}
+
+\begin{itemize}
+    \item \textbf{Phần mềm tiêu biểu:} Sapo POS (với gói quản lý chuỗi)
+    \item \textbf{Đối tượng và Nhu cầu cốt lõi:}
+    \begin{itemize}
+        \item \textbf{Đối tượng:} Các chuỗi cà phê, trà sữa, nhà hàng (Highlands Coffee, The Coffee House...).
+        \item \textbf{Quy mô:} Gồm công ty mẹ (franchisor) và hàng chục, hàng trăm cửa hàng nhượng quyền (franchisee).
+        \item \textbf{Nhu cầu:} Công ty mẹ cần \textbf{kiểm soát và đồng bộ dữ liệu} trên toàn hệ thống, trong khi các chi nhánh cần một công cụ \textbf{đơn giản để bán hàng và đặt hàng} từ kho tổng.
+    \end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+    \item \textbf{Phân tích chi tiết: Sapo POS đáp ứng nhu cầu như thế nào?}
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{3.5cm}|L{5cm}|L{5.5cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Tính năng của Sapo POS}} & \textcolor{white}{\textbf{Vấn đề của Mô hình Nhượng quyền}} & \textcolor{white}{\textbf{Giải pháp của Sapo POS}} \\
+\hline
+\textbf{Quản lý dữ liệu tập trung} & Làm sao để đảm bảo tất cả cửa hàng đều bán đúng sản phẩm, đúng giá, áp dụng đúng khuyến mãi do công ty mẹ đưa ra? & Công ty mẹ tạo ra danh mục sản phẩm, giá bán, công thức định lượng và đẩy xuống toàn bộ hệ thống. Các chi nhánh không thể tự ý thay đổi, đảm bảo tính nhất quán thương hiệu. \\
+\hline
+\textbf{Quy trình đặt hàng nội bộ} & Các chi nhánh cần một cách dễ dàng để đặt nguyên vật liệu (cà phê, sữa, ly...) từ kho tổng của công ty mẹ. & Chi nhánh tạo \textbf{"Yêu cầu chuyển hàng"} trên phần mềm. Yêu cầu này sẽ được gửi đến kho tổng để xử lý. Hệ thống tự động cập nhật tồn kho giữa các kho một cách chính xác. \\
+\hline
+\textbf{Báo cáo tổng hợp và chi tiết} & Công ty mẹ cần cái nhìn tổng quan về toàn chuỗi, còn từng chủ chi nhánh chỉ muốn xem dữ liệu của cửa hàng mình. & Cung cấp hệ thống báo cáo 2 cấp: \textbf{Tài khoản tổng} xem được dữ liệu toàn chuỗi và so sánh các chi nhánh; \textbf{Tài khoản chi nhánh} chỉ xem được dữ liệu của riêng cửa hàng mình. \\
+\hline
+\textbf{Quản lý nhà cung cấp tập trung} & Để đảm bảo chất lượng đồng đều, công ty mẹ thường chỉ định nhà cung cấp nguyên vật liệu cho toàn chuỗi. & Cho phép quản lý danh sách nhà cung cấp tại tài khoản tổng. Khi cần nhập hàng, các chi nhánh có thể chọn từ danh sách đã được phê duyệt, giúp công ty mẹ kiểm soát chất lượng đầu vào. \\
+\hline
+\end{tabular}
+\caption{Phân tích chi tiết: Sapo POS đáp ứng nhu cầu của mô hình nhượng quyền}
+\label{tab:sapopos-analysis}
+\end{table}
+
+\textbf{Kết luận:} Sapo POS giải quyết bài toán đặc thù của mô hình nhượng quyền bằng cơ chế \textbf{quản lý tập trung nhưng vận hành phân tán}. Nó trao cho công ty mẹ công cụ để kiểm soát và đồng bộ toàn chuỗi, đồng thời cung cấp cho các chi nhánh một giao diện đơn giản, hiệu quả để vận hành kinh doanh hàng ngày.
+
+
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\subsection{Quản lý Hệ thống và Phân quyền}
+
+\subsubsection{Biểu mẫu (BM)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM1: Khởi tạo Workspace}} \\
+\hline
+Tên công ty/cửa hàng: ..................... & Địa chỉ: ........................................ \\
+\hline
+Quản trị viên (Admin): .................... & Email Admin: ................................. \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Danh sách kho hàng (Cấu hình)}} \\
+\hline
+Mã kho 1: ................................. & Tên kho 1: ................................... \\
+\hline
+Mã kho 2: ................................. & Tên kho 2: ................................... \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu khởi tạo Workspace}
+\label{tab:bm1-khoi-tao-workspace}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM2: Quản lý Nhân viên}} \\
+\hline
+Mã nhân viên: ............................. & Họ và tên: ...................................... \\
+\hline
+Tên đăng nhập: .......................... & Mật khẩu (khởi tạo): ........................ \\
+\hline
+Email / SĐT: .............................. & Vai trò: ........................................ \\
+\hline
+Kho/Chi nhánh làm việc: .............. & Trạng thái: [ ] Hoạt động [ ] Khóa \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu quản lý nhân viên}
+\label{tab:bm2-quan-ly-nhan-vien}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM3: Quản lý Vai trò (Phân quyền)}} \\
+\hline
+Tên vai trò: ................................ & Mô tả vai trò: ................................ \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Chi tiết quyền hạn (Checklist):}} \\
+\hline
+[ ] Module Nhập kho (Xem, Tạo, Duyệt) & [ ] Module Xuất kho (Xem, Tạo, Duyệt) \\
+\hline
+[ ] Module Kiểm kê (Xem, Tạo, Duyệt) & [ ] Module Báo cáo (Xem) \\
+\hline
+[ ] Module Cài đặt (Quản lý) & [ ] Module Luân chuyển (Xem, Tạo) \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu quản lý vai trò (Phân quyền)}
+\label{tab:bm3-quan-ly-vai-tro}
+\end{table}
+
+\subsubsection{Quy định (QĐ)}
+
+\textbf{QĐ1: Quy định về Quản lý hệ thống}
+
+\begin{itemize}
+    \item Chỉ Quản trị viên (Admin) mới có quyền tạo/khóa tài khoản nhân viên và thiết lập Vai trò (phân quyền).
+    \item Việc gán quyền phải tuân thủ đúng chức năng, nhiệm vụ của từng nhân viên (ví dụ: nhân viên bán hàng chỉ xem tồn kho để tạo đơn hàng, không được nhập/xuất kho).
+    \item Nghiêm cấm việc sử dụng chung tài khoản hoặc tiết lộ mật khẩu.
+\end{itemize}
+
+\end{document}
