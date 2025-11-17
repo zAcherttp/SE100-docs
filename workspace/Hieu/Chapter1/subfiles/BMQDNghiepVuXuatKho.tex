@@ -1,0 +1,90 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\subsection{Nghiệp Vụ Xuất Kho}
+
+\subsubsection{Biểu mẫu (BM)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM7: Yêu cầu Xuất kho}} \\
+\hline
+Mã yêu cầu: ............................... & Khách hàng / Bộ phận yêu cầu: .......... \\
+\hline
+Ngày tạo: ................................. & Lý do xuất (Bán hàng, Sản xuất...): .... \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Chi tiết Hàng hóa yêu cầu:}} \\
+\hline
+\textit{Mã SP} & \textit{Tên sản phẩm} \\
+\hline
+............. & .................................. \\
+\hline
+............. & .................................. \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu yêu cầu xuất kho}
+\label{tab:bm7-yeu-cau-xuat-kho}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM8: Phiếu Lấy Hàng}} \\
+\hline
+Mã phiếu lấy hàng: .................... & Nhân viên lấy hàng: ....................... \\
+\hline
+Ngày tạo: ................................. & Lộ trình lấy hàng (tối ưu): .............. \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Danh sách sản phẩm cần lấy:}} \\
+\hline
+\textit{Vị trí (Khu/Kệ/Ô)} & \textit{Mã SP} \\
+\hline
+............................. & ............. \\
+\hline
+............................. & ............. \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiếu lấy hàng}
+\label{tab:bm8-phieu-lay-hang}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM9: Phiếu Xuất Kho}} \\
+\hline
+Mã phiếu xuất: ........................... & Tham chiếu (Yêu cầu xuất): .............. \\
+\hline
+Ngày giờ xuất thực tế: ............... & Người thực hiện: ........................... \\
+\hline
+Kho xuất: ................................. & Thông tin người nhận: .................... \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Chi tiết Hàng hóa thực xuất:}} \\
+\hline
+\textit{Mã SP} & \textit{Lô/Serial (nếu có)} \\
+\hline
+............. & .................................. \\
+\hline
+............. & .................................. \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiếu xuất kho}
+\label{tab:bm9-phieu-xuat-kho}
+\end{table}
+
+\subsubsection{Quy định (QĐ)}
+
+\textbf{QĐ3: Quy định về Xuất kho}
+
+\begin{itemize}
+    \item Nhân viên kho bắt buộc tuân thủ Phiếu Lấy hàng và lộ trình tối ưu do hệ thống chỉ dẫn (nếu có).
+    \item Bắt buộc sử dụng máy quét mã vạch/QR để quét sản phẩm khi lấy hàng để đảm bảo độ chính xác tuyệt đối, chống giao sai hàng.
+    \item Tuân thủ gợi ý đóng gói của hệ thống (nếu có) để đảm bảo an toàn hàng hóa.
+    \item Sau khi hoàn tất lấy hàng và bàn giao, nhân viên phải xác nhận hoàn thành trên hệ thống để hệ thống tự động trừ tồn kho.
+\end{itemize}
+
+\end{document}
