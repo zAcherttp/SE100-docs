@@ -1,101 +1,271 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../assets/}}}
+\usepackage{float}
+\usepackage{longtable}
 \begin{document}
 
-\chapter{Overall Description}
+\chapter{Sơ đồ Use-case}
 
-\section{Product Perspective}
-IICT WEBSITE is the replacement of the manual hard copy result process. The data have been stored in the hard file or papers, this website will store all of those in the website. Main goal of this project is to minimize the work and maximize the result of this result processing system.
+\section{Biểu đồ use-case tổng quan - mức 1}
 
-\section{User Classes and Characteristics}
-IICT WEBSITE has basically 4 types of users. 
-\begin{itemize}
-  \item Teachers
-    \begin{itemize}
-        \item Director
-        \item Course Teacher
-    \end{itemize}
-  \item Students
-  \item Official Staff
-\end{itemize}
-Teacher has 2 types---Director defines the course teachers who will take the courses. Student fulfill all the requirements like fees, information, and can take advantages of the website. 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=10cm]{assets/2.JPG}
-    \caption{type of users}
-    \label{fig:type of users}
+    \includegraphics[width=1.18\textwidth]{assets/cover/Nguyen/UC TỔNG QUAN.drawio.png}
+    \caption{Use-case tổng quan}
+    \label{fig:use-case-tong-quan}
 \end{figure}
 
-\section{Product Functions}
-IICT WEBSITE store all the results of the students of program PGD, MIT. Also others programs can be included if necessary.
-\begin{figure}[h!]
+\clearpage
+
+\section{Biểu đồ use-case phân rã - mức 2}
+
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=15cm]{assets/3.JPG}
-    \caption{Data Flow Diagram}
-    \label{fig:Data Flow Diagram}
+    \includegraphics[width=0.85\textwidth]{assets/cover/Hieu/UC01.drawio.png}
+    \caption{UC01}
+    \label{fig:uc01}
 \end{figure}
-Before using the main function of the software result process, users have to be registered. 
 
-All users have the following attributes: \code{login\_parameter}, \code{user\_name}, \code{first\_name}, \code{last\_name}, \code{user\_id}, \code{role}, \code{post}, \code{email}, \code{phone\_number}, \code{present\_address}, \code{parmanent\_address}, \code{blood\_group}, \code{password\_hash}, and \code{timeStamp}.
-
-Students have additional information after completing registration: \code{user\_id} (foreign key), \code{registration\_id}, \code{year}, \code{semester}, \code{course\_array}, and \code{drop\_course\_array}. These contain the student's results and program information.
-
-Each program has the following data: \code{program\_name}, \code{program\_id}, \code{course\_id}, \code{nunmber\_of\_semester}, \code{total\_credit}, and \code{course\_length}. There will be one or many \code{course\_id} in each program.
-
-Courses table contains: \code{course\_name}, \code{course\_id}, \code{course\_code}, \code{credit}, \code{semester}, and \code{teacher\_id}.
-
-Every course has its own Credit Values. Those have been 2 types - lab, theory.
-
-Result is the main feature of all. It contains the values of all the exams of a particular student. It has the following data fields: \code{student\_id}, \code{course\_id}, \code{term\_test}, \code{attendance}, \code{marks(A)}, \code{marks(B)}, \code{teacher\_id(A)}, \code{teacher\_id(B)}, \code{entry\_date(A)}, \code{entry\_date(B)}, \code{publish\_date}, \code{semester}, and \code{result\_state}.
-
-\section{Operating Environment}
-The website will operate in any Operating Environment\,---\,\mbox{Mac, Windows, Linux}, etc. 
-
-\section{Design}
-Student activities have 3 steps -
-\begin{itemize}
-    \item From Fill Up Process
-    \item Courses Payment
-    \item Student Profile
-\end{itemize}
-Top selected Student first fill his/her form, bank payment. After verification, student pays for their selected courses. Then he can enter his profile. 
-
-Every student profile contains his/her personal information, results, taken courses, dropped courses and notice.
-
-Notice will contain all the news of IICT\@.
-
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=15cm]{assets/4.JPG}
-    \caption{Student Activities}
-    \label{fig:Students Activites}
+    \includegraphics[width=0.85\textwidth]{assets/cover/Hieu/UC02.drawio.png}
+    \caption{UC02}
+    \label{fig:uc02}
 \end{figure}
-\newpage
-Teacher activities have 2 steps - 
-\begin{itemize}
-    \item Director
-    \item Course Teacher
-\end{itemize}
-Director can re-view the result, publish result, give notice and also create teacher. He can also perform course teacher activities.
-\newline
-Teacher creates results, view students and create notice.
-\newline
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=10cm]{assets/5.JPG}
-    \caption{Teacher Activities}
-    \label{fig:Teacher Activities}
+    \includegraphics[width=0.85\textwidth]{assets/cover/Hieu/UC03.drawio.png}
+    \caption{UC03}
+    \label{fig:uc03}
 \end{figure}
-\newline
-Staff has only one activity - 
-\begin{itemize}
-    \item Notice
-\end{itemize} 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=5cm]{assets/6.JPG}
-    \caption{Staff Activities}
-    \label{fig:Staff Activities}
+    \includegraphics[width=0.85\textwidth]{assets/cover/Hieu/UC04.drawio.png}
+    \caption{UC04}
+    \label{fig:uc04}
 \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/cover/Nguyen/UC05(3).jpg}
+    \caption{UC05}
+    \label{fig:uc05}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/cover/Nguyen/UC06(3).jpg}
+    \caption{UC06}
+    \label{fig:uc06}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/cover/Nguyen/UC07(5).jpg}
+    \caption{UC07}
+    \label{fig:uc07}
+\end{figure}
+
+\clearpage
+\section{Danh sách các Actor}
+
+\begin{longtable}{|c|p{4cm}|p{10cm}|}
+\hline
+\textbf{STT} & \textbf{Tên Actor} & \textbf{Ý nghĩa/Ghi chú} \\ \hline
+\endfirsthead
+
+\hline
+\textbf{STT} & \textbf{Tên Actor} & \textbf{Ý nghĩa/Ghi chú} \\ \hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\caption{Danh sách các Actor sử dụng trong hệ thống}
+\endlastfoot
+
+1 & Quản trị viên hệ thống & Quản lý tài khoản, phân quyền, cấu hình hệ thống và các thiết lập tổng thể. \\ \hline
+2 & Quản lý kho & Giám sát hoạt động kho, phê duyệt nghiệp vụ và theo dõi báo cáo vận hành. \\ \hline
+3 & Quản trị viên hàng tồn kho & Theo dõi số lượng tồn kho, điều chỉnh tồn kho, xử lý chênh lệch và quản lý log thay đổi. \\ \hline
+4 & Chuyên viên nhận hàng & Thực hiện các tác vụ nhập kho như quét mã, kiểm đếm, tạo phiên nhập và kiểm tra chất lượng ban đầu. \\ \hline
+5 & Chuyên viên giao hàng & Chuẩn bị hàng xuất kho, xác nhận giao hàng và phối hợp với vận chuyển. \\ \hline
+6 & Nhân viên kho & Thực hiện các thao tác thực tế như xuất/nhập, quét mã, đóng gói và sắp xếp hàng. \\ \hline
+7 & Nhân viên thu mua & Tạo và chỉnh sửa đơn mua hàng (PO), làm việc với nhà cung cấp và theo dõi mức tồn kho thấp. \\ \hline
+8 & Kế toán & Đối soát dữ liệu nhập/xuất ảnh hưởng đến tài chính và theo dõi công nợ theo PO/SO. \\ \hline
+9 & Người xem báo cáo & Chỉ có quyền xem báo cáo thống kê, tồn kho và hiệu suất hoạt động. \\ \hline
+10 & Nhân viên chưa gán vai trò & Nhân sự mới hoặc chưa được cấp quyền, không thể thao tác cho đến khi được cấu hình. \\ \hline
+
+\end{longtable}
+
+\clearpage
+\section{Danh sách các Use-case}
+\begin{longtable}{|c|c|p{4cm}|p{8cm}|}
+\hline
+\textbf{STT} & \textbf{Mã Use Case} & \textbf{Tên Use Case} & \textbf{Ý nghĩa/Ghi chú} \\ \hline
+\endfirsthead
+
+\hline
+\textbf{STT} & \textbf{Mã Use Case} & \textbf{Tên Use Case} & \textbf{Ý nghĩa/Ghi chú} \\ \hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\caption{Danh sách các Use Case chi tiết trong hệ thống}
+\endlastfoot
+
+%--- UC01 - Authentication & User Management ---%
+\multicolumn{4}{|l|}{\textbf{UC01 - Xác thực \& Quản lý người dùng}} \\ \hline
+1 & UC01-01 & Đăng ký tài khoản & Cho phép người dùng mới tạo tài khoản. \\ \hline
+2 & UC01-02 & Đăng nhập bằng tài khoản & Xác thực người dùng bằng email/mật khẩu. \\ \hline
+3 & UC01-03 & Đăng nhập bằng Passkey & Xác thực không mật khẩu (sinh trắc học, USB). \\ \hline
+4 & UC01-04 & Đăng nhập bằng GitHub & Xác thực qua dịch vụ bên thứ ba (GitHub). \\ \hline
+5 & UC01-05 & Quên mật khẩu & Bắt đầu quy trình lấy lại mật khẩu. \\ \hline
+6 & UC01-06 & Đặt lại mật khẩu & Hoàn tất việc tạo mật khẩu mới qua link email. \\ \hline
+7 & UC01-07 & Tham gia không gian làm việc & Gửi yêu cầu tham gia vào một tổ chức/kho. \\ \hline
+8 & UC01-08 & Quản lý tùy chọn cá nhân & Thay đổi cài đặt cá nhân (giao diện, thông báo). \\ \hline
+9 & UC01-09 & Tạo Tổ chức/Không gian & Admin tạo một môi trường làm việc mới. \\ \hline
+10 & UC01-10 & Tạo mã mời & Admin tạo mã QR/văn bản để mời người khác. \\ \hline
+11 & UC01-11 & Duyệt/Từ chối yêu cầu tham gia & Admin quản lý các yêu cầu tham gia. \\ \hline
+12 & UC01-12 & Quản lý người dùng & Admin xem, sửa, vô hiệu hóa tài khoản. \\ \hline
+13 & UC01-13 & Quản lý vai trò & Admin tạo, sửa, xóa các vai trò (quyền). \\ \hline
+14 & UC01-14 & Gán vai trò cho người dùng & Admin phân quyền cụ thể cho người dùng. \\ \hline
+
+%--- UC02 - Master Data Management ---%
+\multicolumn{4}{|l|}{\textbf{UC02 - Quản lý dữ liệu chủ}} \\ \hline
+15 & UC02-01 & Tạo Danh mục & Tạo danh mục sản phẩm mới (dạng cây). \\ \hline
+16 & UC02-02 & Sửa Danh mục & Chỉnh sửa thông tin danh mục đã có. \\ \hline
+17 & UC02-03 & Cấu hình Danh mục & Đặt các thiết lập riêng (cảnh báo hạn, lưu trữ). \\ \hline
+18 & UC02-04 & Xóa Danh mục & Xóa mềm một danh mục (nếu không có SP). \\ \hline
+19 & UC02-05 & Tạo Thương hiệu & Tạo thông tin thương hiệu/nhà sản xuất. \\ \hline
+20 & UC02-06 & Sửa Thương hiệu & Chỉnh sửa thông tin thương hiệu. \\ \hline
+21 & UC02-07 & Xóa Thương hiệu & Xóa mềm một thương hiệu. \\ \hline
+22 & UC02-08 & Tạo Sản phẩm & Tạo một sản phẩm gốc (product). \\ \hline
+23 & UC02-09 & Sửa Sản phẩm & Chỉnh sửa sản phẩm (tên, danh mục, thương hiệu). \\ \hline
+24 & UC02-10 & Định nghĩa trường tùy chỉnh & Tạo các mẫu (template) thuộc tính riêng cho loại SP. \\ \hline
+25 & UC02-11 & Xóa Sản phẩm & Xóa mềm một sản phẩm (nếu không có SKU). \\ \hline
+26 & UC02-12 & Tạo SKU & Tạo một biến thể sản phẩm (SKU) để quản lý kho. \\ \hline
+27 & UC02-13 & Quản lý mã vạch & Gán một hoặc nhiều mã vạch (barcode/QR) cho SKU. \\ \hline
+28 & UC02-14 & Sửa SKU & Sửa thông tin SKU (giá, kích thước, trọng lượng). \\ \hline
+29 & UC02-15 & Đặt giá trị trường tùy chỉnh & Nhập dữ liệu cho các trường tùy chỉnh của SKU. \\ \hline
+30 & UC02-16 & Xóa SKU & Xóa mềm một SKU (nếu chưa có giao dịch). \\ \hline
+31 & UC02-17 & Tạo Nhà cung cấp & Thêm thông tin nhà cung cấp mới. \\ \hline
+32 & UC02-18 & Sửa Nhà cung cấp & Cập nhật thông tin nhà cung cấp. \\ \hline
+33 & UC02-19 & Xem hiệu suất Nhà cung cấp & Xem thống kê (giao đúng hạn, chất lượng). \\ \hline
+34 & UC02-20 & Xóa Nhà cung cấp & Xóa mềm nhà cung cấp. \\ \hline
+
+%--- UC03 - Warehouse Layout Configuration ---%
+\multicolumn{4}{|l|}{\textbf{UC03 - Cấu hình sơ đồ kho}} \\ \hline
+35 & UC03-01 & Tạo sơ đồ kho 2D & Thiết lập kích thước, lối đi, cổng của kho. \\ \hline
+36 & UC03-02 & Tạo Khu vực lưu trữ & Định nghĩa các vị trí (zone) (kệ, dãy, vùng). \\ \hline
+37 & UC03-03 & Sửa Khu vực lưu trữ & Thay đổi thuộc tính (kích thước, vị trí, nhiệt độ). \\ \hline
+38 & UC03-04 & Xóa Khu vực lưu trữ & Xóa một vị trí (nếu không còn tồn kho). \\ \hline
+39 & UC03-05 & Xem phân cấp khu vực & Xem cấu trúc cây của các vị trí (kho > dãy > kệ). \\ \hline
+40 & UC03-06 & Trực quan hóa sơ đồ 2D & Xem bản đồ kho tương tác. \\ \hline
+
+%--- UC04 - Purchase Order Management ---%
+\multicolumn{4}{|l|}{\textbf{UC04 - Quản lý đơn đặt hàng}} \\ \hline
+41 & UC04-01 & Tạo đơn đặt hàng (PO) & Lập đơn hàng mới gửi nhà cung cấp (Draft). \\ \hline
+42 & UC04-02 & Sửa đơn đặt hàng & Chỉnh sửa PO khi còn ở trạng thái nháp. \\ \hline
+43 & UC04-03 & Gửi đơn đặt hàng & Xác nhận và gửi PO (chuyển trạng thái). \\ \hline
+44 & UC04-04 & Hủy đơn đặt hàng & Hủy PO (nếu chưa nhận hàng). \\ \hline
+45 & UC04-05 & Xem đơn đặt hàng & Xem chi tiết, lịch sử trạng thái, lịch sử nhận hàng. \\ \hline
+46 & UC04-06 & Tính điểm đặt hàng lại (ROP) & (Hệ thống) Tính mức tồn kho an toàn. \\ \hline
+47 & UC04-07 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Cảnh báo khi tồn kho < ROP. \\ \hline
+48 & UC04-08 & Tự động tính ROP & (Hệ thống) Tác vụ chạy định kỳ để cập nhật ROP. \\ \hline
+
+%--- UC05 - Receiving Operations ---%
+\multicolumn{4}{|l|}{\textbf{UC05 - Nghiệp vụ nhận hàng}} \\ \hline
+49 & UC05-01 & Tạo phiên nhận hàng & Bắt đầu một phiên làm việc để nhận hàng. \\ \hline
+50 & UC05-02 & Quét mã vạch & Quét mã vạch SKU, nhập số lượng, lô, hạn dùng. \\ \hline
+51 & UC05-03 & Quét số sê-ri & Quét từng số sê-ri cho hàng quản lý theo sê-ri. \\ \hline
+52 & UC05-04 & Chỉ định vị trí lưu trữ & Gán vị trí cất hàng cho lô/sê-ri vừa nhận. \\ \hline
+53 & UC05-05 & Xử lý chênh lệch & Ghi chú khi nhận hàng thừa/thiếu so với PO. \\ \hline
+54 & UC05-06 & Đính kèm tài liệu & Chụp ảnh (hàng hỏng) hoặc tải lên (phiếu giao). \\ \hline
+55 & UC05-07 & Hoàn thành phiên nhận hàng & Kết thúc phiên, gửi cho quản lý duyệt. \\ \hline
+56 & UC05-08 & Xác thực phiên nhận hàng & (Quản lý) Phê duyệt, chính thức tăng tồn kho. \\ \hline
+57 & UC05-09 & Từ chối phiên nhận hàng & (Quản lý) Từ chối do sai sót, yêu cầu làm lại. \\ \hline
+58 & UC05-10 & Đề xuất vị trí lưu trữ & (Hệ thống) Gợi ý vị trí cất hàng tối ưu. \\ \hline
+
+%--- UC06 - Outbound Operations ---%
+\multicolumn{4}{|l|}{\textbf{UC06 - Nghiệp vụ xuất hàng}} \\ \hline
+59 & UC06-01 & Tạo đơn hàng xuất & Tạo đơn hàng bán/xuất kho (Draft). \\ \hline
+60 & UC06-02 & Tạo phiên lấy hàng (Picking) & Bắt đầu phiên đi lấy hàng cho đơn hàng xuất. \\ \hline
+61 & UC06-03 & Thực thi lấy hàng & Đi lấy hàng, quét mã (vị trí, SKU, lô, sê-ri). \\ \hline
+62 & UC06-04 & Hoàn thành phiên lấy hàng & Kết thúc phiên lấy hàng, gửi đi xác thực. \\ \hline
+63 & UC06-05 & Xác thực phiên lấy hàng & Phê duyệt, chính thức trừ tồn kho (logic). \\ \hline
+64 & UC06-06 & Tạo phiên đóng gói (Packing) & Bắt đầu phiên đóng gói hàng đã lấy. \\ \hline
+65 & UC06-07 & Hoàn thành phiên đóng gói & Kết thúc phiên đóng gói. \\ \hline
+66 & UC06-08 & Xác thực phiên đóng gói & Xác nhận hàng đã đóng gói, sẵn sàng giao. \\ \hline
+67 & UC06-09 & Tính tuyến đường lấy hàng tối ưu & (Hệ thống) Sắp xếp thứ tự lấy hàng theo đường đi ngắn nhất. \\ \hline
+
+%--- UC07 - Inventory Management & Cycle Counting ---%
+\multicolumn{4}{|l|}{\textbf{UC07 - Quản lý tồn kho \& Kiểm kê}} \\ \hline
+68 & UC07-01 & Tạo phiên kiểm kê & Bắt đầu phiên đếm hàng (theo khu vực, SKU). \\ \hline
+69 & UC07-02 & Thực hiện kiểm kê thực tế & (Di động) Quét mã và nhập số lượng đếm thực tế. \\ \hline
+70 & UC07-03 & Hoàn thành phiên kiểm kê & Gửi kết quả đếm thực tế đi xác thực. \\ \hline
+71 & UC07-04 & Xem tồn kho thời gian thực & Xem tồn kho (theo SKU, vị trí, lô, sê-ri). \\ \hline
+72 & UC07-05 & Xác thực phiên kiểm kê & (Quản lý) So sánh số đếm và số hệ thống. \\ \hline
+73 & UC07-06 & Tạo yêu cầu điều chỉnh & Lập phiếu điều chỉnh (tăng/giảm) tồn kho. \\ \hline
+74 & UC07-07 & Gửi yêu cầu điều chỉnh & Gửi yêu cầu đi phê duyệt. \\ \hline
+75 & UC07-08 & Phê duyệt yêu cầu điều chỉnh & (Quản lý) Duyệt, chính thức thay đổi tồn kho. \\ \hline
+76 & UC07-09 & Từ chối yêu cầu điều chỉnh & (Quản lý) Từ chối yêu cầu điều chỉnh. \\ \hline
+77 & UC07-10 & Kiểm tra ngày hết hạn & (Hệ thống) Tự động quét các lô sắp hết hạn. \\ \hline
+78 & UC07-11 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Tác vụ này trùng với UC04-07. \\ \hline
+
+%--- UC08 - Supplier Returns Management ---%
+\multicolumn{4}{|l|}{\textbf{UC08 - Quản lý trả hàng nhà cung cấp}} \\ \hline
+79 & UC08-01 & Tạo yêu cầu trả hàng & Lập phiếu trả hàng cho NCC (do hỏng, hết hạn...). \\ \hline
+80 & UC08-02 & Gửi yêu cầu trả hàng & Gửi yêu cầu đi phê duyệt. \\ \hline
+81 & UC08-03 & Xem trạng thái yêu cầu trả hàng & Theo dõi yêu cầu đã được duyệt hay chưa. \\ \hline
+82 & UC08-04 & Xem xét yêu cầu trả hàng & (Quản lý) Xem xét và phê duyệt yêu cầu. \\ \hline
+83 & UC08-05 & Xác thực yêu cầu trả hàng & (Quản lý) Xác nhận trả, chính thức trừ tồn kho. \\ \hline
+
+%--- UC09 - Internal Transfer Management ---%
+\multicolumn{4}{|l|}{\textbf{UC09 - Quản lý chuyển kho nội bộ}} \\ \hline
+84 & UC09-01 & Tạo lệnh chuyển kho & Tạo lệnh điều chuyển hàng từ kho A sang kho B. \\ \hline
+85 & UC09-02 & Thực thi lấy hàng tại kho nguồn & (Giống UC06) Lấy hàng tại kho A. \\ \hline
+86 & UC09-03 & Đánh dấu đã gửi (Shipped) & Xác nhận kho A đã gửi hàng đi. \\ \hline
+87 & UC09-04 & Cập nhật đang vận chuyển & Cập nhật trạng thái hàng đang đi đường. \\ \hline
+88 & UC09-05 & Nhận hàng chuyển kho & (Giống UC05) Kho B nhận hàng. \\ \hline
+89 & UC09-06 & Xác thực số lượng chuyển kho & Kho B xác nhận số lượng thực nhận so với phiếu. \\ \hline
+90 & UC09-07 & Xác thực lệnh chuyển kho & (Quản lý) Đóng lệnh, cập nhật tồn kho 2 kho. \\ \hline
+
+%--- UC10 - Reporting & Analytics ---%
+\multicolumn{4}{|l|}{\textbf{UC10 - Báo cáo \& Phân tích}} \\ \hline
+91 & UC10-01 & Xem Báo cáo tồn kho & Báo cáo (tồn kho, định giá, luân chuyển...). \\ \hline
+92 & UC10-02 & Xem Báo cáo hoạt động & Báo cáo (hiệu suất nhận/xuất/kiểm kê). \\ \hline
+93 & UC10-03 & Xem Báo cáo nhà cung cấp & Báo cáo (đúng hạn, chất lượng NCC). \\ \hline
+94 & UC10-04 & Tạo mẫu báo cáo tùy chỉnh & Xây dựng báo cáo theo nhu cầu riêng. \\ \hline
+95 & UC10-05 & Chạy mẫu báo cáo & Thực thi mẫu báo cáo tùy chỉnh đã lưu. \\ \hline
+96 & UC10-06 & Xuất báo cáo & Xuất dữ liệu ra PDF, Excel, CSV. \\ \hline
+97 & UC10-07 & Phân tích dữ liệu lịch sử & (Hệ thống) Phân tích cho dự báo (forecasting). \\ \hline
+98 & UC10-08 & Tạo bản ghi dự báo & (Hệ thống) Lưu trữ kết quả dự báo nhu cầu. \\ \hline
+99 & UC10-09 & Xem lịch sử thay đổi (Audit Logs) & Xem ai đã làm gì, khi nào, giá trị cũ/mới. \\ \hline
+
+%--- UC11 - Notifications & Alerts ---%
+\multicolumn{4}{|l|}{\textbf{UC11 - Thông báo \& Cảnh báo}} \\ \hline
+100 & UC11-01 & Xem thông báo & Mở chuông thông báo để xem danh sách. \\ \hline
+101 & UC11-02 & Đánh dấu đã đọc & Đánh dấu một thông báo là đã xem. \\ \hline
+102 & UC11-03 & Xóa thông báo & Xóa một thông báo khỏi danh sách. \\ \hline
+103 & UC11-04 & Điều hướng đến thực thể & Nhấn vào thông báo và đi đến đối tượng liên quan. \\ \hline
+104 & UC11-05 & Tạo cảnh báo hết hạn & (Hệ thống) Gửi thông báo khi có hàng sắp hết hạn. \\ \hline
+105 & UC11-06 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Gửi thông báo khi hàng dưới ROP. \\ \hline
+106 & UC11-07 & Tạo thông báo chờ duyệt & (Hệ thống) Gửi thông báo khi có yêu cầu/phiên chờ. \\ \hline
+107 & UC11-08 & Tạo thông báo phiên hoàn thành & (Hệ thống) Gửi thông báo khi phiên (nhận/xuất) xong. \\ \hline
+108 & UC11-09 & Tạo thông báo lỗi hệ thống & (Hệ thống) Gửi thông báo cho Admin khi có lỗi. \\ \hline
+
+\end{longtable}
+
+\clearpage
+\section{Đặc tả Use Case}
+
+\subfile{../workspace/Hieu}
+\clearpage
+\subfile{../workspace/Nguyen}
+\clearpage
+\subfile{../workspace/Nhan}
 
 \end{document}
