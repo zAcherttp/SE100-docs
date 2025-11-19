@@ -1,0 +1,101 @@
+\documentclass[../chapter1.tex]{subfiles}
+\begin{document}
+
+\subsection{Nghiệp vụ Kiểm kê Kho}
+
+\subsubsection{Biểu mẫu (BM)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM11: Phiên Kiểm kê}} \\
+\hline
+Mã phiên: ................................. & Ngày tạo: .................................... \\
+\hline
+Người tạo: ................................ & Trạng thái: [ ] Mới tạo [ ] Đang kiểm [ ] Chờ xử lý [ ] Hoàn thành \\
+\hline
+Loại kiểm kê: [ ] Toàn phần [ ] Theo chu kỳ & Phạm vi (Kho, Khu vực, Nhóm hàng): ... \\
+\hline
+\multicolumn{2}{|l|}{Nhân viên thực hiện: ...................} \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiên kiểm kê}
+\label{tab:bm11-phien-kiem-ke}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM12: Phiếu Đếm hàng (Trên Mobile App)}} \\
+\hline
+Mã SP (Quét): .......................... & Tên SP: ....................................... \\
+\hline
+Vị trí (Khu/Kệ/Ô): .................... & Tồn kho sổ sách: .......................... \\
+\hline
+Số lượng thực tế (Đếm): .......... & Lô / HSD (nếu có): ....................... \\
+\hline
+\multicolumn{2}{|l|}{Ghi chú: ...................................} \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiếu đếm hàng (Trên Mobile App)}
+\label{tab:bm12-phieu-dem-hang}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM13: Báo cáo Chênh lệch Kiểm kê}} \\
+\hline
+Mã phiên: ................................. & Ngày hoàn thành đếm: ..................... \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Chi tiết chênh lệch:}} \\
+\hline
+\textit{Mã SP} & \textit{Tồn sổ sách} \\
+\hline
+............. & .................... \\
+\hline
+............. & .................... \\
+\hline
+\end{tabular}
+\caption{Báo cáo chênh lệch kiểm kê}
+\label{tab:bm13-bao-cao-chenh-lech}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM14: Phiếu Điều chỉnh Kho}} \\
+\hline
+Mã phiếu: ................................. & Tham chiếu (Mã phiên kiểm kê): ......... \\
+\hline
+Lý do điều chỉnh: Chênh lệch kiểm kê & Người duyệt (Quản lý): ................... \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Chi tiết điều chỉnh (Hệ thống tự động tạo):}} \\
+\hline
+\textit{Mã SP} & \textit{Điều chỉnh ( +/- )} \\
+\hline
+............. & .................................. \\
+\hline
+............. & .................................. \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiếu điều chỉnh kho}
+\label{tab:bm14-phieu-dieu-chinh-kho}
+\end{table}
+
+\subsubsection{Quy định (QĐ)}
+
+\textbf{QĐ5: Quy định về Kiểm kê kho}
+
+\begin{itemize}
+    \item Quản lý kho lập kế hoạch và tạo "Phiên Kiểm kê" trên hệ thống.
+    \item Nhân viên kho bắt buộc sử dụng thiết bị di động để quét mã vạch/QR và nhập số lượng thực tế. Nghiêm cấm ước lượng hoặc nhập số sách để nhập.
+    \item Hệ thống tự động đối chiếu và hiển thị các mã hàng bị chênh lệch ngay lập tức.
+    \item Quản lý phải ra soát Báo cáo Chênh lệch và xác nhận "Phiếu Điều chỉnh Kho" để đưa tồn kho sổ sách về đúng với thực tế.
+\end{itemize}
+
+\end{document}

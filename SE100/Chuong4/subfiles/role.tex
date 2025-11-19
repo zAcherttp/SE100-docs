@@ -1,0 +1,41 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{Role}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh vai trò \\
+\hline
+2 & name & string & unique & Tên vai trò \\
+\hline
+3 & description & string & & Mô tả vai trò \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{grantPermission(permission)}: Cấp quyền
+    \item \texttt{revokePermission(permission)}: Thu hồi quyền
+    \item \texttt{hasPermission(permission)}: Kiểm tra quyền
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{InventoryTransaction}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & bigint & PK & Mã định danh giao dịch \\
+\hline
+2 & quantityBefore & int & & Số lượng trước giao dịch \\
+\hline
+3 & quantityChange & int & & Số lượng thay đổi \\
+\hline
+4 & quantityAfter & int & & Số lượng sau giao dịch \\
+\hline
+5 & createdAt & datetime & & Thời gian giao dịch \\
+\hline
+6 & notes & string & & Ghi chú \\
+\hline
+7 & type & TransactionType & & Loại giao dịch \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{validate()}: Xác thực giao dịch
+    \item \texttt{rollback()}: Hoàn tác giao dịch
+\end{itemize}
+
+\end{document}

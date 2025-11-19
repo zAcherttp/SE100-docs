@@ -1,0 +1,75 @@
+\documentclass[../../main.tex]{subfiles}
+
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{vietnam}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% graphics search path (relative to this file)
+\ifdefined\providegraphicspath\else
+	\makeatletter\def\Ginput@path{{../../../assets/}}{{}}\makeatother
+\fi
+
+% Define colors
+\definecolor{headerblue}{RGB}{67, 113, 183}
+
+% Custom column types
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+\chapter{Class Diagram}
+
+\section{Class Diagram}
+
+\begin{figure}[H]
+	\centering
+	% relative path: ../../assets/nhan/UML.png
+	% scale to fit page while preserving aspect ratio
+	\includegraphics[width=\textwidth,height=0.52\textheight,keepaspectratio]{../../assets/nhan/UML.png}
+	\caption{Class Diagram (UML)}
+	\label{fig:class-diagram}
+\end{figure}
+
+\section{Class Diagram Explanation}
+
+% Core entity subsections
+\subfile{subfiles/organization}
+\subfile{subfiles/branch}
+\subfile{subfiles/product}
+\subfile{subfiles/productvariant}
+\subfile{subfiles/category}
+\subfile{subfiles/brand}
+\subfile{subfiles/supplier}
+\subfile{subfiles/purchaseorder}
+\subfile{subfiles/purchaseorderitem}
+\subfile{subfiles/transferorder}
+\subfile{subfiles/transferorderitem}
+\subfile{subfiles/storagezone}
+\subfile{subfiles/inventorybatch}
+\subfile{subfiles/inventorytransaction}
+\subfile{subfiles/user}
+\subfile{subfiles/role}
+\subfile{subfiles/permission}
+\subfile{subfiles/auditlog}
+
+\section{Enumeration Types}
+
+% Enumeration subsections
+\subfile{subfiles/purchaseorderstatus}
+\subfile{subfiles/transferstatus}
+\subfile{subfiles/batchstatus}
+\subfile{subfiles/transactiontype}
+\subfile{subfiles/zonetype}
+\subfile{subfiles/storagerequirement}
+\subfile{subfiles/unitofmeasure}
+\subfile{subfiles/actiontype}
+
+\end{document}

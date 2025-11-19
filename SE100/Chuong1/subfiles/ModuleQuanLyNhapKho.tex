@@ -1,0 +1,39 @@
+\documentclass[../chapter1.tex]{subfiles}
+\begin{document}
+
+\subsection{Module Quản lý Nhập kho}
+
+Module này quản lý toàn bộ dòng chảy của hàng hóa đi vào kho, từ khâu đặt hàng nhà cung cấp đến khi được lưu trữ đúng vị trí.
+
+\begin{itemize}
+    \item \textbf{Quản lý Đơn hàng Mua:}
+    \begin{itemize}
+        \item Tạo và theo dõi các đơn đặt hàng gửi đến nhà cung cấp.
+        \item Cập nhật trạng thái đơn hàng (chờ xác nhận, đang giao, đã nhận hàng).
+    \end{itemize}
+    
+    \item \textbf{Hệ thống Gợi ý Kho An toàn tối thiểu:}
+    \begin{itemize}
+        \item Phân tích dữ liệu lịch sử bán hàng và mức tồn kho an toàn để \textbf{tự động đề xuất số lượng sản phẩm cần nhập}, giúp tối ưu hóa vốn và tránh tình trạng thiếu hàng hoặc tồn kho quá mức.
+    \end{itemize}
+    
+    \item \textbf{Nghiệp vụ Nhận hàng:}
+    \begin{itemize}
+        \item \textbf{Tiếp nhận hàng hóa bằng mã vạch/mã QR:} Cho phép nhân viên kho quét mã vạch trên sản phẩm để nhập hàng vào hệ thống một cách nhanh chóng và chính xác.
+        \item \textbf{Tự động điền thông tin:} Hệ thống tự động nhận diện và điền các thông tin sản phẩm đã được khai báo trước đó.
+        \item \textbf{Ghi nhận vị trí lưu trữ:} Cho phép nhân viên ghi nhận vị trí cất giữ hàng hóa cụ thể theo cấu trúc Khu / Kệ / Ô.
+    \end{itemize}
+    
+    \item \textbf{Hệ thống Gợi ý Vị trí Lưu trữ Tối ưu:}
+    \begin{itemize}
+        \item Dựa trên tần suất bán ra, hệ thống sẽ \textbf{gợi ý vị trí lưu trữ lý tưởng} (ví dụ: hàng bán chạy sẽ được đặt ở các vị trí dễ lấy, gần khu vực xuất hàng).
+    \end{itemize}
+    
+    \item \textbf{Quản lý Trả hàng Nhà cung cấp:}
+    \begin{itemize}
+        \item Tạo phiếu trả hàng cho nhà cung cấp một cách dễ dàng.
+        \item \textbf{Hỗ trợ trả hàng chính xác theo từng lô nhập}, đảm bảo khả năng truy xuất nguồn gốc và đối soát công nợ chính xác.
+    \end{itemize}
+\end{itemize}
+
+\end{document}

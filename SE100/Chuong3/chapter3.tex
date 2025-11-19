@@ -1,0 +1,551 @@
+\documentclass[../../main.tex]{subfiles}
+\usepackage{array}
+\usepackage{float}
+
+\begin{document}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\chapter{Sơ đồ cơ sở dữ liệu tổng quát}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../../assets/diagram/database.png}
+    \label{Sơ đồ cơ sở dữ liệu tổng quan}
+\end{figure}
+
+
+\section{Bảng cơ sở dữ liệu chi tiết}
+
+% Organization Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh tổ chức \\
+\hline
+2 & name & string & NOT NULL & Tên tổ chức \\
+\hline
+3 & address & string & & Địa chỉ tổ chức \\
+\hline
+4 & phoneNumber & string & & Số điện thoại \\
+\hline
+5 & isActive & bool & NOT NULL & Trạng thái hoạt động \\
+\hline
+6 & settings & map & & Cài đặt tổ chức \\
+\hline
+\end{tabular}
+\caption{Bảng Organization}
+\end{table}
+
+% Branch Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh chi nhánh \\
+\hline
+2 & organizationId & int & FK & Mã tổ chức \\
+\hline
+3 & name & string & NOT NULL & Tên chi nhánh \\
+\hline
+4 & address & string & & Địa chỉ chi nhánh \\
+\hline
+5 & phoneNumber & string & & Số điện thoại \\
+\hline
+6 & isActive & bool & NOT NULL & Trạng thái hoạt động \\
+\hline
+7 & settings & map & & Cài đặt chi nhánh \\
+\hline
+\end{tabular}
+\caption{Bảng Branch}
+\end{table}
+
+% User Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh người dùng \\
+\hline
+2 & organizationId & int & FK & Mã tổ chức \\
+\hline
+3 & username & string & NOT NULL, UNIQUE & Tên đăng nhập \\
+\hline
+4 & fullName & string & NOT NULL & Họ và tên \\
+\hline
+5 & email & string & UNIQUE & Địa chỉ email \\
+\hline
+6 & isActive & bool & NOT NULL & Trạng thái hoạt động \\
+\hline
+7 & preferences & map & & Tùy chọn cá nhân \\
+\hline
+8 & roleId & int & FK & Mã vai trò \\
+\hline
+\end{tabular}
+\caption{Bảng User}
+\end{table}
+
+% Role Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh vai trò \\
+\hline
+2 & name & string & NOT NULL, UNIQUE & Tên vai trò \\
+\hline
+3 & description & string & & Mô tả vai trò \\
+\hline
+\end{tabular}
+\caption{Bảng Role}
+\end{table}
+
+% Permission Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh quyền \\
+\hline
+2 & name & string & NOT NULL, UNIQUE & Tên quyền \\
+\hline
+3 & description & string & & Mô tả quyền \\
+\hline
+\end{tabular}
+\caption{Bảng Permission}
+\end{table}
+
+% Audit Log Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & bigint & PK & Mã định danh log \\
+\hline
+2 & userId & int & FK & Mã người dùng \\
+\hline
+3 & createdAt & datetime & NOT NULL & Thời gian tạo \\
+\hline
+4 & ipAddress & string & & Địa chỉ IP \\
+\hline
+5 & details & map & & Chi tiết hành động \\
+\hline
+6 & actionType & string & NOT NULL & Loại hành động \\
+\hline
+\end{tabular}
+\caption{Bảng Audit Log}
+\end{table}
+
+% Product Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh sản phẩm \\
+\hline
+2 & name & string & NOT NULL & Tên sản phẩm \\
+\hline
+3 & description & string & & Mô tả sản phẩm \\
+\hline
+4 & isBatchTracked & bool & NOT NULL & Theo dõi theo lô \\
+\hline
+5 & shelfLifeDays & int & & Số ngày hạn sử dụng \\
+\hline
+6 & reorderPoint & int & & Điểm đặt hàng lại \\
+\hline
+7 & isActive & bool & NOT NULL & Trạng thái hoạt động \\
+\hline
+8 & categoryId & int & FK & Mã danh mục \\
+\hline
+9 & brandId & int & FK & Mã thương hiệu \\
+\hline
+10 & storageRequirement & string & & Yêu cầu lưu trữ \\
+\hline
+\end{tabular}
+\caption{Bảng Product}
+\end{table}
+
+% Product Variant Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & skuId & int & PK & Mã định danh biến thể \\
+\hline
+2 & productId & int & FK & Mã sản phẩm \\
+\hline
+3 & sku & string & NOT NULL, UNIQUE & Mã SKU \\
+\hline
+4 & barcode & string & UNIQUE & Mã vạch \\
+\hline
+5 & costPrice & decimal & NOT NULL & Giá vốn \\
+\hline
+6 & sellingPrice & decimal & NOT NULL & Giá bán \\
+\hline
+7 & weightKg & decimal & & Trọng lượng (kg) \\
+\hline
+8 & volumeM3 & decimal & & Thể tích (m³) \\
+\hline
+9 & unitOfMeasure & string & NOT NULL & Đơn vị đo \\
+\hline
+\end{tabular}
+\caption{Bảng Product Variant}
+\end{table}
+
+% Category Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh danh mục \\
+\hline
+2 & name & string & NOT NULL & Tên danh mục \\
+\hline
+3 & path & string & NOT NULL & Đường dẫn danh mục \\
+\hline
+4 & parentCategoryId & int & FK & Mã danh mục cha \\
+\hline
+\end{tabular}
+\caption{Bảng Category}
+\end{table}
+
+% Brand Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh thương hiệu \\
+\hline
+2 & name & string & NOT NULL, UNIQUE & Tên thương hiệu \\
+\hline
+\end{tabular}
+\caption{Bảng Brand}
+\end{table}
+
+% Supplier Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh nhà cung cấp \\
+\hline
+2 & name & string & NOT NULL & Tên nhà cung cấp \\
+\hline
+3 & contactPerson & string & & Người liên hệ \\
+\hline
+4 & email & string & & Địa chỉ email \\
+\hline
+5 & phone & string & & Số điện thoại \\
+\hline
+\end{tabular}
+\caption{Bảng Supplier}
+\end{table}
+
+% Purchase Order Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh đơn mua hàng \\
+\hline
+2 & supplierId & int & FK & Mã nhà cung cấp \\
+\hline
+3 & code & string & NOT NULL, UNIQUE & Mã đơn hàng \\
+\hline
+4 & orderedAt & datetime & NOT NULL & Thời gian đặt hàng \\
+\hline
+5 & expectedDeliveryAt & datetime & & Thời gian giao hàng dự kiến \\
+\hline
+6 & status & string & NOT NULL & Trạng thái đơn hàng \\
+\hline
+\end{tabular}
+\caption{Bảng Purchase Order}
+\end{table}
+
+% Purchase Order Item Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh chi tiết đơn mua \\
+\hline
+2 & purchaseOrderId & int & FK & Mã đơn mua hàng \\
+\hline
+3 & productVariantId & int & FK & Mã biến thể sản phẩm \\
+\hline
+4 & quantityOrdered & int & NOT NULL & Số lượng đặt hàng \\
+\hline
+5 & unitCost & decimal & NOT NULL & Đơn giá \\
+\hline
+\end{tabular}
+\caption{Bảng Purchase Order Item}
+\end{table}
+
+% Transfer Order Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh đơn chuyển kho \\
+\hline
+2 & fromBranchId & int & FK & Mã chi nhánh gửi \\
+\hline
+3 & toBranchId & int & FK & Mã chi nhánh nhận \\
+\hline
+4 & code & string & NOT NULL, UNIQUE & Mã đơn chuyển kho \\
+\hline
+5 & createdAt & datetime & NOT NULL & Thời gian tạo \\
+\hline
+6 & expectedDeliveryAt & datetime & & Thời gian giao hàng dự kiến \\
+\hline
+7 & actualDeliveryAt & datetime & & Thời gian giao hàng thực tế \\
+\hline
+8 & status & string & NOT NULL & Trạng thái đơn hàng \\
+\hline
+9 & createdByUserId & int & FK & Mã người tạo \\
+\hline
+\end{tabular}
+\caption{Bảng Transfer Order}
+\end{table}
+
+% Transfer Order Item Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh chi tiết chuyển kho \\
+\hline
+2 & transferOrderId & int & FK & Mã đơn chuyển kho \\
+\hline
+3 & productVariantId & int & FK & Mã biến thể sản phẩm \\
+\hline
+4 & quantityRequested & int & NOT NULL & Số lượng yêu cầu \\
+\hline
+5 & quantityShipped & int & & Số lượng đã gửi \\
+\hline
+6 & quantityReceived & int & & Số lượng đã nhận \\
+\hline
+\end{tabular}
+\caption{Bảng Transfer Order Item}
+\end{table}
+
+% Storage Zone Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh khu vực lưu trữ \\
+\hline
+2 & branchId & int & FK & Mã chi nhánh \\
+\hline
+3 & name & string & NOT NULL & Tên khu vực \\
+\hline
+4 & path & string & NOT NULL & Đường dẫn khu vực \\
+\hline
+5 & type & string & NOT NULL & Loại khu vực \\
+\hline
+6 & parentZoneId & int & FK & Mã khu vực cha \\
+\hline
+\end{tabular}
+\caption{Bảng Storage Zone}
+\end{table}
+
+% Inventory Batch Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & int & PK & Mã định danh lô hàng \\
+\hline
+2 & storageZoneId & int & FK & Mã khu vực lưu trữ \\
+\hline
+3 & productVariantId & int & FK & Mã biến thể sản phẩm \\
+\hline
+4 & quantity & int & NOT NULL & Số lượng \\
+\hline
+5 & supplierBatchNumber & string & & Số lô của nhà cung cấp \\
+\hline
+6 & internalBatchNumber & string & NOT NULL, UNIQUE & Số lô nội bộ \\
+\hline
+7 & receivedAt & date & NOT NULL & Ngày nhận hàng \\
+\hline
+8 & expiresAt & date & & Ngày hết hạn \\
+\hline
+9 & status & string & NOT NULL & Trạng thái lô hàng \\
+\hline
+\end{tabular}
+\caption{Bảng Inventory Batch}
+\end{table}
+
+% Inventory Transaction Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & id & bigint & PK & Mã định danh giao dịch \\
+\hline
+2 & inventoryBatchId & int & FK & Mã lô hàng \\
+\hline
+3 & quantityBefore & int & NOT NULL & Số lượng trước \\
+\hline
+4 & quantityChange & int & NOT NULL & Số lượng thay đổi \\
+\hline
+5 & quantityAfter & int & NOT NULL & Số lượng sau \\
+\hline
+6 & createdAt & datetime & NOT NULL & Thời gian tạo \\
+\hline
+7 & notes & string & & Ghi chú \\
+\hline
+8 & type & string & NOT NULL & Loại giao dịch \\
+\hline
+9 & userId & int & FK & Mã người dùng \\
+\hline
+10 & purchaseOrderItemId & int & FK & Mã chi tiết đơn mua \\
+\hline
+11 & transferOrderItemId & int & FK & Mã chi tiết chuyển kho \\
+\hline
+\end{tabular}
+\caption{Bảng Inventory Transaction}
+\end{table}
+
+% Storage Requirement Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Giá trị yêu cầu lưu trữ \\
+\hline
+\end{tabular}
+\caption{Bảng Storage Requirement}
+\end{table}
+
+% Unit of Measure Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Đơn vị đo lường \\
+\hline
+\end{tabular}
+\caption{Bảng Unit of Measure}
+\end{table}
+
+% Purchase Order Status Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Trạng thái đơn mua hàng \\
+\hline
+\end{tabular}
+\caption{Bảng Purchase Order Status}
+\end{table}
+
+% Transfer Status Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Trạng thái chuyển kho \\
+\hline
+\end{tabular}
+\caption{Bảng Transfer Status}
+\end{table}
+
+% Batch Status Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Trạng thái lô hàng \\
+\hline
+\end{tabular}
+\caption{Bảng Batch Status}
+\end{table}
+
+% Transaction Type Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Loại giao dịch kho \\
+\hline
+\end{tabular}
+\caption{Bảng Transaction Type}
+\end{table}
+
+% Zone Type Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Loại khu vực lưu trữ \\
+\hline
+\end{tabular}
+\caption{Bảng Zone Type}
+\end{table}
+
+% Action Type Table
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|C{0.8cm}|C{3.6cm}|C{2.7cm}|C{2.8cm}|C{5.2cm}|}
+\hline
+\textbf{STT} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} & \textbf{Ý nghĩa/ghi chú} \\
+\hline
+1 & value & string & PK & Loại hành động \\
+\hline
+\end{tabular}
+\caption{Bảng Action Type}
+\end{table}
+
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{ProductVariant}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & skuId & int & PK & Mã định danh SKU \\
+\hline
+2 & sku & string & unique & Mã SKU (Stock Keeping Unit) \\
+\hline
+3 & barcode & string & unique & Mã vạch sản phẩm \\
+\hline
+4 & costPrice & decimal & & Giá vốn \\
+\hline
+5 & sellingPrice & decimal & & Giá bán \\
+\hline
+6 & weightKg & decimal & & Khối lượng (kg) \\
+\hline
+7 & volumeM3 & decimal & & Thể tích (m³) \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{updatePricing(cost, selling)}: Cập nhật giá
+    \item \texttt{calculateMargin()}: Tính tỷ suất lợi nhuận
+\end{itemize}
+
+\end{document}

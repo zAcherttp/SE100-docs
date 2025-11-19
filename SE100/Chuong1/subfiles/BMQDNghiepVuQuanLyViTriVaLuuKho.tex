@@ -1,0 +1,61 @@
+\documentclass[../chapter1.tex]{subfiles}
+\begin{document}
+
+\subsection{Nghiệp vụ Quản lý Vị trí \& Lưu kho}
+
+\subsubsection{Biểu mẫu (BM)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM15: Cấu hình Sơ đồ Kho}} \\
+\hline
+Mã kho: ................................... & Tên kho: ..................................... \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Cấu trúc vị trí:}} \\
+\hline
+Khu vực: [ ] A, [ ] B, [ ] C ... & Dãy: [ ] 01, [ ] 02, [ ] 03 ... \\
+\hline
+Kệ: [ ] A, [ ] B, [ ] C ... & Ô: [ ] 01, [ ] 02, [ ] 03 ... \\
+\hline
+\multicolumn{2}{|l|}{\textit{Mã vị trí (tự động tạo): A-01-A-01}} \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu cấu hình sơ đồ kho}
+\label{tab:bm15-cau-hinh-so-do-kho}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|L{7cm}|L{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{BM16: Phiếu Di chuyển Vị trí (Nội bộ kho)}} \\
+\hline
+Mã phiếu: ................................. & Người thực hiện: ........................... \\
+\hline
+\multicolumn{2}{|l|}{Ngày di chuyển: .........................} \\
+\hline
+Mã SP (Quét): .......................... & Lô / Serial (nếu có): ..................... \\
+\hline
+Vị trí cũ: ................................. & Vị trí mới: .................................... \\
+\hline
+\multicolumn{2}{|l|}{Số lượng di chuyển: ..................} \\
+\hline
+\end{tabular}
+\caption{Biểu mẫu phiếu di chuyển vị trí (Nội bộ kho)}
+\label{tab:bm16-phieu-di-chuyen-vi-tri}
+\end{table}
+
+\subsubsection{Quy định (QĐ)}
+
+\textbf{QĐ6: Quy định về Quản lý vị trí \& Lưu kho}
+
+\begin{itemize}
+    \item Tất cả hàng hóa khi nhập kho hoặc di chuyển phải được gán một vị trí lưu trữ cụ thể (Khu/Kệ/Ô).
+    \item Ưu tiên sắp xếp hàng bán chạy, hàng nặng ở vị trí dễ tiếp cận, gần khu vực xuất hàng (theo gợi ý của hệ thống nếu có).
+    \item Tuân thủ các điều kiện bảo quản (nhiệt độ, độ ẩm) cho từng loại hàng.
+    \item Khi di chuyển hàng hóa từ vị trí này sang vị trí khác, bắt buộc phải thực hiện thao tác trên hệ thống (dùng Phiếu Di chuyển Vị trí hoặc nhập nâng trên Mobile).
+\end{itemize}
+
+\end{document}

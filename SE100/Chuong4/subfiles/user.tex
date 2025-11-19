@@ -1,0 +1,48 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{User}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh người dùng \\
+\hline
+2 & username & string & unique & Tên đăng nhập \\
+\hline
+3 & fullName & string & & Họ và tên đầy đủ \\
+\hline
+4 & email & string & unique & Địa chỉ email \\
+\hline
+5 & isActive & bool & & Trạng thái hoạt động \\
+\hline
+6 & preferences & Map<string, string> & & Tùy chọn cá nhân \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{authenticate(password)}: Xác thực đăng nhập
+    \item \texttt{hasPermission(permission)}: Kiểm tra quyền hạn
+    \item \texttt{assignToBranch(branch)}: Gán vào chi nhánh
+    \item \texttt{updatePreference(key, value)}: Cập nhật tùy chọn
+\end{itemize}
+
+\end{document}

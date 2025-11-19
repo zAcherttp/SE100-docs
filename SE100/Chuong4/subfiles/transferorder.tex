@@ -1,0 +1,48 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{TransferOrder}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh phiếu chuyển kho \\
+\hline
+2 & code & string & unique & Mã phiếu chuyển kho \\
+\hline
+3 & createdAt & datetime & & Thời gian tạo phiếu \\
+\hline
+4 & expectedDeliveryAt & datetime & & Thời gian giao hàng dự kiến \\
+\hline
+5 & actualDeliveryAt & datetime & & Thời gian giao hàng thực tế \\
+\hline
+6 & status & TransferStatus & & Trạng thái chuyển kho \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{addItem(sku, quantity)}: Thêm mặt hàng vào phiếu chuyển
+    \item \texttt{ship(shippedQuantities)}: Xuất kho
+    \item \texttt{receive(receivedQuantities)}: Nhận hàng
+    \item \texttt{cancel()}: Hủy phiếu chuyển kho
+\end{itemize}
+
+\end{document}

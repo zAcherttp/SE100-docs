@@ -1,0 +1,50 @@
+\documentclass[../chapter4_clean.tex]{subfiles}
+\begin{document}
+\subsection{InventoryBatch}
+
+\begin{longtable}{|C{0.8cm}|L{4cm}|L{3cm}|L{2.5cm}|L{4cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{.No}} & 
+\textcolor{white}{\textbf{Attribute name}} & 
+\textcolor{white}{\textbf{Data type}} & 
+\textcolor{white}{\textbf{Constraint}} & 
+\textcolor{white}{\textbf{Meaning or Note}} \\
+\hline
+\endhead
+
+1 & id & int & PK & Mã định danh lô hàng \\
+\hline
+2 & quantity & int & & Số lượng tồn kho \\
+\hline
+3 & supplierBatchNumber & string & & Số lô của nhà cung cấp \\
+\hline
+4 & internalBatchNumber & string & & Số lô nội bộ \\
+\hline
+5 & receivedAt & date & & Ngày nhận hàng \\
+\hline
+6 & expiresAt & date & & Ngày hết hạn \\
+\hline
+7 & status & BatchStatus & & Trạng thái lô hàng \\
+\hline
+\end{longtable}
+
+\textbf{Methods:}
+\begin{itemize}
+    \item \texttt{adjustQuantity(change, reason)}: Điều chỉnh số lượng
+    \item \texttt{checkExpiration()}: Kiểm tra hạn sử dụng
+    \item \texttt{isExpired()}: Kiểm tra đã hết hạn
+    \item \texttt{getDaysUntilExpiry()}: Lấy số ngày còn lại đến hết hạn
+\end{itemize}
+
+\end{document}

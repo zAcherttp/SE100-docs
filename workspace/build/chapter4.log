@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.1)  17 NOV 2025 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.1)  19 NOV 2025 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1706,3 +1706,471 @@ LaTeX Info: Redefining \_ on input line 42.
 (C:\Latex\tex/latex/firstaid\underscore-ltx.sty
 Package: underscore-ltx 2023/09/20 LaTeX firstaid to make underscore protected 
 ) (C:\Latex\tex/latex/morefloats\morefloats.sty
+Package: morefloats 2025/01/28 v1.1a Raise limit of unprocessed floats (HMM)
+Package morefloats Info: Maximum number of possible floats asked for: 36
+(morefloats)             (i.e. 18 more floats).
+(morefloats)             LaTeX might run out of memory before this
+(morefloats)             (in which case it will notify you).
+) (C:\Latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 43.
+\chaptertopmargin=\skip311
+Package hyperref Info: Option `colorlinks' set `true' on input line 120.
+ (C:\Latex\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip312
+\enit@outerparindent=\dimen406
+\enit@toks=\toks64
+\enit@inbox=\box147
+\enit@count@id=\count516
+\enitdp@description=\count517
+)) (C:\Latex\tex/latex/subfiles\subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+))) (C:\Latex\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count518
+\float@exts=\toks65
+\float@box=\box148
+\@float@everytoks=\toks66
+\@floatcapt=\box149
+) (C:\Latex\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks67
+\minrowclearance=\skip313
+\rownum=\count519
+)
+
+Package array Warning: Column C is already defined on input line 24.
+
+(c:/Users\Admin\OneDrive\Desktop\CNPM\SE100-docs\workspace\build\chapter4.aux)
+\openout1 = `chapter4.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 26.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 26.
+ (C:\Latex\tex/latex/vntex\t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=632.19432pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-1.1381pt
+* \headheight=20.0pt
+* \headsep=21.68121pt
+* \topskip=14.4pt
+* \footskip=28.90755pt
+* \marginparwidth=51.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=11.69997pt plus 5.19942pt minus 2.60054pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Latex\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count520
+\scratchdimen=\dimen407
+\scratchbox=\box150
+\nofMPsegments=\count521
+\nofMParguments=\count522
+\everyMPshowfont=\toks68
+\MPscratchCnt=\count523
+\MPscratchDim=\dimen408
+\MPnumerator=\count524
+\makeMPintoPDFobject=\count525
+\everyMPtoPDFconversion=\toks69
+) (C:\Latex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Latex\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (C:\Latex\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: scrextend package is loaded.
+\caption@addmargin@hsize=\dimen409
+\caption@addmargin@linewidth=\dimen410
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 26.
+ (c:/Users\Admin\OneDrive\Desktop\CNPM\SE100-docs\workspace\build\chapter4.out) (c:/Users\Admin\OneDrive\Desktop\CNPM\SE100-docs\workspace\build\chapter4.out)
+\@outlinefile=\write5
+\openout5 = `chapter4.out'.
+
+\c@lstlisting=\count526
+
+Ch\uhorn \ohorn ng 1.
+<../../../assets/nhan/UML.png, id=150, 3754.025pt x 6413.9625pt>
+File: ../../../assets/nhan/UML.png Graphic file (type png)
+<use ../../../assets/nhan/UML.png>
+Package pdftex.def Info: ../../../assets/nhan/UML.png  used on input line 36.
+(pdftex.def)             Requested size: 192.40935pt x 328.74217pt.
+(subfiles/organization.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--38
+ [] [] [] [] [] 
+ []
+
+
+
+[1
+
+
+{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Latex/fonts/enc/dvips/vntex/t5.enc} <../../../assets/nhan/UML.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 42.
+ (C:\Latex\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 42.
+ (C:\Latex\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)) (subfiles/branch.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--38
+ [] [] [] [] [] 
+ []
+
+[2{C:/Latex/fonts/enc/dvips/base/8r.enc}]) (subfiles/product.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--40
+ [] [] [] [] [] 
+ []
+
+) (subfiles/productvariant.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--40
+ [] [] [] [] [] 
+ []
+
+
+
+[3]) (subfiles/category.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--32
+ [] [] [] [] [] 
+ []
+
+) (subfiles/brand.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--30
+ [] [] [] [] [] 
+ []
+
+
+
+[4]) (subfiles/supplier.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--36
+ [] [] [] [] [] 
+ []
+
+) (subfiles/purchaseorder.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (23.2177pt too wide) in paragraph at lines 34--34
+[]|\T5/ptm/m/n/13 PurchaseOrderStatus|  
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--36
+ [] [] [] [] [] 
+ []
+
+[5]) (subfiles/purchaseorderitem.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--32
+ [] [] [] [] [] 
+ []
+
+) (subfiles/transferorder.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--38
+ [] [] [] [] [] 
+ []
+
+[6]) (subfiles/transferorderitem.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--34
+ [] [] [] [] [] 
+ []
+
+) (subfiles/storagezone.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--34
+ [] [] [] [] [] 
+ []
+
+
+
+[7]) (subfiles/inventorybatch.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--40
+ [] [] [] [] [] 
+ []
+
+) (subfiles/inventorytransaction.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--40
+ [] [] [] [] [] 
+ []
+
+
+
+[8]) (subfiles/user.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--38
+ [] [] [] [] [] 
+ []
+
+[9]) (subfiles/role.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--32
+ [] [] [] [] [] 
+ []
+
+) (subfiles/permission.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--32
+ [] [] [] [] [] 
+ []
+
+) (subfiles/auditlog.tex
+Overfull \hbox (14.03032pt too wide) in alignment at lines 5--14
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 14--24
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.03032pt too wide) in alignment at lines 24--36
+ [] [] [] [] [] 
+ []
+
+
+
+[10]) (subfiles/purchaseorderstatus.tex) (subfiles/transferstatus.tex [11]) (subfiles/batchstatus.tex) (subfiles/transactiontype.tex) (subfiles/zonetype.tex [12]) (subfiles/storagerequirement.tex) (subfiles/unitofmeasure.tex) (subfiles/actiontype.tex)
+
+[13] (c:/Users\Admin\OneDrive\Desktop\CNPM\SE100-docs\workspace\build\chapter4.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `chapter4.out' has not changed.
+(rerunfilecheck)             Checksum: B2E2D6D3918E0D1BC69F9588E95D6F85;3671.
+ ) 
+Here is how much of TeX's memory you used:
+ 46374 strings out of 468080
+ 905948 string characters out of 5443088
+ 1606590 words of memory out of 5000000
+ 74139 multiletter control sequences out of 15000+600000
+ 655218 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 143i,11n,138p,2627b,721s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Latex/fonts/type1/vntex/urwvn/utmb8v.pfb><C:/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Latex/fonts/type1/vntex/urwvn/utmr8v.pfb><C:/Latex/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on c:/Users\Admin\OneDrive\Desktop\CNPM\SE100-docs\workspace\build\chapter4.pdf (13 pages, 964762 bytes).
+PDF statistics:
+ 276 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
+ 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+
