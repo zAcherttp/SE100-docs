@@ -8,9 +8,9 @@
 \hline
 \textbf{Mã UC} & UC02-03 \\
 \hline
-\textbf{Tên UC} & Configure Category Settings (Cấu hình Cài đặt Danh mục) \\
+\textbf{Tên UC} & Delete Category (Xóa Danh mục) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép quản trị viên thiết lập các quy tắc kinh doanh cụ thể cho một danh mục (ví dụ: cảnh báo hết hạn). \\
+\textbf{Mô tả tóm tắt} & Cho phép quản trị viên xóa mềm (soft delete) một danh mục. \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
 \hline
@@ -18,21 +18,24 @@
 \begin{enumerate}
     \vspace{-18pt}
     \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Danh mục".
-    \item Tác nhân chọn một danh mục và nhấn "Cài đặt".
-    \item Hệ thống hiển thị biểu mẫu cài đặt (lưu trong category_settings).
-    \item Tác nhân «include» Set Expiry Warning Thresholds (đặt ngưỡng cảnh báo hết hạn, ví dụ: 30, 60 ngày).
-    \item Tác nhân «include» Set Default Storage Requirements (đặt yêu cầu lưu trữ mặc định, ví dụ: "Refrigerated").
-    \item Tác nhân nhấn "Lưu".
-    \item Hệ thống cập nhật các cài đặt (JSONB) cho danh mục.
+    \item Tác nhân chọn một danh mục và nhấn "Xóa".
+    \item Hệ thống hiển thị xác nhận.
+    \item Tác nhân xác nhận.
+    \item Hệ thống thực hiện Soft Delete (cập nhật is_deleted = true, deleted_at = NOW()).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Không có \\
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[3a.] Tác nhân hủy bỏ -> Không có gì xảy ra.
+    \item[3b.] Danh mục đang chứa sản phẩm -> Hệ thống cảnh báo "Danh mục chứa sản phẩm. Vui lòng di chuyển sản phẩm sang danh mục khác trước khi xóa." (Hoặc tự động gán sản phẩm về "Uncategorized").
+\end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Các cài đặt này sẽ được áp dụng cho tất cả sản phẩm thuộc danh mục này, trừ khi bị ghi đè ở cấp sản phẩm. \\
+\textbf{Yêu cầu đặc biệt} & Phải là xóa mềm để bảo toàn lịch sử dữ liệu. \\
 \hline
 \textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền "MANAGE_CATEGORIES". \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Các quy tắc kinh doanh cho danh mục được cập nhật. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Danh mục bị đánh dấu là đã xóa và không hiển thị trong các lựa chọn thông thường. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

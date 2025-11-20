@@ -10,36 +10,55 @@
 \hline
 \textbf{Tên UC} & Join Workspace (Tham gia không gian làm việc) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép người dùng đã có tài khoản gửi yêu cầu tham gia vào một tổ chức/không gian làm việc cụ thể bằng mã mời. \\
+\textbf{Mô tả tóm tắt} & Cho phép người dùng đã có tài khoản tham gia vào một tổ chức/không gian làm việc thông qua email mời từ Quản trị viên. \\
 \hline
-\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò \\
+\textbf{Tác nhân tham gia} & 
+\begin{itemize}
+    \vspace{-18pt}
+    \item Nhân viên chưa chưa gán vai trò
+    \item Quản trị viên
+\end{itemize} \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Người dùng (đã đăng nhập nhưng chưa thuộc tổ chức nào) được điều hướng đến trang "Tham gia Workspace".
-    \item Hệ thống yêu cầu mã mời.
-    \item Người dùng chọn 1 trong 2 cách:
-    \item[3a.] Scan QR Code («include» Decode Invitation Code).
-    \item[3b.] Enter Invitation Code Manually (Nhập mã thủ công).
-    \item Người dùng nhấn "Gửi yêu cầu tham gia".
-    \item Hệ thống xác thực mã mời (tồn tại, còn hạn).
-    \item Hệ thống tạo một bản ghi workspace_invitations với trạng thái "PENDING".
+    \item Người dùng liên hệ với Quản trị viên workspace qua email để yêu cầu tham gia.
+    \item Quản trị viên gửi email mời kèm đường link tham gia workspace.
+    \item Người dùng nhận email và nhấn vào đường link.
+    \item Hệ thống xác thực link (hợp lệ, chưa hết hạn, chưa được sử dụng).
+    \item Hệ thống hiển thị trang xác nhận với thông tin workspace.
+    \item Người dùng nhấn "Chấp nhận tham gia".
+    \item Hệ thống thêm người dùng vào workspace với vai trò mặc định.
+    \item Hệ thống hiển thị thông báo thành công và chuyển hướng đến dashboard workspace.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item[5a.] Mã mời không hợp lệ hoặc hết hạn -> Hệ thống hiển thị thông báo lỗi.
+    \item[4a.] Link không hợp lệ, đã hết hạn hoặc đã được sử dụng:
+    \begin{enumerate}
+        \item Hệ thống hiển thị thông báo lỗi "Link mời không hợp lệ hoặc đã hết hạn".
+        \item Use case kết thúc.
+    \end{enumerate}
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Không có \\
+\textbf{Yêu cầu đặc biệt} & 
+\begin{itemize}
+    \vspace{-18pt}
+    \item Link mời có thời hạn sử dụng (ví dụ: 7 ngày)
+    \item Link mời chỉ sử dụng được 1 lần
+    \item Email mời phải được gửi đến đúng địa chỉ email của người dùng trong hệ thống
+\end{itemize} \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập (đã xác thực) nhưng chưa được gán vào tổ chức/workspace nào. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã có tài khoản nhưng chưa thuộc workspace nào hoặc muốn tham gia workspace khác. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một yêu cầu tham gia được tạo và đang chờ Quản trị viên phê duyệt. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Người dùng đã được thêm vào workspace và có quyền truy cập các chức năng theo vai trò được gán. \\
 \hline
-\textbf{Điểm mở rộng} & «extend» Request Pending Approval (Yêu cầu chờ phê duyệt). \\
+\textbf{Điểm mở rộng} & 
+\begin{itemize}
+    \vspace{-18pt}
+    \item «include» Validate Invitation Link (Xác thực link mời)
+\end{itemize} \\
 \hline
 \end{tabular}
 

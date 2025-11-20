@@ -8,34 +8,30 @@
 \hline
 \textbf{Mã UC} & UC02-13 \\
 \hline
-\textbf{Tên UC} & Manage Barcodes (Quản lý Mã vạch) \\
+\textbf{Tên UC} & Edit SKU (Chỉnh sửa SKU) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép gán nhiều mã vạch (UPC, EAN, nội bộ, QR) cho một SKU. \\
+\textbf{Mô tả tóm tắt} & Cho phép chỉnh sửa thông tin chi tiết của một SKU (ví dụ: giá, kích thước). \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Tác nhân điều hướng đến trang chi tiết của một SKU.
-    \item Tác nhân chọn "Quản lý Mã vạch".
-    \item Tác nhân «include» Add Multiple Barcodes (thêm giá trị mã vạch mới).
-    \item Tác nhân «include» Specify Barcode Type (chỉ định loại: UPC, EAN, QR, Internal).
+    \item Tác nhân chọn một SKU từ danh sách hoặc trang sản phẩm.
+    \item Tác nhân nhấn "Chỉnh sử
+    \item Tác nhân thay đổi thông tin (giá bán, giá vốn, trọng lượng, thể tích...).
     \item Tác nhân nhấn "Lưu".
-    \item (Tùy chọn) Hệ thống «include» Generate QR Code (tự động tạo QR code nếu là loại 'Internal').
+    \item Nếu giá thay đổi, hệ thống «include» Audit Price Changes (ghi lại nhật ký thay đổi giá).
+    \item Hệ thống cập nhật bản ghi SKU.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & 
-\begin{enumerate}
-    \vspace{-18pt}
-    \item[3a.] Mã vạch đã tồn tại (được gán cho SKU khác) -> Hệ thống báo lỗi.
-\end{enumerate} \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Cần có bảng product_barcodes riêng để lưu quan hệ nhiều-một với SKU. \\
+\textbf{Yêu cầu đặc biệt} & Mọi thay đổi về giá phải được ghi lại trong audit log. \\
 \hline
 \textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập. SKU đã tồn tại. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & SKU được liên kết với một hoặc nhiều mã vạch. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin SKU được cập nhật. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

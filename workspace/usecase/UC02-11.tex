@@ -8,32 +8,36 @@
 \hline
 \textbf{Mã UC} & UC02-11 \\
 \hline
-\textbf{Tên UC} & Delete Product (Xóa Sản phẩm) \\
+\textbf{Tên UC} & Create SKU (Tạo SKU) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép quản trị viên xóa mềm (soft delete) một sản phẩm chủ. \\
+\textbf{Mô tả tóm tắt} & Tạo một biến thể sản phẩm (SKU) cụ thể, có thể bán được, dựa trên một sản phẩm chủ. \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Tác nhân chọn một sản phẩm và nhấn "Xóa".
-    \item Hệ thống hiển thị xác nhận.
-    \item Tác nhân xác nhận.
-    \item Hệ thống thực hiện Soft Delete (cập nhật is_deleted = true).
+    \item Tác nhân điều hướng đến trang chi tiết của một Sản phẩm (Product).
+    \item Tác nhân chọn "Thêm SKU / Biến thể".
+    \item Hệ thống hiển thị biểu mẫu tạo SKU.
+    \item Tác nhân «include» Generate/Assign SKU Code (tạo/gán mã SKU duy nhất).
+    \item Tác nhân «include» Set Cost/Selling Price (đặt giá vốn/giá bán).
+    \item Tác nhân «include» Define Dimensions (định nghĩa kích thước: trọng lượng, thể tích).
+    \item Tác nhân «include» Set Packing Constraints (đặt ràng buộc đóng gói: nhiệt độ, giới hạn xếp chồng).
+    \item Tác nhân nhấn "Lưu".
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item[2a.] Sản phẩm đang có SKU liên kết hoặc hàng tồn kho -> Hệ thống chặn xóa và yêu cầu xóa SKU trước.
+    \item[4a.] Mã SKU bị trùng -> Hệ thống báo lỗi.
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Phải là xóa mềm. \\
+\textbf{Yêu cầu đặc biệt} & SKU là đơn vị cơ sở để theo dõi tồn kho. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý sản phẩm. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý sản phẩm. Sản phẩm chủ đã tồn tại. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Sản phẩm chủ bị đánh dấu là đã xóa. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một biến thể SKU mới được tạo và liên kết với sản phẩm chủ. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

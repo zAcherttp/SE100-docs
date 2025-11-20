@@ -8,31 +8,57 @@
 \hline
 \textbf{Mã UC} & UC01-10 \\
 \hline
-\textbf{Tên UC} & Generate Workspace Invitation Code (Tạo mã mời tham gia) \\
+\textbf{Tên UC} & Invite User to Workspace (Mời người dùng vào workspace) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên tạo một mã mời (dạng văn bản và QR) để gửi cho nhân viên mới. \\
+\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên mời người dùng tham gia workspace thông qua email. \\
 \hline
-\textbf{Tác nhân tham gia} & Quản trị viên hệ thống \\
+\textbf{Tác nhân tham gia} & 
+\begin{itemize}
+    \vspace{-18pt}
+    \item Quản trị viên hệ thống
+\end{itemize} \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Admin điều hướng đến trang "Quản lý Người dùng" -> "Mời".
-    \item Admin nhấn "Tạo mã mời mới".
-    \item Hệ thống «include» Set Validity Duration (cho phép Admin đặt thời hạn cho mã, ví dụ: 24 giờ).
-    \item Hệ thống tạo một mã mời duy nhất và lưu vào bảng workspace_invitations.
-    \item Hệ thống «include» Generate QR Code (hiển thị mã QR tương ứng).
+    \item Quản trị viên điều hướng đến trang "/[workspace]/settings/members".
+    \item Quản trị viên nhấn nút "Invite" hoặc "Mời thành viên".
+    \item Quản trị viên nhập địa chỉ email của người dùng cần mời (có thể nhập nhiều email, phân cách bằng dấu phẩy).
+    \item Quản trị viên nhấn nút "Confirm" hoặc "Gửi lời mời".
+    \item Hệ thống xác thực danh sách email (kiểm tra định dạng hợp lệ).
+    \item Hệ thống tạo link mời duy nhất cho mỗi email hợp lệ với thời hạn sử dụng.
+    \item Hệ thống gửi email mời đến các địa chỉ email hợp lệ kèm theo link tham gia workspace.
+    \item Hệ thống hiển thị thông báo thành công "Đã gửi lời mời đến X email".
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Không có \\
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[6a.] Có email không hợp lệ (sai định dạng):
+    \begin{enumerate}
+        \item Hệ thống hiển thị thông báo lỗi "Email không hợp lệ: [danh sách email lỗi]".
+    \end{enumerate}
+    \item[6c.] Email đã được mời trước đó và link chưa hết hạn:
+    \begin{enumerate}
+        \item Hệ thống hiển thị cảnh báo "Email [email] đã có lời mời đang chờ".
+    \end{enumerate}
+\end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Mã mời phải là duy nhất và có thời gian hết hạn. \\
+\textbf{Yêu cầu đặc biệt} & 
+\begin{itemize}
+    \vspace{-18pt}
+    \item Link mời phải là duy nhất và có thời hạn sử dụng (ví dụ: 7 ngày)
+    \item Hệ thống hỗ trợ mời nhiều email cùng lúc (bulk invite)
+\end{itemize} \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "INVITE_USERS". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Quản trị viên đã đăng nhập và có quyền mời thành viên. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một mã mời mới được tạo và sẵn sàng để chia sẻ. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Email mời được gửi thành công, link mời được lưu và chờ người dùng chấp nhận (UC01-07). \\
 \hline
-\textbf{Điểm mở rộng} & Không có \\
+\textbf{Điểm mở rộng} & 
+\begin{itemize}
+    \item «extend» Resend Invitation (Gửi lại lời mời)
+\end{itemize} \\
 \hline
 \end{tabular}
 
