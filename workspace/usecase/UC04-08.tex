@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC04-08 \\
+\hline
+\textbf{Tên UC} & Tự động tính ROP (Hệ thống) \\
+\hline
+\textbf{Mô tả tóm tắt} & Hệ thống tự động tính lại điểm đặt hàng (ROP) dựa trên lịch sử tiêu thụ hàng hóa theo thời gian thực. \\
+\hline
+\textbf{Tác nhân tham gia} & (Hệ thống) \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Hệ thống lấy dữ liệu lịch sử tiêu thụ.
+    \item Áp dụng công thức tính ROP dựa trên tốc độ tiêu thụ và thời gian giao hàng.
+    \item Cập nhật giá trị ROP mới cho từng mặt hàng.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu thiếu dữ liệu lịch sử → bỏ qua sản phẩm đó. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Hệ thống cần có module thống kê và dữ liệu thời gian thực. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có dữ liệu tồn kho và lịch sử tiêu thụ. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & ROP của sản phẩm được cập nhật tự động. \\
+\hline
+\textbf{Điểm mở rộng} & Không có. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC04-08}
+\end{table}
+
+\end{document}

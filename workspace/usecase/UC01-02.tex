@@ -1,0 +1,47 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-02 \\
+\hline
+\textbf{Tên UC} & Login with Credentials (Đăng nhập bằng tài khoản) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng đã đăng ký xác thực vào hệ thống bằng email và mật khẩu. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò / Bất kỳ Actor nào đã đăng ký \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng truy cập trang Đăng nhập.
+    \item Người dùng nhập Email và Mật khẩu.
+    \item Người dùng nhấn "Đăng nhập".
+    \item Hệ thống «include» Verify Password (xác thực mật khẩu qua better-auth).
+    \item Hệ thống «include» Generate JWT Token (tạo token phiên).
+    \item Hệ thống tạo phiên làm việc và chuyển hướng người dùng đến Bảng điều khiển (Dashboard).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Email hoặc Mật khẩu không chính xác -> Hệ thống hiển thị thông báo "Thông tin đăng nhập không hợp lệ".
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Tài khoản người dùng phải tồn tại và đang hoạt động. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng chưa được xác thực. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Người dùng được xác thực, có phiên làm việc (session) và được cấp JWT token. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC01-02}
+\end{table}
+
+\end{document}

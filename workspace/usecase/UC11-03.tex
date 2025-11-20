@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-03 \\
+\hline
+\textbf{Tên UC} & Bỏ qua Thông báo (Dismiss Notification) \\
+\hline
+\textbf{Mô tả tóm tắt} & Ẩn một thông báo khỏi danh sách (nhưng không xóa vĩnh viễn). \\
+\hline
+\textbf{Tác nhân tham gia} & All Authenticated Users (Tất cả người dùng) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng nhấp vào nút "Bỏ qua" (Dismiss) hoặc "X" trên một thông báo. \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng nhấn "Bỏ qua".
+    \item Hệ thống cập nhật dismissed_at timestamp cho thông báo đó.
+    \item Thông báo biến mất khỏi danh sách xem hiện tại.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Có thông báo đang hiển thị. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo bị ẩn khỏi danh sách. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC11-03}
+\end{table}
+
+\end{document}

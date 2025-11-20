@@ -1,0 +1,39 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC10-09 \\
+\hline
+\textbf{Tên UC} & Xem Nhật ký Kiểm toán (View Audit Logs) \\
+\hline
+\textbf{Mô tả tóm tắt} & Kế toán hoặc Admin xem lại lịch sử thay đổi của các dữ liệu quan trọng. \\
+\hline
+\textbf{Tác nhân tham gia} & Accountant (Kế toán), System Administrator \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng truy cập chức năng "Nhật ký Kiểm toán". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn các bộ lọc (VD: Khoảng thời gian, Tên trường, Người thực hiện, Loại hành động...).
+    \item Hệ thống truy vấn và hiển thị nhật ký; người dùng có thể xem chi tiết của một thay đổi.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Người dùng đã đăng nhập và có quyền "VIEW_AUDIT_LOGS". \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Lịch sử thay đổi được hiển thị. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & Nhật ký phải được ghi lại cho tất cả các hành động C/U/D trên các thực thể tài chính. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC10-09}
+\end{table}
+
+\end{document}

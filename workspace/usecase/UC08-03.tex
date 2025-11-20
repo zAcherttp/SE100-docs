@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC08-03 \\
+\hline
+\textbf{Tên UC} & Xem Trạng thái Yêu cầu Trả hàng (View Return Request Status) \\
+\hline
+\textbf{Mô tả tóm tắt} & Người dùng tra cứu và xem trạng thái của các yêu cầu trả hàng đã tạo. \\
+\hline
+\textbf{Tác nhân tham gia} & Inventory Administrator (QT Tồn kho), Stock Clerk (NV Kho) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng truy cập danh sách "Yêu cầu Trả hàng". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Hệ thống hiển thị danh sách các yêu cầu trả hàng.
+    \item Người dùng lọc/tìm kiếm theo Mã yêu cầu, Trạng thái, hoặc Nhà cung cấp.
+    \item Người dùng chọn 1 yêu cầu để xem chi tiết trạng thái (Draft, Submitted, Approved...).
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Người dùng đã đăng nhập. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông tin trạng thái yêu cầu được hiển thị. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC08-03}
+\end{table}
+
+\end{document}

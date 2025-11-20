@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC06-02 \\
+\hline
+\textbf{Tên UC} & Tạo phiên lấy hàng \\
+\hline
+\textbf{Mô tả tóm tắt} & Sau khi đơn hàng xuất được tạo, nhân viên kho khởi tạo phiên lấy hàng để chuẩn bị hàng hóa trong kho. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn đơn hàng xuất để tạo phiên lấy hàng.
+    \item Xác định khu vực và người phụ trách lấy hàng.
+    \item Hệ thống tạo phiên lấy hàng mới, gắn với đơn hàng tương ứng.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu không tìm thấy đơn hàng phù hợp → hiển thị cảnh báo.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Phải có đơn hàng xuất đã được phê duyệt. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn hàng xuất hợp lệ có trong hệ thống. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên lấy hàng được tạo và gắn với nhân viên phụ trách. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC06-03 Thực thi lấy hàng. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC06-02}
+\end{table}
+
+\end{document}

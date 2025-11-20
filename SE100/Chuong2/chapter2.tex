@@ -1,8 +1,12 @@
 \documentclass[../../main.tex]{subfiles}
 \usepackage{float}
+\usepackage{morefloats}
 \usepackage{longtable}
 \usepackage{array}
+\usepackage[table]{xcolor}
+\definecolor{headerblue}{RGB}{67, 113, 183}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \begin{document}
 
 \chapter{Sơ đồ Use-case}
@@ -11,7 +15,7 @@
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.18\textwidth]{../../assets/cover/Nguyen/UC TỔNG QUAN.drawio.png}
+    \includegraphics[width=1.18\textwidth]{../../assets/cover/UC/UC TỔNG QUAN.drawio.png}
     \caption{Use-case tổng quan}
     \label{fig:use-case-tong-quan}
 \end{figure}
@@ -22,47 +26,47 @@
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Hieu/UC01.drawio.png}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC01.drawio.png}
     \caption{UC01}
     \label{fig:uc01}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Hieu/UC02.drawio.png}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC02.drawio.png}
     \caption{UC02}
     \label{fig:uc02}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Hieu/UC03.drawio.png}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC03.drawio.png}
     \caption{UC03}
     \label{fig:uc03}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Hieu/UC04.drawio.png}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC04.drawio.png}
     \caption{UC04}
     \label{fig:uc04}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Nguyen/UC05(3).jpg}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC05(3).jpg}
     \caption{UC05}
     \label{fig:uc05}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Nguyen/UC06(3).jpg}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC06(3).jpg}
     \caption{UC06}
     \label{fig:uc06}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{../../assets/cover/Nguyen/UC07(5).jpg}
+    \includegraphics[width=0.85\textwidth]{../../assets/cover/UC/UC07(5).jpg}
     \caption{UC07}
     \label{fig:uc07}
 \end{figure}
@@ -263,10 +267,6 @@
 \clearpage
 \section{Đặc tả Use Case}
 
-\subfile{../../workspace/Hieu}
-\clearpage
-\subfile{../../workspace/Nguyen}
-\clearpage
-\subfile{../../workspace/Nhan}
+\subfile{../../workspace/UC}
 
 \end{document}

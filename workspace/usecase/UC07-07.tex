@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-07 \\
+\hline
+\textbf{Tên UC} & Gửi yêu cầu điều chỉnh để phê duyệt \\
+\hline
+\textbf{Mô tả tóm tắt} & Sau khi tạo, nhân viên hoặc quản lý gửi yêu cầu điều chỉnh lên cấp có thẩm quyền để phê duyệt. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên kho, Quản lý kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn yêu cầu điều chỉnh trong danh sách.
+    \item Nhấn “Gửi phê duyệt”.
+    \item Hệ thống gửi thông báo đến người phê duyệt. 
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu chưa nhập lý do điều chỉnh → không cho phép gửi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần có người phê duyệt được phân quyền. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có yêu cầu điều chỉnh chờ gửi. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu được gửi thành công và chờ duyệt. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC07-08 Phê duyệt yêu cầu điều chỉnh. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC07-07}
+\end{table}
+
+\end{document}

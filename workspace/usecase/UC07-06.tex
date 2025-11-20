@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-06 \\
+\hline
+\textbf{Tên UC} & Tạo yêu cầu điều chỉnh \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhân viên hoặc quản lý tạo yêu cầu điều chỉnh hàng tồn khi phát hiện sai lệch giữa dữ liệu hệ thống và kiểm kê thực tế. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho, Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn chức năng “Tạo yêu cầu điều chỉnh”.
+    \item Nhập thông tin sản phẩm, số lượng chênh lệch và lý do.
+    \item Hệ thống tạo yêu cầu điều chỉnh và lưu vào danh sách chờ phê duyệt.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu thông tin không hợp lệ → hiển thị cảnh báo. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Chỉ được tạo điều chỉnh cho sản phẩm đã xác thực kiểm kê. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đã phát hiện chênh lệch trong kiểm kê. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu điều chỉnh được tạo thành công. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC07-07 Gửi yêu cầu điều chỉnh để phê duyệt. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC07-06}
+\end{table}
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-05 \\
+\hline
+\textbf{Tên UC} & Tạo Cảnh báo Hết hạn (Create Expiry Warnings) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Hệ thống) Tự động tạo thông báo khi phát hiện lô hàng sắp hết hạn. \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Kích hoạt bởi Tác vụ Kiểm tra Hết hạn (UC07-10). \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item UC07-10 phát hiện một lô hàng sắp hết hạn.
+    \item Hệ thống tạo một bản ghi thông báo mới (type: EXPIRY_WARNING, priority: HIGH).
+    \item Gán người nhận: Quản lý Kho, QT Tồn kho.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & UC07-10 chạy và có kết quả. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo cảnh báo hết hạn được tạo và gửi đến người dùng liên quan. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC11-05}
+\end{table}
+
+\end{document}

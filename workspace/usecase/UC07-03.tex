@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-03 \\
+\hline
+\textbf{Tên UC} & Hoàn thành phiên kiểm kê \\
+\hline
+\textbf{Mô tả tóm tắt} & Sau khi hoàn tất đếm hàng, nhân viên kho xác nhận kết thúc phiên kiểm kê và gửi kết quả để phê duyệt. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Chọn chức năng “Hoàn thành phiên”.
+    \item Hệ thống tổng hợp toàn bộ dữ liệu kiểm kê.
+    \item Xác nhận gửi kết quả lên quản lý để kiểm tra.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu còn hàng chưa kiểm kê → hiển thị cảnh báo và yêu cầu hoàn tất trước khi nộp. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đang trong tiến trình. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên kiểm kê được đánh dấu là hoàn thành. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC07-04 Xem tồn kho thời gian thực. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC07-03}
+\end{table}
+
+\end{document}

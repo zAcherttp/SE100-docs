@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC06-03 \\
+\hline
+\textbf{Tên UC} & Thực thi lấy hàng \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhân viên kho thực hiện việc lấy hàng trong kho theo danh sách được giao trong phiên lấy hàng. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Nhân viên mở phiên lấy hàng.
+    \item Thực hiện quét mã sản phẩm và lấy hàng theo chỉ dẫn.
+    \item Hệ thống xác nhận từng sản phẩm đã được lấy.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu hàng không còn trong vị trí → hiển thị cảnh báo và yêu cầu cập nhật. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần thiết bị quét mã vạch. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên lấy hàng đang mở. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hàng hóa được xác nhận đã lấy xong. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC06-04 Hoàn thành phiên lấy hàng. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC06-03}
+\end{table}
+
+\end{document}

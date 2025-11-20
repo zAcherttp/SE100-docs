@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC10-08 \\
+\hline
+\textbf{Tên UC} & Tạo Bản ghi Dự báo (Generate Forecast Records) \\
+\hline
+\textbf{Mô tả tóm tắt} & (Hệ thống) Lưu lại kết quả dự báo nhu cầu cho từng SKU. \\
+\hline
+\textbf{Tác nhân tham gia} & System (Hệ thống - Tác vụ tự động) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Ngay sau khi UC10-07 hoàn tất. \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Dựa trên kết quả phân tích (UC10-07).
+    \item Hệ thống tạo/cập nhật các bản ghi dự báo (forecast records) cho từng SKU.
+    \item Hệ thống lưu lại phương pháp tính đã sử dụng và khoảng tin cậy.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & UC10-07 đã chạy thành công. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Dữ liệu dự báo được cập nhật trong hệ thống. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC10-08}
+\end{table}
+
+\end{document}

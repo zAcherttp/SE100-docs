@@ -1,0 +1,49 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-03 \\
+\hline
+\textbf{Tên UC} & Login with Passkey (WebAuthn) (Đăng nhập bằng Passkey) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép người dùng đăng nhập vào hệ thống bằng phương thức xác thực không mật khẩu (ví dụ: sinh trắc học, khóa bảo mật). \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên chưa gán vai trò / Bất kỳ Actor nào đã đăng ký \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng truy cập trang Đăng nhập.
+    \item Người dùng chọn "Đăng nhập bằng Passkey".
+    \item Trình duyệt hiển thị cửa sổ yêu cầu xác thực (sinh trắc học, Face ID, khóa USB...).
+    \item Người dùng hoàn tất xác thực.
+    \item Hệ thống «include» Verify Passkey (xác thực passkey qua better-auth).
+    \item Hệ thống «include» Generate JWT Token.
+    \item Hệ thống tạo phiên làm việc và chuyển hướng đến Dashboard.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Người dùng hủy bỏ cửa sổ xác thực -> Luồng đăng nhập kết thúc.
+    \item[5a.] Xác thực Passkey thất bại -> Hiển thị thông báo lỗi và quay lại bước 2 của luồng chính.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Người dùng phải đã đăng ký ít nhất một Passkey cho tài khoản của họ trước đó. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng chưa được xác thực. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Người dùng được xác thực, có phiên làm việc và được cấp JWT token. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC01-03}
+\end{table}
+
+\end{document}

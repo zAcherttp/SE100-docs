@@ -1,0 +1,44 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC06-08 \\
+\hline
+\textbf{Tên UC} & Xác thực phiên đóng gói \\
+\hline
+\textbf{Mô tả tóm tắt} & Quản lý kho kiểm tra và xác thực các phiên đóng gói để đảm bảo tính chính xác trước khi giao hàng. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Quản lý mở danh sách phiên đóng gói.
+    \item Kiểm tra số lượng, loại hàng và thông tin đóng gói.
+    \item Xác thực hoặc từ chối phiên nếu có sai lệch.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu từ chối → trả lại cho nhân viên để chỉnh sửa. 
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Chỉ người có quyền quản lý mới được xác thực. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên đóng gói hoàn thành. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên đóng gói được xác thực và sẵn sàng giao hàng. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC06-09 Tính tuyến đường lấy hàng tối ưu. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC06-08}
+\end{table}
+
+\end{document}

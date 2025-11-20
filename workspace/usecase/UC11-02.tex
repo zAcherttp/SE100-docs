@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-02 \\
+\hline
+\textbf{Tên UC} & Đánh dấu Thông báo Đã đọc (Mark Notification as Read) \\
+\hline
+\textbf{Mô tả tóm tắt} & Đánh dấu một hoặc nhiều thông báo là đã đọc. \\
+\hline
+\textbf{Tác nhân tham gia} & All Authenticated Users (Tất cả người dùng) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng nhấp vào một thông báo, hoặc chọn "Đánh dấu tất cả là đã đọc". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng nhấp vào một thông báo (chưa đọc).
+    \item Hệ thống cập nhật read_at timestamp cho thông báo đó.
+    \item Số lượng thông báo chưa đọc giảm đi.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Đánh dấu tất cả: hệ thống cập nhật read_at cho tất cả thông báo chưa đọc. \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Có ít nhất một thông báo chưa đọc. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Thông báo được đánh dấu là đã đọc. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC11-02}
+\end{table}
+
+\end{document}

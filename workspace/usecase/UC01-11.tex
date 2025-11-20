@@ -1,0 +1,47 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC01-11 \\
+\hline
+\textbf{Tên UC} & Approve/Reject Join Requests (Phê duyệt/Từ chối yêu cầu tham gia) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên xem xét và xử lý các yêu cầu tham gia từ nhân viên mới. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản trị viên hệ thống \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Admin điều hướng đến trang "Yêu cầu tham gia" (thường thấy qua thông báo).
+    \item Hệ thống «include» Review Pending Requests (hiển thị danh sách người dùng đang chờ).
+    \item Admin chọn một yêu cầu.
+    \item Admin chọn "Phê duyệt" hoặc "Từ chối".
+    \item Nếu "Phê duyệt":
+    \item[5a.] Hệ thống «include» Assign Initial Role (gán vai trò ban đầu, ví dụ: "Employee").
+    \item[5b.] Hệ thống liên kết người dùng với tổ chức.
+    \item[5c.] Cập nhật trạng thái yêu cầu thành "APPROVED".
+    \item Nếu "Từ chối":
+    \item[6a.] Cập nhật trạng thái yêu cầu thành "REJECTED".
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Không có \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "APPROVE_USERS". Có ít nhất một yêu cầu đang ở trạng thái "PENDING". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu được xử lý. Nếu được phê duyệt, người dùng trở thành thành viên của tổ chức. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC01-11}
+\end{table}
+
+\end{document}

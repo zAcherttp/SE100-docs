@@ -1,0 +1,47 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC02-17 \\
+\hline
+\textbf{Tên UC} & Create Supplier (Tạo Nhà cung cấp) \\
+\hline
+\textbf{Mô tả tóm tắt} & Cho phép quản trị viên hoặc nhân viên mua hàng thêm thông tin nhà cung cấp mới. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho / Nhân viên thu mua \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Nhà cung cấp".
+    \item Tác nhân chọn "Tạo Nhà cung cấp mới".
+    \item Tác nhân nhập thông tin (Tên, liên hệ, địa chỉ, email...).
+    \item Tác nhân «include» Set Default Lead Time (đặt thời gian giao hàng (lead time) mặc định).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống lưu bản ghi nhà cung cấp mới.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[5a.] Thiếu thông tin bắt buộc (ví dụ: Tên) -> Hệ thống báo lỗi.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Không có \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền "MANAGE_SUPPLIERS". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một nhà cung cấp mới được thêm vào hệ thống. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC02-17}
+\end{table}
+
+\end{document}

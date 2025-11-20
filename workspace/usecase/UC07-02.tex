@@ -1,0 +1,45 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC07-02 \\
+\hline
+\textbf{Tên UC} & Thực hiện kiểm kê thực tế \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhân viên kho thực hiện việc đếm hàng hóa thực tế trong khu vực đã được chỉ định và ghi nhận kết quả vào hệ thống. \\
+\hline
+\textbf{Tác nhân tham gia} & Nhân viên kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Nhân viên chọn phiên kiểm kê đang hoạt động.
+    \item Tiến hành đếm số lượng hàng hóa thực tế.
+    \item Nhập dữ liệu kiểm kê vào hệ thống.
+    \item Hệ thống lưu kết quả tạm thời.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu sản phẩm không tìm thấy trong danh sách → hiển thị cảnh báo và cho phép thêm mới tạm thời.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Cần thiết bị quét mã vạch hỗ trợ. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đã được khởi tạo. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Kết quả kiểm kê được ghi nhận vào hệ thống. \\
+\hline
+\textbf{Điểm mở rộng} & Bao gồm UC07-03 Hoàn thành phiên kiểm kê. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC07-02}
+\end{table}
+
+\end{document}

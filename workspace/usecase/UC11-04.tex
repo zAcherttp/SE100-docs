@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC11-04 \\
+\hline
+\textbf{Tên UC} & Điều hướng đến Thực thể Liên quan (Navigate to Related Entity) \\
+\hline
+\textbf{Mô tả tóm tắt} & Nhấp vào một thông báo để đi thẳng đến đối tượng mà thông báo đó đề cập. \\
+\hline
+\textbf{Tác nhân tham gia} & All Authenticated Users (Tất cả người dùng) \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng nhấp vào nội dung chính của một thông báo. \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng nhấp vào thông báo.
+    \item Hệ thống tự động đánh dấu thông báo là đã đọc (UC11-02).
+    \item Hệ thống điều hướng người dùng đến trang chi tiết của đối tượng liên quan.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & (Không có) \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Thông báo phải chứa một action_url (đường dẫn liên kết). \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Người dùng được chuyển đến trang liên quan. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC11-04}
+\end{table}
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC10-06 \\
+\hline
+\textbf{Tên UC} & Xuất Báo cáo (Export Report) \\
+\hline
+\textbf{Mô tả tóm tắt} & Xuất dữ liệu báo cáo đang xem ra tệp (PDF, Excel, CSV). \\
+\hline
+\textbf{Tác nhân tham gia} & Warehouse Manager, Accountant, Report Viewer \\
+\hline
+\textbf{Sự kiện kích hoạt} & Người dùng đang xem một báo cáo (UC10-05) và nhấn nút "Xuất". \\
+\hline
+\textbf{Luồng sự kiện chính} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng nhấn nút "Xuất".
+    \item Hệ thống hỏi định dạng xuất (PDF, Excel, CSV).
+    \item Người dùng chọn định dạng và hệ thống tạo tệp cho phép tải về.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} & Xuất PDF: hệ thống định dạng dữ liệu theo layout A4 trước khi tạo tệp. \\
+\hline
+\textbf{Yêu cầu trước khi thực hiện} & Phải có dữ liệu báo cáo đang được hiển thị. \\
+\hline
+\textbf{Yêu cầu sau khi thực hiện} & Một tệp (PDF, Excel, CSV) được tải về máy người dùng. \\
+\hline
+\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC10-06}
+\end{table}
+
+\end{document}

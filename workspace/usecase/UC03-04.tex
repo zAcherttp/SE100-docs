@@ -1,0 +1,45 @@
+\documentclass[../UC.tex]{subfiles}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Mã UC} & UC03-04 \\
+\hline
+\textbf{Tên UC} & Xóa khu vực lưu trữ \\
+\hline
+\textbf{Mô tả tóm tắt} & Quản trị viên hoặc quản lý kho có thể xóa khu vực lưu trữ không còn được sử dụng trong sơ đồ kho. \\
+\hline
+\textbf{Tác nhân tham gia} & Quản trị viên hệ thống, Quản lý kho \\
+\hline
+\textbf{Luồng sự kiện chính} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item Người dùng chọn khu vực cần xóa trong danh sách khu vực lưu trữ.
+    \item Xác nhận thao tác xóa.
+    \item Hệ thống kiểm tra xem khu vực có đang chứa hàng hay không.
+    \item Nếu hợp lệ, khu vực được xóa khỏi sơ đồ kho và cơ sở dữ liệu.
+\end{enumerate} \\
+\hline
+\textbf{Luồng sự kiện khác} &
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[4a.] Nếu khu vực đang chứa hàng → hiển thị cảnh báo và không cho phép xóa.
+\end{enumerate} \\
+\hline
+\textbf{Yêu cầu đặc biệt} & Chỉ người có quyền quản lý kho mới được phép xóa khu vực. \\
+\hline
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Khu vực đã tồn tại trong hệ thống. \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Khu vực được xóa khỏi sơ đồ và dữ liệu kho. \\
+\hline
+\textbf{Điểm mở rộng} & Không có. \\
+\hline
+\end{tabular}
+
+\caption{Bảng UC03-04}
+\end{table}
+
+\end{document}
