@@ -2,39 +2,43 @@
 
 \begin{document}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
 \textbf{Mã UC} & UC06-06 \\
 \hline
-\textbf{Tên UC} & Tạo phiên đóng gói \\
+\textbf{Tên UC} & Pack picked items (Đóng gói hàng đã lấy) \\
 \hline
-\textbf{Mô tả tóm tắt} & Nhân viên kho tạo phiên đóng gói để chuẩn bị hàng hóa giao cho khách. \\
+\textbf{Mô tả tóm tắt} & Nhân viên kho đóng gói hàng đã lấy và cập nhật trạng thái phiên picking thành PACKAGING rồi FINISHED. \\
 \hline
 \textbf{Tác nhân tham gia} & Nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Chọn chức năng “Tạo phiên đóng gói”.
-    \item Liên kết với phiên lấy hàng đã xác thực.
-    \item Hệ thống tạo phiên đóng gói mới và hiển thị danh sách hàng cần đóng. 
+    \item Chọn phiên picking đã được xác thực (status = VERIFIED).
+    \item Hệ thống chuyển trạng thái phiên sang PACKAGING.
+    \item Nhân viên đóng gói hàng đã lấy (quét mã, kiểm tra số lượng).
+    \item Sau khi hoàn tất đóng gói, nhân viên chọn "Hoàn thành đóng gói".
+    \item Hệ thống chuyển trạng thái phiên sang FINISHED (manually).
+    \item Hàng đã đóng gói sẵn sàng giao cho khách hàng.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item[4a.] Nếu chưa có phiên lấy hàng hợp lệ → hiển thị cảnh báo.
+    \item[3a.] Nếu phát hiện thiếu hàng hoặc sai sót → ghi chú và báo cáo quản lý.
+    \item[5a.] Nếu có lỗi trong quá trình đóng gói → có thể chuyển về trạng thái PACKAGING để sửa.
 \end{enumerate} \\
 \hline
 \textbf{Yêu cầu đặc biệt} & Không có. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có phiên lấy hàng hợp lệ. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên picking đã được xác thực (status = VERIFIED). \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên đóng gói được tạo thành công. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên picking chuyển sang PACKAGING, sau đó FINISHED. Hàng sẵn sàng giao. \\
 \hline
-\textbf{Điểm mở rộng} & Bao gồm UC06-07 Hoàn thành phiên đóng gói. \\
+\textbf{Điểm mở rộng} & Không có. \\
 \hline
 \end{tabular}
 

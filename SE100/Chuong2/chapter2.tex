@@ -178,89 +178,85 @@
 44 & UC04-04 & Hủy đơn đặt hàng & Hủy PO (nếu chưa nhận hàng). \\ \hline
 45 & UC04-05 & Xem đơn đặt hàng & Xem chi tiết, lịch sử trạng thái, lịch sử nhận hàng. \\ \hline
 46 & UC04-06 & Tính điểm đặt hàng lại (ROP) & (Hệ thống) Tính mức tồn kho an toàn. \\ \hline
-47 & UC04-07 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Cảnh báo khi tồn kho < ROP. \\ \hline
-48 & UC04-08 & Tự động tính ROP & (Hệ thống) Tác vụ chạy định kỳ để cập nhật ROP. \\ \hline
+47 & UC04-07 & Tự động tính ROP & (Hệ thống) Tác vụ chạy định kỳ để cập nhật ROP. \\ \hline
 
 %--- UC05 - Receiving Operations ---%
 \multicolumn{4}{|l|}{\textbf{UC05 - Nghiệp vụ nhận hàng}} \\ \hline
-49 & UC05-01 & Tạo phiên nhận hàng & Bắt đầu một phiên làm việc để nhận hàng. \\ \hline
-50 & UC05-02 & Quét mã vạch & Quét mã vạch SKU, nhập số lượng, lô, hạn dùng. \\ \hline
-51 & UC05-03 & Quét số sê-ri & Quét từng số sê-ri cho hàng quản lý theo sê-ri. \\ \hline
-52 & UC05-04 & Chỉ định vị trí lưu trữ & Gán vị trí cất hàng cho lô/sê-ri vừa nhận. \\ \hline
-53 & UC05-05 & Xử lý chênh lệch & Ghi chú khi nhận hàng thừa/thiếu so với PO. \\ \hline
-54 & UC05-06 & Đính kèm tài liệu & Chụp ảnh (hàng hỏng) hoặc tải lên (phiếu giao). \\ \hline
-55 & UC05-07 & Hoàn thành phiên nhận hàng & Kết thúc phiên, gửi cho quản lý duyệt. \\ \hline
-56 & UC05-08 & Xác thực phiên nhận hàng & (Quản lý) Phê duyệt, chính thức tăng tồn kho. \\ \hline
-57 & UC05-09 & Từ chối phiên nhận hàng & (Quản lý) Từ chối do sai sót, yêu cầu làm lại. \\ \hline
-58 & UC05-10 & Đề xuất vị trí lưu trữ & (Hệ thống) Gợi ý vị trí cất hàng tối ưu. \\ \hline
+48 & UC05-01 & Tạo phiên nhận hàng & Bắt đầu một phiên làm việc để nhận hàng. \\ \hline
+49 & UC05-02 & Quét mã vạch & Quét mã vạch SKU, nhập số lượng, lô, hạn dùng. \\ \hline
+50 & UC05-03 & Quét số sê-ri & Quét từng số sê-ri cho hàng quản lý theo sê-ri. \\ \hline
+51 & UC05-04 & Chỉ định vị trí lưu trữ & Gán vị trí cất hàng cho lô/sê-ri vừa nhận. \\ \hline
+52 & UC05-05 & Xử lý chênh lệch & Ghi chú khi nhận hàng thừa/thiếu so với PO. \\ \hline
+53 & UC05-06 & Đính kèm tài liệu & Chụp ảnh (hàng hỏng) hoặc tải lên (phiếu giao). \\ \hline
+54 & UC05-07 & Hoàn thành phiên nhận hàng & Kết thúc phiên, gửi cho quản lý duyệt. \\ \hline
+55 & UC05-08 & Xác thực phiên nhận hàng & (Quản lý) Phê duyệt, chính thức tăng tồn kho. \\ \hline
+56 & UC05-09 & Từ chối phiên nhận hàng & (Quản lý) Từ chối do sai sót, yêu cầu làm lại. \\ \hline
+57 & UC05-10 & Đề xuất vị trí lưu trữ & (Hệ thống) Gợi ý vị trí cất hàng tối ưu. \\ \hline
 
 %--- UC06 - Outbound Operations ---%
 \multicolumn{4}{|l|}{\textbf{UC06 - Nghiệp vụ xuất hàng}} \\ \hline
-59 & UC06-01 & Tạo đơn hàng xuất & Tạo đơn hàng bán/xuất kho (Draft). \\ \hline
-60 & UC06-02 & Tạo phiên lấy hàng (Picking) & Bắt đầu phiên đi lấy hàng cho đơn hàng xuất. \\ \hline
-61 & UC06-03 & Thực thi lấy hàng & Đi lấy hàng, quét mã (vị trí, SKU, lô, sê-ri). \\ \hline
-62 & UC06-04 & Hoàn thành phiên lấy hàng & Kết thúc phiên lấy hàng, gửi đi xác thực. \\ \hline
-63 & UC06-05 & Xác thực phiên lấy hàng & Phê duyệt, chính thức trừ tồn kho (logic). \\ \hline
-64 & UC06-06 & Tạo phiên đóng gói (Packing) & Bắt đầu phiên đóng gói hàng đã lấy. \\ \hline
-65 & UC06-07 & Hoàn thành phiên đóng gói & Kết thúc phiên đóng gói. \\ \hline
-66 & UC06-08 & Xác thực phiên đóng gói & Xác nhận hàng đã đóng gói, sẵn sàng giao. \\ \hline
-67 & UC06-09 & Tính tuyến đường lấy hàng tối ưu & (Hệ thống) Sắp xếp thứ tự lấy hàng theo đường đi ngắn nhất. \\ \hline
+58 & UC06-01 & Tạo đơn hàng xuất & Tạo đơn hàng bán/xuất kho (Draft). \\ \hline
+59 & UC06-02 & Tạo phiên lấy hàng (Picking) & Bắt đầu phiên đi lấy hàng cho đơn hàng xuất. \\ \hline
+60 & UC06-03 & Thực thi lấy hàng & Đi lấy hàng, quét mã (vị trí, SKU, lô, sê-ri). \\ \hline
+61 & UC06-04 & Hoàn thành phiên lấy hàng & Kết thúc phiên lấy hàng, gửi đi xác thực. \\ \hline
+62 & UC06-05 & Xác thực phiên lấy hàng & Phê duyệt, chính thức trừ tồn kho (logic). \\ \hline
+63 & UC06-06 & Pack picked items & Đóng gói hàng đã lấy, chuyển trạng thái PACKAGING → FINISHED. \\ \hline
+64 & UC06-07 & Tính tuyến đường lấy hàng tối ưu & (Hệ thống) Sắp xếp thứ tự lấy hàng theo đường đi ngắn nhất. \\ \hline
 
 %--- UC07 - Inventory Management & Cycle Counting ---%
 \multicolumn{4}{|l|}{\textbf{UC07 - Quản lý tồn kho \& Kiểm kê}} \\ \hline
-68 & UC07-01 & Tạo phiên kiểm kê & Bắt đầu phiên đếm hàng (theo khu vực, SKU). \\ \hline
-69 & UC07-02 & Thực hiện kiểm kê thực tế & (Di động) Quét mã và nhập số lượng đếm thực tế. \\ \hline
-70 & UC07-03 & Hoàn thành phiên kiểm kê & Gửi kết quả đếm thực tế đi xác thực. \\ \hline
-71 & UC07-04 & Xem tồn kho thời gian thực & Xem tồn kho (theo SKU, vị trí, lô, sê-ri). \\ \hline
-72 & UC07-05 & Xác thực phiên kiểm kê & (Quản lý) So sánh số đếm và số hệ thống. \\ \hline
-73 & UC07-06 & Tạo yêu cầu điều chỉnh & Lập phiếu điều chỉnh (tăng/giảm) tồn kho. \\ \hline
-74 & UC07-07 & Gửi yêu cầu điều chỉnh & Gửi yêu cầu đi phê duyệt. \\ \hline
-75 & UC07-08 & Phê duyệt yêu cầu điều chỉnh & (Quản lý) Duyệt, chính thức thay đổi tồn kho. \\ \hline
-76 & UC07-09 & Từ chối yêu cầu điều chỉnh & (Quản lý) Từ chối yêu cầu điều chỉnh. \\ \hline
-77 & UC07-10 & Kiểm tra ngày hết hạn & (Hệ thống) Tự động quét các lô sắp hết hạn. \\ \hline
-78 & UC07-11 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Tác vụ này trùng với UC04-07. \\ \hline
+65 & UC07-01 & Tạo phiên kiểm kê & Bắt đầu phiên đếm hàng (theo khu vực, SKU). \\ \hline
+66 & UC07-02 & Thực hiện kiểm kê thực tế & (Di động) Quét mã và nhập số lượng đếm thực tế. \\ \hline
+67 & UC07-03 & Hoàn thành phiên kiểm kê & Gửi kết quả đếm thực tế đi xác thực. \\ \hline
+68 & UC07-04 & Xem tồn kho thời gian thực & Xem tồn kho (theo SKU, vị trí, lô, sê-ri). \\ \hline
+69 & UC07-05 & Xác thực phiên kiểm kê & (Quản lý) So sánh số đếm và số hệ thống. \\ \hline
+70 & UC07-06 & Tạo yêu cầu điều chỉnh & Lập phiếu điều chỉnh (tăng/giảm) tồn kho. \\ \hline
+71 & UC07-07 & Gửi yêu cầu điều chỉnh & Gửi yêu cầu đi phê duyệt. \\ \hline
+72 & UC07-08 & Phê duyệt yêu cầu điều chỉnh & (Quản lý) Duyệt, chính thức thay đổi tồn kho. \\ \hline
+73 & UC07-09 & Từ chối yêu cầu điều chỉnh & (Quản lý) Từ chối yêu cầu điều chỉnh. \\ \hline
+74 & UC07-10 & Kiểm tra ngày hết hạn & (Hệ thống) Tự động quét các lô sắp hết hạn. \\ \hline
 
 %--- UC08 - Supplier Returns Management ---%
 \multicolumn{4}{|l|}{\textbf{UC08 - Quản lý trả hàng nhà cung cấp}} \\ \hline
-79 & UC08-01 & Tạo yêu cầu trả hàng & Lập phiếu trả hàng cho NCC (do hỏng, hết hạn...). \\ \hline
-80 & UC08-02 & Gửi yêu cầu trả hàng & Gửi yêu cầu đi phê duyệt. \\ \hline
-81 & UC08-03 & Xem trạng thái yêu cầu trả hàng & Theo dõi yêu cầu đã được duyệt hay chưa. \\ \hline
-82 & UC08-04 & Xem xét yêu cầu trả hàng & (Quản lý) Xem xét và phê duyệt yêu cầu. \\ \hline
-83 & UC08-05 & Xác thực yêu cầu trả hàng & (Quản lý) Xác nhận trả, chính thức trừ tồn kho. \\ \hline
+75 & UC08-01 & Tạo yêu cầu trả hàng & Lập phiếu trả hàng cho NCC (do hỏng, hết hạn...). \\ \hline
+76 & UC08-02 & Gửi yêu cầu trả hàng & Gửi yêu cầu đi phê duyệt. \\ \hline
+77 & UC08-03 & Xem trạng thái yêu cầu trả hàng & Theo dõi yêu cầu đã được duyệt hay chưa. \\ \hline
+78 & UC08-04 & Xem xét yêu cầu trả hàng & (Quản lý) Xem xét và phê duyệt yêu cầu. \\ \hline
+79 & UC08-05 & Xác thực yêu cầu trả hàng & (Quản lý) Xác nhận trả, chính thức trừ tồn kho. \\ \hline
 
 %--- UC09 - Internal Transfer Management ---%
 \multicolumn{4}{|l|}{\textbf{UC09 - Quản lý chuyển kho nội bộ}} \\ \hline
-84 & UC09-01 & Tạo lệnh chuyển kho & Tạo lệnh điều chuyển hàng từ kho A sang kho B. \\ \hline
-85 & UC09-02 & Thực thi lấy hàng tại kho nguồn & (Giống UC06) Lấy hàng tại kho A. \\ \hline
-86 & UC09-03 & Đánh dấu đã gửi (Shipped) & Xác nhận kho A đã gửi hàng đi. \\ \hline
-87 & UC09-04 & Cập nhật đang vận chuyển & Cập nhật trạng thái hàng đang đi đường. \\ \hline
-88 & UC09-05 & Nhận hàng chuyển kho & (Giống UC05) Kho B nhận hàng. \\ \hline
-89 & UC09-06 & Xác thực số lượng chuyển kho & Kho B xác nhận số lượng thực nhận so với phiếu. \\ \hline
-90 & UC09-07 & Xác thực lệnh chuyển kho & (Quản lý) Đóng lệnh, cập nhật tồn kho 2 kho. \\ \hline
+80 & UC09-01 & Tạo lệnh chuyển kho & Tạo lệnh điều chuyển hàng từ kho A sang kho B. \\ \hline
+81 & UC09-02 & Thực thi lấy hàng tại kho nguồn & (Giống UC06) Lấy hàng tại kho A. \\ \hline
+82 & UC09-03 & Đánh dấu đã gửi (Shipped) & Xác nhận kho A đã gửi hàng đi. \\ \hline
+83 & UC09-04 & Cập nhật đang vận chuyển & Cập nhật trạng thái hàng đang đi đường. \\ \hline
+84 & UC09-05 & Nhận hàng chuyển kho & (Giống UC05) Kho B nhận hàng. \\ \hline
+85 & UC09-06 & Xác thực số lượng chuyển kho & Kho B xác nhận số lượng thực nhận so với phiếu. \\ \hline
+86 & UC09-07 & Xác thực lệnh chuyển kho & (Quản lý) Đóng lệnh, cập nhật tồn kho 2 kho. \\ \hline
 
 %--- UC10 - Reporting & Analytics ---%
 \multicolumn{4}{|l|}{\textbf{UC10 - Báo cáo \& Phân tích}} \\ \hline
-91 & UC10-01 & Xem Báo cáo tồn kho & Báo cáo (tồn kho, định giá, luân chuyển...). \\ \hline
-92 & UC10-02 & Xem Báo cáo hoạt động & Báo cáo (hiệu suất nhận/xuất/kiểm kê). \\ \hline
-93 & UC10-03 & Xem Báo cáo nhà cung cấp & Báo cáo (đúng hạn, chất lượng NCC). \\ \hline
-94 & UC10-04 & Tạo mẫu báo cáo tùy chỉnh & Xây dựng báo cáo theo nhu cầu riêng. \\ \hline
-95 & UC10-05 & Chạy mẫu báo cáo & Thực thi mẫu báo cáo tùy chỉnh đã lưu. \\ \hline
-96 & UC10-06 & Xuất báo cáo & Xuất dữ liệu ra PDF, Excel, CSV. \\ \hline
-97 & UC10-07 & Phân tích dữ liệu lịch sử & (Hệ thống) Phân tích cho dự báo (forecasting). \\ \hline
-98 & UC10-08 & Tạo bản ghi dự báo & (Hệ thống) Lưu trữ kết quả dự báo nhu cầu. \\ \hline
-99 & UC10-09 & Xem lịch sử thay đổi (Audit Logs) & Xem ai đã làm gì, khi nào, giá trị cũ/mới. \\ \hline
+87 & UC10-01 & Xem Báo cáo tồn kho & Báo cáo (tồn kho, định giá, luân chuyển...). \\ \hline
+88 & UC10-02 & Xem Báo cáo hoạt động & Báo cáo (hiệu suất nhận/xuất/kiểm kê). \\ \hline
+89 & UC10-03 & Xem Báo cáo nhà cung cấp & Báo cáo (đúng hạn, chất lượng NCC). \\ \hline
+90 & UC10-04 & Tạo mẫu báo cáo tùy chỉnh & Xây dựng báo cáo theo nhu cầu riêng. \\ \hline
+91 & UC10-05 & Chạy mẫu báo cáo & Thực thi mẫu báo cáo tùy chỉnh đã lưu. \\ \hline
+92 & UC10-06 & Xuất báo cáo & Xuất dữ liệu ra PDF, Excel, CSV. \\ \hline
+93 & UC10-07 & Phân tích dữ liệu lịch sử & (Hệ thống) Phân tích cho dự báo (forecasting). \\ \hline
+94 & UC10-08 & Tạo bản ghi dự báo & (Hệ thống) Lưu trữ kết quả dự báo nhu cầu. \\ \hline
+95 & UC10-09 & Xem lịch sử thay đổi (Audit Logs) & Xem ai đã làm gì, khi nào, giá trị cũ/mới. \\ \hline
 
 %--- UC11 - Notifications & Alerts ---%
 \multicolumn{4}{|l|}{\textbf{UC11 - Thông báo \& Cảnh báo}} \\ \hline
-100 & UC11-01 & Xem thông báo & Mở chuông thông báo để xem danh sách. \\ \hline
-101 & UC11-02 & Đánh dấu đã đọc & Đánh dấu một thông báo là đã xem. \\ \hline
-102 & UC11-03 & Xóa thông báo & Xóa một thông báo khỏi danh sách. \\ \hline
-103 & UC11-04 & Điều hướng đến thực thể & Nhấn vào thông báo và đi đến đối tượng liên quan. \\ \hline
-104 & UC11-05 & Tạo cảnh báo hết hạn & (Hệ thống) Gửi thông báo khi có hàng sắp hết hạn. \\ \hline
-105 & UC11-06 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Gửi thông báo khi hàng dưới ROP. \\ \hline
-106 & UC11-07 & Tạo thông báo chờ duyệt & (Hệ thống) Gửi thông báo khi có yêu cầu/phiên chờ. \\ \hline
-107 & UC11-08 & Tạo thông báo phiên hoàn thành & (Hệ thống) Gửi thông báo khi phiên (nhận/xuất) xong. \\ \hline
-108 & UC11-09 & Tạo thông báo lỗi hệ thống & (Hệ thống) Gửi thông báo cho Admin khi có lỗi. \\ \hline
+96 & UC11-01 & Xem thông báo & Mở chuông thông báo để xem danh sách. \\ \hline
+97 & UC11-02 & Đánh dấu đã đọc & Đánh dấu một thông báo là đã xem. \\ \hline
+98 & UC11-03 & Xóa thông báo & Xóa một thông báo khỏi danh sách. \\ \hline
+99 & UC11-04 & Điều hướng đến thực thể & Nhấn vào thông báo và đi đến đối tượng liên quan. \\ \hline
+100 & UC11-05 & Tạo cảnh báo hết hạn & (Hệ thống) Gửi thông báo khi có hàng sắp hết hạn. \\ \hline
+101 & UC11-06 & Tạo cảnh báo tồn kho thấp & (Hệ thống) Gửi thông báo khi hàng dưới ROP. \\ \hline
+102 & UC11-07 & Tạo thông báo chờ duyệt & (Hệ thống) Gửi thông báo khi có yêu cầu/phiên chờ. \\ \hline
+103 & UC11-08 & Tạo thông báo phiên hoàn thành & (Hệ thống) Gửi thông báo khi phiên (nhận/xuất) xong. \\ \hline
+104 & UC11-09 & Tạo thông báo lỗi hệ thống & (Hệ thống) Gửi thông báo cho Admin khi có lỗi. \\ \hline
 
 \end{longtable}
 
