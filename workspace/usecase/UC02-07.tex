@@ -8,33 +8,37 @@
 \hline
 \textbf{Mã UC} & UC02-07 \\
 \hline
-\textbf{Tên UC} & Delete Brand (Xóa Thương hiệu) \\
+\textbf{Tên UC} & Create Product (Tạo Sản phẩm) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép quản trị viên xóa mềm (soft delete) một thương hiệu. \\
+\textbf{Mô tả tóm tắt} & Tạo một bản ghi sản phẩm chủ (master record), xác định các thuộc tính chung trước khi tạo các biến thể (SKU). \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Thương hiệu".
-    \item Tác nhân chọn một thương hiệu và nhấn "Xóa".
-    \item Hệ thống hiển thị xác nhận.
-    \item Tác nhân xác nhận.
-    \item Hệ thống thực hiện Soft Delete (cập nhật is_deleted = true).
+    \item Tác nhân điều hướng đến "Dữ liệu chủ" -> "Sản phẩm" và chọn "Tạo mới".
+    \item Hệ thống hiển thị biểu mẫu tạo sản phẩm.
+    \item Tác nhân nhập Tên, Mô tả.
+    \item Tác nhân «include» Assign Category (gán vào danh mục).
+    \item Tác nhân «include» Assign Brand (gán vào thương hiệu).
+    \item Tác nhân «include» Set Storage Requirements (đặt yêu cầu lưu trữ: khô, lạnh...).
+    \item Tác nhân «include» Set Tracking Method (chọn SERIAL, BATCH, hoặc NONE).
+    \item Tác nhân nhấn "Lưu".
+    \item Hệ thống tạo bản ghi sản phẩm chủ.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item[3a.] Thương hiệu đang được gán cho sản phẩm -> Hệ thống cảnh báo "Không thể xóa thương hiệu đang được sử dụng".
+    \item[8a.] Thiếu thông tin bắt buộc -> Hệ thống báo lỗi.
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Phải là xóa mềm. \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý dữ liệu chủ. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý sản phẩm. Danh mục và Thương hiệu đã tồn tại. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} &Thương hiệu bị đánh dấu là đã xóa. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một bản ghi sản phẩm chủ được tạo. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

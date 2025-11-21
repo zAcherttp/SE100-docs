@@ -8,30 +8,32 @@
 \hline
 \textbf{Mã UC} & UC02-10 \\
 \hline
-\textbf{Tên UC} & Define Custom Product Fields (Định nghĩa Trường tùy chỉnh cho Sản phẩm) \\
+\textbf{Tên UC} & Delete Product (Xóa Sản phẩm) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép quản trị viên tạo các mẫu (template) để thêm các thuộc tính riêng cho từng loại sản phẩm (ví dụ: "Màu sắc", "Kích thước" cho "Quần áo"). \\
+\textbf{Mô tả tóm tắt} & Cho phép quản trị viên xóa mềm (soft delete) một sản phẩm chủ. \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Tác nhân điều hướng đến "Cài đặt" -> "Mẫu Sản phẩm".
-    \item Tác nhân «include» Create Product Type Template (Tạo mẫu loại sản phẩm, ví dụ: "Điện tử").
-    \item Tác nhân thêm các trường vào mẫu.
-    \item Với mỗi trường, tác nhân «include» Define Field Types (định nghĩa kiểu dữ liệu: text, number, date, dropdown).
-    \item Tác nhân nhấn "Lưu".
-    \item Định nghĩa mẫu được lưu (thường là trong CSDL, các giá trị sẽ được lưu vào JSONB của SKU).
+    \item Tác nhân chọn một sản phẩm và nhấn "Xóa".
+    \item Hệ thống hiển thị xác nhận.
+    \item Tác nhân xác nhận.
+    \item Hệ thống thực hiện Soft Delete (cập nhật is_deleted = true).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Không có \\
+\textbf{Luồng sự kiện khác} & 
+\begin{enumerate}
+    \vspace{-18pt}
+    \item[2a.] Sản phẩm đang có SKU liên kết hoặc hàng tồn kho -> Hệ thống chặn xóa và yêu cầu xóa SKU trước.
+\end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Phải là xóa mềm. \\
 \hline
 \textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý sản phẩm. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một mẫu loại sản phẩm với các trường tùy chỉnh được định nghĩa. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Sản phẩm chủ bị đánh dấu là đã xóa. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

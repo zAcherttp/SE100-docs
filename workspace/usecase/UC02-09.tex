@@ -8,34 +8,30 @@
 \hline
 \textbf{Mã UC} & UC02-09 \\
 \hline
-\textbf{Tên UC} & Edit Product (Chỉnh sửa Sản phẩm) \\
+\textbf{Tên UC} & Define Custom Product Fields (Định nghĩa Trường tùy chỉnh cho Sản phẩm) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép chỉnh sửa các thuộc tính chung của một sản phẩm chủ. \\
+\textbf{Mô tả tóm tắt} & Cho phép quản trị viên tạo các mẫu (template) để thêm các thuộc tính riêng cho từng loại sản phẩm (ví dụ: "Màu sắc", "Kích thước" cho "Quần áo"). \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho / Quản trị viên hàng tồn kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Tác nhân chọn một sản phẩm từ danh sách và nhấn "Chỉnh sửa".
-    \item Hệ thống hiển thị biểu mẫu chi tiết sản phẩm.
-    \item Tác nhân thay đổi thông tin (ví dụ: mô tả, danh mục, phương thức theo dõi...).
+    \item Tác nhân điều hướng đến "Cài đặt" -> "Mẫu Sản phẩm".
+    \item Tác nhân «include» Create Product Type Template (Tạo mẫu loại sản phẩm, ví dụ: "Điện tử").
+    \item Tác nhân thêm các trường vào mẫu.
+    \item Với mỗi trường, tác nhân «include» Define Field Types (định nghĩa kiểu dữ liệu: text, number, date, dropdown).
     \item Tác nhân nhấn "Lưu".
-    \item Hệ thống «include» Audit Log Change (ghi lại nhật ký thay đổi).
-    \item Hệ thống cập nhật bản ghi sản phẩm.
+    \item Định nghĩa mẫu được lưu (thường là trong CSDL, các giá trị sẽ được lưu vào JSONB của SKU).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & 
-\begin{enumerate}
-    \vspace{-18pt}
-    \item[3a.] Tác nhân cố gắng thay đổi Phương thức Theo dõi (ví dụ: từ BATCH sang NONE) khi sản phẩm đã có hàng tồn kho -> Hệ thống cảnh báo hoặc chặn hành động.
-\end{enumerate} \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Mọi thay đổi quan trọng (ví dụ: phương thức theo dõi) phải được ghi lại trong audit log. \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
 \textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác nhân đã đăng nhập và có quyền quản lý sản phẩm. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin sản phẩm chủ được cập nhật. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một mẫu loại sản phẩm với các trường tùy chỉnh được định nghĩa. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

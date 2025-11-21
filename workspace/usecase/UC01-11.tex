@@ -8,36 +8,32 @@
 \hline
 \textbf{Mã UC} & UC01-11 \\
 \hline
-\textbf{Tên UC} & Approve/Reject Join Requests (Phê duyệt/Từ chối yêu cầu tham gia) \\
+\textbf{Tên UC} & Manage Users (Quản lý Người dùng) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên xem xét và xử lý các yêu cầu tham gia từ nhân viên mới. \\
+\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên xem, kích hoạt/vô hiệu hóa, và gán chi nhánh cho người dùng trong tổ chức. \\
 \hline
 \textbf{Tác nhân tham gia} & Quản trị viên hệ thống \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Admin điều hướng đến trang "Yêu cầu tham gia" (thường thấy qua thông báo).
-    \item Hệ thống «include» Review Pending Requests (hiển thị danh sách người dùng đang chờ).
-    \item Admin chọn một yêu cầu.
-    \item Admin chọn "Phê duyệt" hoặc "Từ chối".
-    \item Nếu "Phê duyệt":
-    \item[5a.] Hệ thống «include» Assign Initial Role (gán vai trò ban đầu, ví dụ: "Employee").
-    \item[5b.] Hệ thống liên kết người dùng với tổ chức.
-    \item[5c.] Cập nhật trạng thái yêu cầu thành "APPROVED".
-    \item Nếu "Từ chối":
-    \item[6a.] Cập nhật trạng thái yêu cầu thành "REJECTED".
+    \item Admin điều hướng đến trang "Quản lý Người dùng".
+    \item Hệ thống «include» View All Users (hiển thị danh sách tất cả người dùng trong tổ chức).
+    \item Admin chọn một người dùng để quản lý.
+    \item Admin thực hiện một trong các hành động:
+    \item[4a.] Deactivate User (Vô hiệu hóa/Kích hoạt tài khoản).
+    \item[4b.] Assign to Branches (Gán người dùng vào các chi nhánh cụ thể).
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Không thể xóa cứng (hard delete) người dùng để đảm bảo tính toàn vẹn của audit log. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "APPROVE_USERS". Có ít nhất một yêu cầu đang ở trạng thái "PENDING". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "VIEW_USERS". \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu được xử lý. Nếu được phê duyệt, người dùng trở thành thành viên của tổ chức. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin hoặc trạng thái của người dùng được cập nhật. \\
 \hline
-\textbf{Điểm mở rộng} & Không có \\
+\textbf{Điểm mở rộng} & «extend» Soft Delete User (Xóa mềm người dùng). \\
 \hline
 \end{tabular}
 

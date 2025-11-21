@@ -8,36 +8,36 @@
 \hline
 \textbf{Mã UC} & UC01-13 \\
 \hline
-\textbf{Tên UC} & Manage Roles (Quản lý Vai trò) \\
+\textbf{Tên UC} & Assign Roles to Users (Gán vai trò cho Người dùng) \\
 \hline
-\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên tạo, chỉnh sửa và xóa các vai trò tùy chỉnh và các quyền đi kèm. \\
+\textbf{Mô tả tóm tắt} & Cho phép Quản trị viên gán các vai trò đã định nghĩa cho người dùng, áp dụng trên toàn tổ chức hoặc chi nhánh cụ thể. \\
 \hline
 \textbf{Tác nhân tham gia} & Quản trị viên hệ thống \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Admin điều hướng đến trang "Quản lý Vai trò và Phân quyền".
-    \item Admin chọn "Tạo Vai trò Mới" (Create Custom Role).
-    \item Admin nhập tên vai trò (ví dụ: "Kế toán Chi nhánh A").
-    \item Hệ thống hiển thị danh sách tất cả các quyền (permissions).
-    \item Admin «include» Configure Bitwise Permissions (chọn các quyền cho vai trò, ví dụ: "VIEW_REPORTS", "EXPORT_DATA").
-    \item Admin «include» Set Permission Scope (GLOBAL/BRANCH) (thiết lập phạm vi quyền là toàn tổ chức hay chỉ chi nhánh cụ thể).
+    \item Admin điều hướng đến trang "Quản lý Người dùng" và chọn một người dùng.
+    \item Admin chọn tab/mục "Phân quyền".
+    \item Admin chọn "Thêm vai trò".
+    \item Admin chọn một vai trò từ danh sách (ví dụ: "Warehouse Manager").
+    \item Nếu vai trò có phạm vi "BRANCH", Admin phải chọn (các) chi nhánh áp dụng.
+    \item HNếu vai trò có phạm vi "GLOBAL", Admin chỉ cần gán (Assign Organization-Wide Role).
     \item Admin nhấn "Lưu".
+    \item Hệ thống tạo bản ghi trong bảng user_role_assignments.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item[2a.] Admin chọn một vai trò hiện có để Chỉnh sửa hoặc Xóa (Delete Role).
-    \item[2b.] (Nếu xóa) Hệ thống kiểm tra xem vai trò có đang được gán cho người dùng nào không. Nếu có, yêu cầu gán lại vai trò trước khi xóa.
+    \item[3a.] Admin xóa một vai trò đã gán khỏi người dùng.
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Các vai trò mặc định của hệ thống (is_system_default = true) không thể bị xóa. \\
+\textbf{Yêu cầu đặc biệt} & Logic kiểm tra quyền (Permission Check Logic) phải kết hợp cả quyền GLOBAL và quyền BRANCH (nếu branch_id khớp). \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "ASSIGN_ROLES". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Admin đã đăng nhập và có quyền "ASSIGN_ROLES". Người dùng và Vai trò đã tồn tại. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Vai trò được tạo/cập nhật/xóa. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Người dùng được gán (hoặc bị gỡ) vai trò. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline
