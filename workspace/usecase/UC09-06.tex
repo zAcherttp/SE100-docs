@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho - Đích) \\
 \hline
-\textbf{Sự kiện kích hoạt} & Quản lý kho đích mở đơn "TRANSFER_RECEIVED". \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -26,11 +24,13 @@
 \hline
 \textbf{Luồng sự kiện khác} & Tạo điều chỉnh cho hàng thất lạc (khởi tạo UC07-06). \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_RECEIVED". \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Chênh lệch (nếu có) được ghi nhận. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_RECEIVED". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Chênh lệch (nếu có) được ghi nhận. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -38,3 +38,4 @@
 \end{table}
 
 \end{document}
+

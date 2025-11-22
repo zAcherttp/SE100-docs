@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & System (Hệ thống - Tác vụ tự động) \\
 \hline
-\textbf{Sự kiện kích hoạt} & Được kích hoạt tự động theo lịch (VD: hàng tuần). \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -24,13 +22,15 @@
     \item Hệ thống áp dụng các phương pháp dự báo (VD: Trung bình trượt, Điều chỉnh theo mùa...).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Không có) \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Tác vụ được lập lịch (cron job) và có đủ dữ liệu lịch sử. \\
+\textbf{Yêu cầu đặc biệt} & Tác vụ phải chạy ngầm, không ảnh hưởng hiệu suất ban ngày. \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Dữ liệu phân tích sẵn sàng cho UC10-08. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác vụ được lập lịch (cron job) và có đủ dữ liệu lịch sử. \\
 \hline
-\textbf{Yêu cầu phi chức năng} & Tác vụ phải chạy ngầm, không ảnh hưởng hiệu suất ban ngày. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Dữ liệu phân tích sẵn sàng cho UC10-08. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -38,3 +38,4 @@
 \end{table}
 
 \end{document}
+

@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Warehouse Manager, Accountant, Report Viewer \\
 \hline
-\textbf{Sự kiện kích hoạt} & Người dùng đang xem một báo cáo (UC10-05) và nhấn nút "Xuất". \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -26,11 +24,13 @@
 \hline
 \textbf{Luồng sự kiện khác} & Xuất PDF: hệ thống định dạng dữ liệu theo layout A4 trước khi tạo tệp. \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Phải có dữ liệu báo cáo đang được hiển thị. \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Một tệp (PDF, Excel, CSV) được tải về máy người dùng. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phải có dữ liệu báo cáo đang được hiển thị. \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một tệp (PDF, Excel, CSV) được tải về máy người dùng. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -38,3 +38,4 @@
 \end{table}
 
 \end{document}
+

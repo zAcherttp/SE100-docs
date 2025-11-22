@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -13,8 +13,6 @@
 \textbf{Mô tả tóm tắt} & Quản lý kho xem xét và phê duyệt hoặc từ chối một yêu cầu trả hàng. \\
 \hline
 \textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho) \\
-\hline
-\textbf{Sự kiện kích hoạt} & Quản lý nhận thông báo hoặc truy cập danh sách "RETURN_SUBMITTED". \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
@@ -28,11 +26,13 @@
 \hline
 \textbf{Luồng sự kiện khác} & Từ chối: hệ thống yêu cầu nhập lý do từ chối (bắt buộc) và gửi thông báo. \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Yêu cầu trả hàng ở trạng thái "RETURN_SUBMITTED". \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Yêu cầu được cập nhật trạng thái (Approved/Rejected). \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Yêu cầu trả hàng ở trạng thái "RETURN_SUBMITTED". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu được cập nhật trạng thái (Approved/Rejected). \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -40,3 +40,4 @@
 \end{table}
 
 \end{document}
+

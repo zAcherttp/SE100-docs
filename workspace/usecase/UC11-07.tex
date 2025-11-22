@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & System (Hệ thống) \\
 \hline
-\textbf{Sự kiện kích hoạt} & Một đối tượng (VD: Yêu cầu Điều chỉnh, Yêu cầu Trả hàng) được cập nhật trạng thái "PENDING_APPROVAL" hoặc "SUBMITTED". \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -25,13 +23,15 @@
     \item Gán người nhận: (Vai trò) Người có quyền phê duyệt (VD: Warehouse Manager).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Không có) \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Một hành động (VD: UC07-07, UC08-02) kích hoạt trạng thái chờ phê duyệt. \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Thông báo chờ phê duyệt được tạo và gửi đến người dùng liên quan. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Một hành động (VD: UC07-07, UC08-02) kích hoạt trạng thái chờ phê duyệt. \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông báo chờ phê duyệt được tạo và gửi đến người dùng liên quan. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -39,3 +39,4 @@
 \end{table}
 
 \end{document}
+

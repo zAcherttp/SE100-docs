@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho) \\
 \hline
-\textbf{Sự kiện kích hoạt} & Quản lý mở yêu cầu ở trạng thái "RETURN_APPROVED". \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -24,13 +22,15 @@
     \item Hệ thống cập nhật trạng thái "RETURN_VERIFIED" và tạo giao dịch trừ tồn kho.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Không có) \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Yêu cầu trả hàng ở trạng thái "RETURN_APPROVED". \\
+\textbf{Yêu cầu đặc biệt} & Giao dịch trừ kho phải được thực hiện ngay lập tức. \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Tồn kho thực tế trong hệ thống được cập nhật (giảm) và yêu cầu có trạng thái "RETURN_VERIFIED". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Yêu cầu trả hàng ở trạng thái "RETURN_APPROVED". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & Giao dịch trừ kho phải được thực hiện ngay lập tức. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Tồn kho thực tế trong hệ thống được cập nhật (giảm) và yêu cầu có trạng thái "RETURN_VERIFIED". \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -38,3 +38,4 @@
 \end{table}
 
 \end{document}
+

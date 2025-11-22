@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Shipping Specialist (NV Giao hàng - Kho Nguồn) \\
 \hline
-\textbf{Sự kiện kích hoạt} & NV Kho Nguồn bắt đầu một "Phiên Lấy hàng" (Picking Session) cho đơn "TRANSFER_DRAFT". \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -23,13 +21,15 @@
     \item Sau khi lấy xong, NV Kho hoàn tất phiên.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Xem UC05-01). \\
+\textbf{Luồng sự kiện khác} & Xem UC05-01. \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_DRAFT". \\
+\textbf{Yêu cầu đặc biệt} & Xem UC05-01. \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Hàng hóa được lấy và sẵn sàng để đóng gói, vận chuyển. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_DRAFT". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Xem UC05-01). \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hàng hóa được lấy và sẵn sàng để đóng gói, vận chuyển. \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -37,3 +37,4 @@
 \end{table}
 
 \end{document}
+

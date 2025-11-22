@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -13,8 +13,6 @@
 \textbf{Mô tả tóm tắt} & Cấp có thẩm quyền từ chối một yêu cầu điều chỉnh. \\
 \hline
 \textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho), Inventory Administrator (có quyền APPROVE) \\
-\hline
-\textbf{Sự kiện kích hoạt} & Người phê duyệt mở yêu cầu "ADJ_PENDING_APPROVAL". \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
@@ -27,18 +25,20 @@
     \item Gửi thông báo (kèm lý do) cho người tạo.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Không có) \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Yêu cầu ở trạng thái "ADJ_PENDING_APPROVAL". \\
+\textbf{Yêu cầu đặc biệt} & Phải bắt buộc nhập lý do từ chối. \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & 
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Yêu cầu ở trạng thái "ADJ_PENDING_APPROVAL". \\
+\hline
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & 
 \begin{enumerate}
     \vspace{-18pt}
     \item Yêu cầu có trạng thái "ADJ_REJECTED".
     \item Tồn kho không thay đổi.
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu phi chức năng} & Phải bắt buộc nhập lý do từ chối. \\
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -46,3 +46,4 @@
 \end{table}
 
 \end{document}
+

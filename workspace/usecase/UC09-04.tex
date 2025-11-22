@@ -1,8 +1,8 @@
-\documentclass[../UC.tex]{subfiles}
+\documentclass[../../main.tex]{subfiles}
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho - Nguồn) \\
 \hline
-\textbf{Sự kiện kích hoạt} & Quản lý theo dõi vận đơn và cập nhật trạng thái. \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -26,11 +24,13 @@
 \hline
 \textbf{Luồng sự kiện khác} & Tự động cập nhật nếu tích hợp API vận chuyển. \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Đơn hàng ở trạng thái "TRANSFER_SHIPPED". \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Đơn hàng ở trạng thái "TRANSFER_IN_TRANSIT". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn hàng ở trạng thái "TRANSFER_SHIPPED". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Đơn hàng ở trạng thái "TRANSFER_IN_TRANSIT". \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -38,3 +38,4 @@
 \end{table}
 
 \end{document}
+

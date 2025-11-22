@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Inventory Administrator (QT Tồn kho), Stock Clerk (NV Kho) \\
 \hline
-\textbf{Sự kiện kích hoạt} & Người dùng mở yêu cầu "RETURN_DRAFT" và nhấn "Gửi Phê duyệt". \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -25,13 +23,15 @@
     \item Hệ thống gửi thông báo cho Quản lý Kho (UC11-07).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Không có) \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Yêu cầu trả hàng ở trạng thái "RETURN_DRAFT". \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Yêu cầu được chuyển sang trạng thái "RETURN_SUBMITTED". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Yêu cầu trả hàng ở trạng thái "RETURN_DRAFT". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Không có) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu được chuyển sang trạng thái "RETURN_SUBMITTED". \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -39,3 +39,4 @@
 \end{table}
 
 \end{document}
+

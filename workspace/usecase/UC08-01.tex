@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -13,8 +13,6 @@
 \textbf{Mô tả tóm tắt} & Lập một yêu cầu (phiếu) để trả hàng lại cho nhà cung cấp. \\
 \hline
 \textbf{Tác nhân tham gia} & Inventory Administrator (QT Tồn kho), Stock Clerk (NV Kho) \\
-\hline
-\textbf{Sự kiện kích hoạt} & Người dùng chọn chức năng "Tạo Yêu cầu Trả hàng". \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
@@ -29,11 +27,13 @@
 \hline
 \textbf{Luồng sự kiện khác} & Lý do "KHÁC": Người dùng chọn "OTHER" và hệ thống yêu cầu ghi chú chi tiết. \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Người dùng đã đăng nhập.\\
+\textbf{Yêu cầu đặc biệt} & Hỗ trợ tải lên tối đa 5 tệp bằng chứng (ảnh/video). \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Một yêu cầu trả hàng được tạo ở trạng thái "RETURN_DRAFT". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập.\\
 \hline
-\textbf{Yêu cầu phi chức năng} & Hỗ trợ tải lên tối đa 5 tệp bằng chứng (ảnh/video). \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một yêu cầu trả hàng được tạo ở trạng thái "RETURN_DRAFT". \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -41,3 +41,4 @@
 \end{table}
 
 \end{document}
+

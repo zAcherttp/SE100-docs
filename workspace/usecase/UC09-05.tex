@@ -1,8 +1,8 @@
-\documentclass[../UC.tex]{subfiles}
+\documentclass[../../main.tex]{subfiles}
 
 \begin{document}
 
-\begin{table}[htbp]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
@@ -14,8 +14,6 @@
 \hline
 \textbf{Tác nhân tham gia} & Receiving Specialist (NV Nhận hàng - Kho Đích) \\
 \hline
-\textbf{Sự kiện kích hoạt} & NV Kho Đích chọn đơn chuyển kho (trạng thái "SHIPPED" / "IN_TRANSIT") để bắt đầu nhận. \\
-\hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
@@ -23,13 +21,15 @@
     \item Sau khi nhận xong, NV Kho hoàn tất phiên.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & (Xem UC04-01) \\
+\textbf{Luồng sự kiện khác} & Xem UC04-01 \\
 \hline
-\textbf{Yêu cầu trước khi thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_SHIPPED" hoặc "TRANSFER_IN_TRANSIT". \\
+\textbf{Yêu cầu đặc biệt} & Xem UC04-01 \\
 \hline
-\textbf{Yêu cầu sau khi thực hiện} & Hàng hóa được nhận và (tạm thời) đưa vào kho đích; đơn cập nhật trạng thái "TRANSFER_RECEIVED". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đơn chuyển kho ở trạng thái "TRANSFER_SHIPPED" hoặc "TRANSFER_IN_TRANSIT". \\
 \hline
-\textbf{Yêu cầu phi chức năng} & (Xem UC04-01) \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hàng hóa được nhận và (tạm thời) đưa vào kho đích; đơn cập nhật trạng thái "TRANSFER_RECEIVED". \\
+\hline
+\textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
@@ -37,3 +37,4 @@
 \end{table}
 
 \end{document}
+
