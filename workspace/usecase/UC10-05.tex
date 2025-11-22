@@ -8,34 +8,33 @@
 \hline
 \textbf{Mã UC} & UC10-05 \\
 \hline
-\textbf{Tên UC} & Thực thi Mẫu Báo cáo (Execute Report Template) \\
+\textbf{Tên UC} & Phân tích Dữ liệu Lịch sử (Analyze Historical Data) \\
 \hline
-\textbf{Mô tả tóm tắt} & Chạy một mẫu báo cáo (chuẩn hoặc tùy chỉnh) để xem dữ liệu. \\
+\textbf{Mô tả tóm tắt} & (Hệ thống) Quét lịch sử xuất kho để tìm ra các xu hướng nhu cầu. \\
 \hline
-\textbf{Tác nhân tham gia} & Warehouse Manager, Accountant, Report Viewer \\
+\textbf{Tác nhân tham gia} & System (Hệ thống - Tác vụ tự động) \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Người dùng chọn mẫu báo cáo.
-    \item Hệ thống hiển thị tham số/bộ lọc đã định nghĩa.
-    \item Người dùng nhập giá trị tham số và nhấn "Xem Báo cáo".
-    \item Hệ thống thực thi mẫu và hiển thị kết quả.
+    \item Hệ thống truy vấn lịch sử các đơn hàng xuất kho (Outbound Order History).
+    \item Hệ thống tính toán các mẫu nhu cầu (demand patterns).
+    \item Hệ thống áp dụng các phương pháp dự báo (VD: Trung bình trượt, Điều chỉnh theo mùa...).
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Tác vụ phải chạy ngầm, không ảnh hưởng hiệu suất ban ngày. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phải tồn tại ít nhất một mẫu báo cáo. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác vụ được lập lịch (cron job) và có đủ dữ liệu lịch sử. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Dữ liệu báo cáo được hiển thị. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Dữ liệu phân tích sẵn sàng cho UC10-08. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
-\caption{Bảng UC10-05}
+\caption{Bảng UC10-07}
 \end{table}
 
 \end{document}

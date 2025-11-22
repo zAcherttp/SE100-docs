@@ -8,33 +8,33 @@
 \hline
 \textbf{Mã UC} & UC10-04 \\
 \hline
-\textbf{Tên UC} & Tạo Mẫu Báo cáo Tùy chỉnh (Create Custom Report Template) \\
+\textbf{Tên UC} & Xuất Báo cáo (Export Report) \\
 \hline
-\textbf{Mô tả tóm tắt} & Thiết kế và lưu lại một mẫu báo cáo mới theo nhu cầu riêng. \\
+\textbf{Mô tả tóm tắt} & Xuất dữ liệu báo cáo đang xem ra tệp (PDF, Excel, CSV). \\
 \hline
-\textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho), Accountant (Kế toán) \\
+\textbf{Tác nhân tham gia} & Warehouse Manager, Accountant, Report Viewer \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Người dùng chọn nguồn dữ liệu (VD: Tồn kho, Giao dịch, Đơn hàng...).
-    \item Người dùng kéo/thả các cột muốn hiển thị và định nghĩa bộ lọc, nhóm, tổng hợp.
-    \item Người dùng đặt tên, lưu mẫu và thiết lập quyền chia sẻ.
+    \item Người dùng nhấn nút "Xuất".
+    \item Hệ thống hỏi định dạng xuất (PDF, Excel, CSV).
+    \item Người dùng chọn định dạng và hệ thống tạo tệp cho phép tải về.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Không có \\
+\textbf{Luồng sự kiện khác} & Xuất PDF: hệ thống định dạng dữ liệu theo layout A4 trước khi tạo tệp. \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Giao diện thiết kế phải trực quan (kéo-thả). \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập và có quyền "CREATE_CUSTOM_REPORTS". \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phải có dữ liệu báo cáo đang được hiển thị. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một mẫu báo cáo mới được lưu lại. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một tệp (PDF, Excel, CSV) được tải về máy người dùng. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline
 \end{tabular}
 
-\caption{Bảng UC10-04}
+\caption{Bảng UC10-06}
 \end{table}
 
 \end{document}
