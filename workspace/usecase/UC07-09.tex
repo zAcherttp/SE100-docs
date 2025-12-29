@@ -8,37 +8,28 @@
 \hline
 \textbf{Mã UC} & UC07-09 \\
 \hline
-\textbf{Tên UC} & Từ chối Yêu cầu Điều chỉnh (Reject Adjustment Request) \\
+\textbf{Tên UC} & Xác nhận trạng thái yêu cầu điều chỉnh \\
 \hline
-\textbf{Mô tả tóm tắt} & Cấp có thẩm quyền từ chối một yêu cầu điều chỉnh. \\
+\textbf{Mô tả tóm tắt} & Xác nhận trạng thái của một yêu cầu điều chỉnh tồn kho, bao gồm phê duyệt hoặc từ chối yêu cầu. \\
 \hline
-\textbf{Tác nhân tham gia} & Warehouse Manager (Quản lý Kho), Inventory Administrator (có quyền APPROVE) \\
+\textbf{Tác nhân tham gia} & Quản lý kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Người phê duyệt xem xét yêu cầu.
-    \item Người phê duyệt nhấn "Từ chối" (Reject).
-    \item Hệ thống yêu cầu nhập "Lý do Từ chối" (bắt buộc).
-    \item Người phê duyệt nhập lý do và xác nhận.
-    \item Hệ thống cập nhật trạng thái "ADJ_REJECTED".
-    \item Gửi thông báo (kèm lý do) cho người tạo.
+    \item Truy cập vào trang điều chỉnh trong kho.
+    \item Chọn mục cần xem danh sách yêu cầu điều chỉnh (số lượng hoặc vị trí).
+    \item Chọn hành động tại yêu cầu cần xác nhận.
+    \item Chọn trạng thái cân xác nhận (phê duyệt hoặc từ chối).
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Cần quyền xem danh sách yêu cầu điều chỉnh. \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Phải bắt buộc nhập lý do từ chối. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có các yêu cầu điều chỉnh. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Yêu cầu ở trạng thái "ADJ_PENDING_APPROVAL". \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Cập nhật trạng thái yêu cầu điều chỉnh. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & 
-\begin{enumerate}
-    \vspace{-18pt}
-    \item Yêu cầu có trạng thái "ADJ_REJECTED".
-    \item Tồn kho không thay đổi.
-\end{enumerate} \\
-\hline
-\textbf{Điểm mở rộng} & Không có \\
+\textbf{Điểm mở rộng} & Không có. \\
 \hline
 \end{tabular}
 

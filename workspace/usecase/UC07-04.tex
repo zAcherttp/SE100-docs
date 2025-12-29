@@ -8,33 +8,34 @@
 \hline
 \textbf{Mã UC} & UC07-04 \\
 \hline
-\textbf{Tên UC} & Xem tồn kho thời gian thực \\
+\textbf{Tên UC} & Hoàn thành phiên kiểm kê \\
 \hline
-\textbf{Mô tả tóm tắt} & Quản lý hoặc nhân viên có thể xem tình trạng hàng tồn kho theo thời gian thực để đối chiếu và theo dõi. \\
+\textbf{Mô tả tóm tắt} & Xác nhận phiên kiểm kê đã hoàn thành. \\
 \hline
 \textbf{Tác nhân tham gia} & Quản lý kho, Nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Người dùng chọn chức năng “Xem tồn kho”.
-    \item Hệ thống lấy dữ liệu tồn kho hiện tại.
-    \item Hiển thị bảng tổng hợp theo khu vực và sản phẩm.
+    \item Truy cập vào trang phiên kiểm kê trong kho.
+    \item Chọn mục hành động tại phiên kiểm cần kiểm tra.
+    \item Chọn xem chi tiết.
+    \item Xác nhận hoàn thành phiên kiểm kê.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item[4a.] Nếu mất kết nối cơ sở dữ liệu → hiển thị thông báo lỗi.
+    \item[4a.] Nếu phiên đã được hoàn thành thì không thể xác nhận lại.
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Cần đường truyền ổn định để cập nhật dữ liệu thời gian thực. \\
+\textbf{Yêu cầu đặc biệt} & Cần quyền xác nhận hoàn thành phiên kiểm kê. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Hệ thống hoạt động bình thường. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đang trong tiến hành. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hiển thị thông tin tồn kho chính xác. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên kiểm kê được đánh dấu là hoàn thành. \\
 \hline
-\textbf{Điểm mở rộng} & Bao gồm UC07-05 Xác thực phiên kiểm kê. \\
+\textbf{Điểm mở rộng} & Không. \\
 \hline
 \end{tabular}
 

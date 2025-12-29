@@ -8,18 +8,19 @@
 \hline
 \textbf{Mã UC} & UC07-05 \\
 \hline
-\textbf{Tên UC} & Xác thực phiên kiểm kê \\
+\textbf{Tên UC} & Xóa phiên kiểm kê \\
 \hline
-\textbf{Mô tả tóm tắt} & Quản lý kho kiểm tra dữ liệu kiểm kê, xác thực kết quả và ghi nhận chênh lệch giữa hàng thực tế và hệ thống. \\
+\textbf{Mô tả tóm tắt} & Xóa một phiên kiểm kê khỏi hệ thống. \\
 \hline
-\textbf{Tác nhân tham gia} & Quản lý kho \\
+\textbf{Tác nhân tham gia} & Quản lý kho, nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Mở phiên kiểm kê đã hoàn thành.
-    \item Kiểm tra dữ liệu và xác thực kết quả.
-    \item Hệ thống lưu kết quả xác thực và ghi nhận sai lệch (nếu có).
+    \item Truy cập vào trang phiên kiểm kê trong kho.
+    \item Chọn mục hành động tại phiên kiểm cần kiểm tra.
+    \item Chọn xem chi tiết.
+    \item Xác nhận xóa phiên kiểm kê.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
@@ -30,11 +31,11 @@
 \hline
 \textbf{Yêu cầu đặc biệt} & Chỉ người có quyền xác thực mới được thao tác. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đã hoàn tất. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê phải tồn tại và chưa bị xóa. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên kiểm kê được xác thực và cập nhật sai lệch. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên kiểm kê được xóa khỏi hệ thống. \\
 \hline
-\textbf{Điểm mở rộng} & Bao gồm UC07-06 Tạo yêu cầu điều chỉnh. \\
+\textbf{Điểm mở rộng} & Không. \\
 \hline
 \end{tabular}
 
