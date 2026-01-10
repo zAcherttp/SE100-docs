@@ -8,33 +8,35 @@
 \hline
 \textbf{Mã UC} & UC07-07 \\
 \hline
-\textbf{Tên UC} & Gửi yêu cầu điều chỉnh để phê duyệt \\
+\textbf{Tên UC} & Tạo yêu cầu điều chỉnh vị trí \\
 \hline
-\textbf{Mô tả tóm tắt} & Sau khi tạo, nhân viên hoặc quản lý gửi yêu cầu điều chỉnh lên cấp có thẩm quyền để phê duyệt. \\
+\textbf{Mô tả tóm tắt} & Tạo yêu cầu điều chỉnh vị trí hàng tồn kho. \\
 \hline
-\textbf{Tác nhân tham gia} & Nhân viên kho, Quản lý kho \\
+\textbf{Tác nhân tham gia} & Quản lý kho, Nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Chọn yêu cầu điều chỉnh trong danh sách.
-    \item Nhấn “Gửi phê duyệt”.
-    \item Hệ thống gửi thông báo đến người phê duyệt. 
+    \item Truy cập vào trang điều chỉnh trong kho.
+    \item Chọn tạo mới điều chỉnh.
+    \item Chọn điều chỉnh vị trí.
+    \item Nhập thông tin sản phẩm cần điều chỉnh và vị trí điều chỉnh.
+    \item Xác nhận tạo yêu cầu điều chỉnh.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item[4a.] Nếu chưa nhập lý do điều chỉnh → không cho phép gửi.
+    \item[4a.] Nếu thông tin không hợp lệ → hiển thị cảnh báo. 
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Cần có người phê duyệt được phân quyền. \\
+\textbf{Yêu cầu đặc biệt} & Chỉ được tạo điều chỉnh cho sản phẩm đã xác thực kiểm kê. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có yêu cầu điều chỉnh chờ gửi. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Đã phát hiện chênh lệch trong kiểm kê. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu được gửi thành công và chờ duyệt. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Yêu cầu điều chỉnh được tạo thành công. \\
 \hline
-\textbf{Điểm mở rộng} & Bao gồm UC07-08 Phê duyệt yêu cầu điều chỉnh. \\
+\textbf{Điểm mở rộng} & Không. \\
 \hline
 \end{tabular}
 

@@ -8,28 +8,25 @@
 \hline
 \textbf{Mã UC} & UC07-10 \\
 \hline
-\textbf{Tên UC} & Kiểm tra Hạn sử dụng (Hệ thống) \\
+\textbf{Tên UC} & Tra cứu phiên điều chỉnh \\
 \hline
-\textbf{Mô tả tóm tắt} & Hệ thống tự động quét và cảnh báo các lô hàng sắp hết hạn. \\
+\textbf{Mô tả tóm tắt} & Tra cứu phiên điều chỉnh. \\
 \hline
-\textbf{Tác nhân tham gia} & System (Hệ thống - Tác vụ tự động) \\
+\textbf{Tác nhân tham gia} & Quản lý kho, nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Hệ thống truy vấn tất cả các lô hàng (Batches) có expires_at và số lượng > 0.
-    \item Hệ thống so sánh expires_at với ngày hiện tại và các ngưỡng (7, 30, 60 ngày).
-    \item Với mỗi lô hàng vi phạm, hệ thống tạo một thông báo (UC11-05).
-    \item Gửi thông báo đến Quản lý Kho.
+    \item Truy cập vào trang điều chỉnh trong kho.
+    \item Chọn mục cần xem danh sách yêu cầu điều chỉnh (số lượng hoặc vị trí).
+    \item Điền thông tin cần tra cứu.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Cần quyền xem danh sách yêu cầu điều chỉnh. \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Tác vụ phải chạy ngầm, không ảnh hưởng hiệu suất ban ngày. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có các phiên điều chỉnh. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Tác vụ được lập lịch (cron job). \\
-\hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Các thông báo cảnh báo hết hạn được tạo ra. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hiển thị phiên điều chỉnh cần tìm (nếu có). \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline
@@ -39,4 +36,5 @@
 \end{table}
 
 \end{document}
+
 

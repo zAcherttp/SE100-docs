@@ -8,27 +8,27 @@
 \hline
 \textbf{Mã UC} & UC08-03 \\
 \hline
-\textbf{Tên UC} & Xem Trạng thái Yêu cầu Trả hàng (View Return Request Status) \\
+\textbf{Tên UC} & Xác nhận Yêu cầu Trả hàng (Verify Return Request) \\
 \hline
-\textbf{Mô tả tóm tắt} & Người dùng tra cứu và xem trạng thái của các yêu cầu trả hàng đã tạo. \\
+\textbf{Mô tả tóm tắt} & Xác nhận hàng đã sẵn sàng trả hoặc bị từ chối. \\
 \hline
-\textbf{Tác nhân tham gia} & Inventory Administrator (QT Tồn kho), Stock Clerk (NV Kho) \\
+\textbf{Tác nhân tham gia} & Quản lý kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Hệ thống hiển thị danh sách các yêu cầu trả hàng.
-    \item Người dùng lọc/tìm kiếm theo Mã yêu cầu, Trạng thái, hoặc Nhà cung cấp.
-    \item Người dùng chọn 1 yêu cầu để xem chi tiết trạng thái (Draft, Submitted, Approved...).
+    \item Chọn chức năng 'Xem chi tiết yêu cầu trả hàng'.
+    \item Bấm xác nhận hoặc từ chối trả hàng.
+    \item Hệ thống cập nhật lại trạng thái mới của hàng hóa được yêu cầu trả hàng.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Người dùng đã đăng nhập với vai trò Quản lý kho. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Yêu cầu trả hàng ở trạng thái sẵn sàng trả hoặc bị từ chối. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin trạng thái yêu cầu được hiển thị. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hàng hóa được cập nhật trạng thái mới tương ứng với việc xác nhận hoặc từ chối trả hàng. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline

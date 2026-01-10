@@ -2,43 +2,42 @@
 
 \begin{document}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{|p{4cm}|p{10cm}|}
 \hline
 \textbf{Mã UC} & UC05-07 \\
 \hline
-\textbf{Tên UC} & Hoàn tất phiên nhập \\
+\textbf{Tên UC} & Xem danh sách phiên nhập hàng \\
 \hline
-\textbf{Mô tả tóm tắt} & Kết thúc phiên nhập sau khi kiểm tra xong và chuyển sang bước xác minh. \\
+\textbf{Mô tả tóm tắt} & Xem danh sách phiên nhập hàng. \\
 \hline
-\textbf{Tác nhân tham gia} & Chuyên viên nhận hàng \\
+\textbf{Tác nhân tham gia} & Chuyên viên nhận hàng, Quản lý kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Người dùng chọn 'Hoàn tất phiên' khi mọi hàng đã được quét và phân bổ.
-    \item Hệ thống kiểm tra các mục bắt buộc (seri, tài liệu) và cho phép hoàn tất.
-    \item Phiên nhập chuyển trạng thái 'Hoàn tất' và chờ xác minh.
+    \item Truy cập vào trang phiên nhập hàng trong nhập.
+    \item Chọn xem danh sách phiên nhập hàng.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item[4a.] Thiếu thông tin bắt buộc → hệ thống không cho hoàn tất và hiển thị lỗi.
+    \item[4a.] Không. 
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Không có \\
+\textbf{Yêu cầu đặc biệt} & Cần quyền xem danh sách phiên nhập hàng. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên nhập đã ghi đủ dữ liệu. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Có các phiên nhập hàng. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên nhập ở trạng thái 'Hoàn tất' chờ xác minh quản lý. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Hiển thị danh sách phiên nhập hàng. \\
 \hline
-\textbf{Điểm mở rộng} & Mở rộng: Xác minh phiên nhập \\
+\textbf{Điểm mở rộng} & Không có. \\
 \hline
 \end{tabular}
 
-\caption{Bảng UC05-07}
+\caption{Bảng U05-07}
 \end{table}
 
 \end{document}

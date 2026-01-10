@@ -8,33 +8,33 @@
 \hline
 \textbf{Mã UC} & UC07-03 \\
 \hline
-\textbf{Tên UC} & Hoàn thành phiên kiểm kê \\
+\textbf{Tên UC} & Tiến hành phiên kiểm kê \\
 \hline
-\textbf{Mô tả tóm tắt} & Sau khi hoàn tất đếm hàng, nhân viên kho xác nhận kết thúc phiên kiểm kê và gửi kết quả để phê duyệt. \\
+\textbf{Mô tả tóm tắt} & Hoàn tất phiên kiểm kê. \\
 \hline
 \textbf{Tác nhân tham gia} & Nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Chọn chức năng “Hoàn thành phiên”.
-    \item Hệ thống tổng hợp toàn bộ dữ liệu kiểm kê.
-    \item Xác nhận gửi kết quả lên quản lý để kiểm tra.
+    \item Truy cập vào trang phiên kiểm kê trong kho.
+    \item Chọn mục hành động tại phiên kiểm cần kiểm tra.
+    \item Chọn tiến hành.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item[4a.] Nếu còn hàng chưa kiểm kê → hiển thị cảnh báo và yêu cầu hoàn tất trước khi nộp. 
+    \item[4a.] Nếu phiên kiểm kê đã hoàn thành thì không chọn được tiến hành. 
 \end{enumerate} \\
 \hline
 \textbf{Yêu cầu đặc biệt} & Không có. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đang trong tiến trình. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đang trong chờ. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên kiểm kê được đánh dấu là hoàn thành. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Phiên kiểm kê được đánh dấu đang trong tiến hành. \\
 \hline
-\textbf{Điểm mở rộng} & Bao gồm UC07-04 Xem tồn kho thời gian thực. \\
+\textbf{Điểm mở rộng} & Không. \\
 \hline
 \end{tabular}
 

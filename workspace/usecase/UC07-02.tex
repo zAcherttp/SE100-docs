@@ -8,34 +8,34 @@
 \hline
 \textbf{Mã UC} & UC07-02 \\
 \hline
-\textbf{Tên UC} & Thực hiện kiểm kê thực tế \\
+\textbf{Tên UC} & Xem thông tin chi tiết phiên kiểm kê \\
 \hline
-\textbf{Mô tả tóm tắt} & Nhân viên kho thực hiện việc đếm hàng hóa thực tế trong khu vực đã được chỉ định và ghi nhận kết quả vào hệ thống. \\
+\textbf{Mô tả tóm tắt} & Xem thông tin chi tiết của một phiên kiểm kê cụ thể. \\
 \hline
-\textbf{Tác nhân tham gia} & Nhân viên kho \\
+\textbf{Tác nhân tham gia} & Nhân viên kho, Quản lý kho \\
 \hline
 \textbf{Luồng sự kiện chính} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item Nhân viên chọn phiên kiểm kê đang hoạt động.
-    \item Tiến hành đếm số lượng hàng hóa thực tế.
-    \item Nhập dữ liệu kiểm kê vào hệ thống.
-    \item Hệ thống lưu kết quả tạm thời.
+    \item Truy cập vào trang phiên kiểm kê trong kho.
+    \item Chọn mục hành động tại phiên kiểm cần kiểm tra.
+    \item Chọn xem chi tiết.
+    \item Xem đầy đủ thông tin chi tiết của phiên kiểm kê.
 \end{enumerate} \\
 \hline
 \textbf{Luồng sự kiện khác} &
 \begin{enumerate}
     \vspace{-18pt}
-    \item[4a.] Nếu sản phẩm không tìm thấy trong danh sách → hiển thị cảnh báo và cho phép thêm mới tạm thời.
+    \item[4a.] Không. 
 \end{enumerate} \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Cần thiết bị quét mã vạch hỗ trợ. \\
+\textbf{Yêu cầu đặc biệt} & Người xem phải có quyền truy cập thông tin kiểm kê. \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Phiên kiểm kê đã được khởi tạo. \\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Hệ thống phải có dữ liệu phiên kiểm kê. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Kết quả kiểm kê được ghi nhận vào hệ thống. \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin chi tiết phiên kiểm kê được hiển thị thành công. \\
 \hline
-\textbf{Điểm mở rộng} & Bao gồm UC07-03 Hoàn thành phiên kiểm kê. \\
+\textbf{Điểm mở rộng} & Không. \\
 \hline
 \end{tabular}
 

@@ -8,30 +8,26 @@
 \hline
 \textbf{Mã UC} & UC08-01 \\
 \hline
-\textbf{Tên UC} & Tạo Yêu cầu Trả hàng (Create Return Request) \\
+\textbf{Tên UC} & Xem chi tiết yêu cầu Trả hàng (View Return Request Status) \\
 \hline
-\textbf{Mô tả tóm tắt} & Lập một yêu cầu (phiếu) để trả hàng lại cho nhà cung cấp. \\
+\textbf{Mô tả tóm tắt} & Người dùng tra cứu và xem chi tiết các yêu cầu trả hàng đã tạo. \\
 \hline
-\textbf{Tác nhân tham gia} & Inventory Administrator (QT Tồn kho), Stock Clerk (NV Kho) \\
+\textbf{Tác nhân tham gia} & Quản lý kho, Nhân viên kho \\
 \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{enumerate}
     \vspace{-18pt}
-    \item Hệ thống tạo mã yêu cầu trả hàng (Return Request Code).
-    \item Người dùng chọn Nhà cung cấp.
-    \item Người dùng thêm (các) mặt hàng cần trả (chọn SKU, Lô, Số lượng).
-    \item Với mỗi mặt hàng, người dùng chọn "Lý do Trả" (VD: DEFECTIVE, EXPIRED...).
-    \item Người dùng nhập ghi chú, đính kèm bằng chứng (ảnh) và nhập số tiền tín dụng dự kiến (nếu có).
-    \item Người dùng lưu yêu cầu, hệ thống đặt trạng thái "RETURN_DRAFT".
+    \item Chọn chức năng 'Xem chi tiết yêu cầu trả hàng'.
+    \item Xem chi tiết các trạng thái.
 \end{enumerate} \\
 \hline
-\textbf{Luồng sự kiện khác} & Lý do "KHÁC": Người dùng chọn "OTHER" và hệ thống yêu cầu ghi chú chi tiết. \\
+\textbf{Luồng sự kiện khác} & Không có \\
 \hline
-\textbf{Yêu cầu đặc biệt} & Hỗ trợ tải lên tối đa 5 tệp bằng chứng (ảnh/video). \\
+\textbf{Yêu cầu đặc biệt} & Không có \\
 \hline
-\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập.\\
+\textbf{Trạng thái hệ thống ngay khi bắt đầu thực hiện} & Người dùng đã đăng nhập. \\
 \hline
-\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Một yêu cầu trả hàng được tạo ở trạng thái "RETURN_DRAFT". \\
+\textbf{Trạng thái hệ thống sau khi bắt đầu thực hiện} & Thông tin trạng thái yêu cầu được hiển thị. \\
 \hline
 \textbf{Điểm mở rộng} & Không có \\
 \hline
