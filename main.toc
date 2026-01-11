@@ -1,7 +1,7 @@
 \changetocdepth {2}
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{M\d {u}c l\d {u}c}{2}{chapter*.1}%
-\contentsline {chapter}{Danh s\'ach b\h {a}ng}{4}{chapter*.2}%
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{5}{chapter*.2}%
 \contentsline {chapter}{\chapternumberline {1}Giới thiệu}{9}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Giới thiệu}{9}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Các hoạt động chính trong quản lý kho:}{9}{subsection.1.1.1}%
@@ -55,35 +55,83 @@
 \contentsline {section}{\numberline {2.3}Danh sách các Actor}{53}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Danh sách các Use-case}{54}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Đặc tả Use Case}{61}{section.2.5}%
-\contentsline {chapter}{\chapternumberline {3}Sơ đồ cơ sở dữ liệu tổng quát}{155}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Bảng cơ sở dữ liệu chi tiết}{155}{section.3.1}%
-\contentsline {chapter}{\chapternumberline {4}Class Diagram}{163}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Class Diagram}{163}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Class Diagram Explanation}{164}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Organization}{164}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Branch}{164}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Product}{165}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}ProductVariant}{165}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Category}{166}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Brand}{166}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Supplier}{167}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}PurchaseOrder}{167}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}PurchaseOrderItem}{168}{subsection.4.2.9}%
-\contentsline {subsection}{\numberline {4.2.10}TransferOrder}{168}{subsection.4.2.10}%
-\contentsline {subsection}{\numberline {4.2.11}TransferOrderItem}{169}{subsection.4.2.11}%
-\contentsline {subsection}{\numberline {4.2.12}StorageZone}{169}{subsection.4.2.12}%
-\contentsline {subsection}{\numberline {4.2.13}InventoryBatch}{169}{subsection.4.2.13}%
-\contentsline {subsection}{\numberline {4.2.14}InventoryTransaction}{170}{subsection.4.2.14}%
-\contentsline {subsection}{\numberline {4.2.15}User}{171}{subsection.4.2.15}%
-\contentsline {subsection}{\numberline {4.2.16}Role}{171}{subsection.4.2.16}%
-\contentsline {subsection}{\numberline {4.2.17}Permission}{172}{subsection.4.2.17}%
-\contentsline {subsection}{\numberline {4.2.18}AuditLog}{172}{subsection.4.2.18}%
-\contentsline {section}{\numberline {4.3}Enumeration Types}{172}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}PurchaseOrderStatus}{172}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}TransferStatus}{173}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}BatchStatus}{173}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}TransactionType}{173}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}ZoneType}{173}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}StorageRequirement}{174}{subsection.4.3.6}%
-\contentsline {subsection}{\numberline {4.3.7}UnitOfMeasure}{174}{subsection.4.3.7}%
-\contentsline {subsection}{\numberline {4.3.8}ActionType}{174}{subsection.4.3.8}%
+\contentsline {chapter}{\chapternumberline {3}Thiết kế}{63}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Thiết kế giao diện}{63}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Sơ đồ liên kết các giao diện}{63}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Thiết kế giao diện đăng nhập}{63}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Thiết kế giao diện quản lý kho}{63}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Thiết kế cơ sở dữ liệu}{63}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Sơ đồ cơ sở dữ liệu tổng quát}{64}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Bảng cơ sở dữ liệu chi tiết}{64}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Thiết kế lớp}{69}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Sơ đồ lớp tổng quát}{71}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Mô tả các lớp chính}{72}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Đặc tả chi tiết các lớp}{72}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Organization}{72}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Branch}{73}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Product}{73}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}ProductVariant}{74}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Category}{74}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Brand}{75}{subsection.3.3.9}%
+\contentsline {subsection}{\numberline {3.3.10}Supplier}{75}{subsection.3.3.10}%
+\contentsline {subsection}{\numberline {3.3.11}PurchaseOrder}{76}{subsection.3.3.11}%
+\contentsline {subsection}{\numberline {3.3.12}PurchaseOrderItem}{76}{subsection.3.3.12}%
+\contentsline {subsection}{\numberline {3.3.13}TransferOrder}{76}{subsection.3.3.13}%
+\contentsline {subsection}{\numberline {3.3.14}TransferOrderItem}{77}{subsection.3.3.14}%
+\contentsline {subsection}{\numberline {3.3.15}StorageZone}{78}{subsection.3.3.15}%
+\contentsline {subsection}{\numberline {3.3.16}InventoryBatch}{78}{subsection.3.3.16}%
+\contentsline {subsection}{\numberline {3.3.17}InventoryTransaction}{79}{subsection.3.3.17}%
+\contentsline {subsection}{\numberline {3.3.18}User}{79}{subsection.3.3.18}%
+\contentsline {subsection}{\numberline {3.3.19}Role}{80}{subsection.3.3.19}%
+\contentsline {subsection}{\numberline {3.3.20}Permission}{80}{subsection.3.3.20}%
+\contentsline {subsection}{\numberline {3.3.21}AuditLog}{80}{subsection.3.3.21}%
+\contentsline {subsection}{\numberline {3.3.22}Các kiểu liệt kê (Enumeration Types)}{81}{subsection.3.3.22}%
+\contentsline {subsection}{\numberline {3.3.23}PurchaseOrderStatus}{81}{subsection.3.3.23}%
+\contentsline {subsection}{\numberline {3.3.24}TransferStatus}{81}{subsection.3.3.24}%
+\contentsline {subsection}{\numberline {3.3.25}BatchStatus}{81}{subsection.3.3.25}%
+\contentsline {subsection}{\numberline {3.3.26}TransactionType}{82}{subsection.3.3.26}%
+\contentsline {subsection}{\numberline {3.3.27}ZoneType}{82}{subsection.3.3.27}%
+\contentsline {subsection}{\numberline {3.3.28}StorageRequirement}{82}{subsection.3.3.28}%
+\contentsline {subsection}{\numberline {3.3.29}UnitOfMeasure}{83}{subsection.3.3.29}%
+\contentsline {subsection}{\numberline {3.3.30}ActionType}{83}{subsection.3.3.30}%
+\contentsline {section}{\numberline {3.4}Thiết kế kiến trúc}{83}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Mô hình kiến trúc tổng quan}{83}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Đặc điểm kiến trúc}{84}{subsection.3.4.2}%
+\contentsline {chapter}{\chapternumberline {4}Xây dựng và triển khai ứng dụng}{85}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Tổng quan công nghệ}{85}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Frontend}{85}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Backend}{85}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Database}{86}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Công cụ hỗ trợ}{86}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Sơ đồ thành phần}{86}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Các thành phần chính}{86}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Giao tiếp giữa các thành phần}{87}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Sơ đồ triển khai}{87}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Môi trường triển khai}{87}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Kết nối mạng}{88}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Chiến lược triển khai}{88}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Bảng phân công công việc}{88}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Chi tiết phân công theo giai đoạn}{89}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Giai đoạn 1: Phân tích và Thiết kế (Tuần 1-2)}{89}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Giai đoạn 2: Phát triển Backend (Tuần 3-5)}{89}{subsubsection.4.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Giai đoạn 3: Phát triển Frontend (Tuần 4-6)}{89}{subsubsection.4.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.4.1.4}Giai đoạn 4: Kiểm thử và Triển khai (Tuần 7-8)}{90}{subsubsection.4.4.1.4}%
+\contentsline {chapter}{\chapternumberline {5}Tổng kết}{91}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kết quả đạt được}{91}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Các chức năng đã hoàn thành}{91}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Quản lý tổ chức và chi nhánh}{91}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Quản lý người dùng và phân quyền}{91}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}Quản lý sản phẩm}{91}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}Quản lý nhà cung cấp}{92}{subsubsection.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.1.5}Quản lý đơn hàng}{92}{subsubsection.5.1.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.1.6}Quản lý kho bãi}{92}{subsubsection.5.1.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.1.7}Báo cáo và thống kê}{92}{subsubsection.5.1.1.7}%
+\contentsline {subsection}{\numberline {5.1.2}Thông tin triển khai}{93}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Ưu và khuyết điểm của phần mềm}{93}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Ưu điểm}{93}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Khuyết điểm}{93}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Hướng phát triển}{94}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Ngắn hạn (3-6 tháng)}{94}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Trung hạn (6-12 tháng)}{94}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Dài hạn (1-2 năm)}{95}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Kết luận}{95}{subsection.5.3.4}%

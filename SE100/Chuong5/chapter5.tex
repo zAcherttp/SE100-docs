@@ -1,0 +1,191 @@
+\documentclass[../../main.tex]{subfiles}
+
+\usepackage{array}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+
+% Define colors
+\definecolor{headerblue}{RGB}{67, 113, 183}
+
+% Custom column types
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+\chapter{Tổng kết}
+
+\section{Kết quả đạt được}
+
+Sau quá trình nghiên cứu, phân tích và phát triển, nhóm đã hoàn thành hệ thống quản lý kho với các chức năng chính sau:
+
+\subsection{Các chức năng đã hoàn thành}
+
+\subsubsection{Quản lý tổ chức và chi nhánh}
+
+\begin{itemize}
+    \item Tạo và quản lý thông tin tổ chức (workspace)
+    \item Quản lý nhiều chi nhánh trong cùng một tổ chức
+    \item Cấu hình cài đặt riêng cho từng tổ chức và chi nhánh
+    \item Hệ thống mời người dùng tham gia workspace thông qua mã mời
+\end{itemize}
+
+\subsubsection{Quản lý người dùng và phân quyền}
+
+\begin{itemize}
+    \item Đăng nhập, đăng xuất, quản lý phiên làm việc
+    \item Quản lý người dùng: thêm, sửa, xóa, khóa tài khoản
+    \item Phân quyền dựa trên vai trò (Role-Based Access Control)
+    \item Quản lý vai trò và quyền hạn chi tiết
+    \item Lưu nhật ký hoạt động người dùng (Audit Log)
+\end{itemize}
+
+\subsubsection{Quản lý sản phẩm}
+
+\begin{itemize}
+    \item Quản lý danh mục sản phẩm theo cấu trúc phân cấp
+    \item Quản lý thương hiệu sản phẩm
+    \item Quản lý sản phẩm và các biến thể (SKU)
+    \item Quản lý nhiều mã vạch cho mỗi SKU
+    \item Theo dõi sản phẩm theo lô (batch tracking)
+    \item Quản lý yêu cầu lưu trữ đặc biệt (nhiệt độ, độ ẩm, v.v.)
+\end{itemize}
+
+\subsubsection{Quản lý nhà cung cấp}
+
+\begin{itemize}
+    \item Quản lý thông tin nhà cung cấp
+    \item Theo dõi lịch sử giao dịch với nhà cung cấp
+    \item Đánh giá hiệu suất giao hàng của nhà cung cấp
+\end{itemize}
+
+\subsubsection{Quản lý đơn hàng}
+
+\begin{itemize}
+    \item Tạo và quản lý đơn mua hàng (Purchase Order)
+    \item Theo dõi trạng thái đơn hàng: Đang đặt, Đang giao, Đã nhận, Hoàn thành
+    \item Nhập kho theo đơn mua hàng
+    \item Tạo và quản lý đơn chuyển kho giữa các chi nhánh
+    \item Theo dõi quá trình chuyển kho: Đang chuẩn bị, Đang vận chuyển, Đã nhận
+\end{itemize}
+
+\subsubsection{Quản lý kho bãi}
+
+\begin{itemize}
+    \item Quản lý khu vực lưu trữ theo cấu trúc phân cấp
+    \item Quản lý lô hàng (inventory batch) với thông tin chi tiết
+    \item Theo dõi số lượng tồn kho theo thời gian thực
+    \item Ghi nhận các giao dịch kho: Nhập, Xuất, Chuyển kho, Điều chỉnh
+    \item Cảnh báo hàng sắp hết hạn
+    \item Cảnh báo hàng dưới mức tồn kho tối thiểu (reorder point)
+\end{itemize}
+
+\subsubsection{Báo cáo và thống kê}
+
+\begin{itemize}
+    \item Báo cáo tồn kho theo sản phẩm, theo khu vực
+    \item Báo cáo xuất nhập tồn theo kỳ
+    \item Báo cáo hiệu suất nhà cung cấp
+    \item Thống kê doanh thu, chi phí
+    \item Dashboard tổng quan hệ thống
+\end{itemize}
+
+\subsection{Thông tin triển khai}
+
+\begin{itemize}
+    \item \textbf{Mã nguồn:} \url{https://github.com/zAcherttp/SE100-docs.git}
+    \item \textbf{Video demo:} [Link video demo - Đã bật quyền chia sẻ]
+    \item \textbf{Người quản lý mã nguồn:} [Tên sinh viên - MSSV]
+    \item \textbf{Người quản lý video demo:} [Tên sinh viên - MSSV]
+\end{itemize}
+
+\section{Ưu và khuyết điểm của phần mềm}
+
+\subsection{Ưu điểm}
+
+\begin{itemize}
+    \item \textbf{Giao diện thân thiện:} Giao diện được thiết kế theo chuẩn Material Design, dễ sử dụng, hỗ trợ responsive cho nhiều thiết bị.
+    
+    \item \textbf{Kiến trúc rõ ràng:} Áp dụng kiến trúc phân lớp, dễ bảo trì và mở rộng. Tách biệt rõ ràng giữa frontend, backend và database.
+    
+    \item \textbf{Quản lý đa tổ chức:} Hỗ trợ multi-tenant, cho phép nhiều tổ chức sử dụng cùng một hệ thống với dữ liệu được cô lập.
+    
+    \item \textbf{Phân quyền linh hoạt:} Hệ thống phân quyền chi tiết dựa trên vai trò, cho phép kiểm soát chặt chẽ quyền truy cập.
+    
+    \item \textbf{Theo dõi lô hàng:} Hỗ trợ theo dõi sản phẩm theo lô, giúp quản lý hàng hóa có hạn sử dụng hiệu quả.
+    
+    \item \textbf{Báo cáo phong phú:} Cung cấp nhiều loại báo cáo và thống kê, hỗ trợ ra quyết định kinh doanh.
+    
+    \item \textbf{Cảnh báo tự động:} Hệ thống tự động cảnh báo khi hàng sắp hết hạn hoặc dưới mức tồn kho tối thiểu.
+\end{itemize}
+
+\subsection{Khuyết điểm}
+
+\begin{itemize}
+    \item \textbf{Chưa hỗ trợ quét mã vạch tích hợp:} Tính năng quét mã vạch qua camera trên thiết bị di động chưa được triển khai đầy đủ, cần phát triển thêm để tối ưu quy trình nhập xuất kho.
+    
+    \item \textbf{Thiếu tính năng dự báo nhu cầu:} Hệ thống chưa có module dự báo nhu cầu hàng hóa dựa trên dữ liệu lịch sử.
+    
+    \item \textbf{Chưa tích hợp với hệ thống bên ngoài:} Chưa có API tích hợp với các hệ thống kế toán, ERP hoặc nền tảng thương mại điện tử.
+    
+    \item \textbf{Hiệu suất với dữ liệu lớn:} Chưa được kiểm thử kỹ lưỡng với khối lượng dữ liệu lớn (hàng triệu giao dịch).
+    
+    \item \textbf{Thiếu giao diện 2D warehouse layout:} Chưa triển khai tính năng hiển thị sơ đồ kho 2D với vị trí các khu vực lưu trữ.
+    
+    \item \textbf{Chưa hỗ trợ offline mode:} Ứng dụng yêu cầu kết nối internet liên tục, chưa hỗ trợ làm việc offline.
+    
+    \item \textbf{Tài liệu người dùng chưa đầy đủ:} Tài liệu hướng dẫn sử dụng cho người dùng cuối còn hạn chế.
+\end{itemize}
+
+\section{Hướng phát triển}
+
+Dựa trên các khuyết điểm hiện tại và nhu cầu thực tế, hệ thống có thể được phát triển thêm theo các hướng sau:
+
+\subsection{Ngắn hạn (3-6 tháng)}
+
+\begin{itemize}
+    \item \textbf{Hoàn thiện tính năng quét mã vạch:} Phát triển module quét mã vạch tích hợp trên ứng dụng mobile, hỗ trợ nhiều định dạng mã vạch (Code 39, Code 128, QR Code).
+    
+    \item \textbf{Tối ưu hóa hiệu suất:} Thực hiện indexing cơ sở dữ liệu, áp dụng caching (Redis) cho các truy vấn thường xuyên.
+    
+    \item \textbf{Bổ sung tài liệu:} Viết tài liệu hướng dẫn sử dụng chi tiết cho từng chức năng.
+    
+    \item \textbf{Cải thiện UI/UX:} Thu thập feedback từ người dùng thực tế, cải thiện trải nghiệm người dùng.
+\end{itemize}
+
+\subsection{Trung hạn (6-12 tháng)}
+
+\begin{itemize}
+    \item \textbf{Module dự báo nhu cầu:} Phát triển tính năng phân tích dữ liệu lịch sử và dự báo nhu cầu hàng hóa.
+    
+    \item \textbf{Giao diện 2D warehouse layout:} Triển khai tính năng vẽ và hiển thị sơ đồ kho 2D.
+    
+    \item \textbf{API tích hợp:} Xây dựng API public cho phép tích hợp với các hệ thống bên ngoài.
+    
+    \item \textbf{Mobile App native:} Phát triển ứng dụng di động native (iOS, Android) với đầy đủ tính năng.
+    
+    \item \textbf{Báo cáo nâng cao:} Bổ sung các báo cáo phân tích chuyên sâu như ABC analysis, phân tích chu kỳ tồn kho.
+\end{itemize}
+
+\subsection{Dài hạn (1-2 năm)}
+
+\begin{itemize}
+    \item \textbf{AI và Automation:} Áp dụng AI để tự động phân loại sản phẩm, gợi ý vị trí lưu trữ tối ưu.
+    
+    \item \textbf{IoT Integration:} Tích hợp với các thiết bị IoT như cảm biến nhiệt độ, độ ẩm, cân điện tử, RFID reader.
+    
+    \item \textbf{Blockchain cho truy xuất nguồn gốc:} Áp dụng công nghệ blockchain để đảm bảo tính minh bạch và truy xuất nguồn gốc hàng hóa.
+    
+    \item \textbf{Route optimization:} Phát triển thuật toán tối ưu hóa tuyến đường picking trong kho.
+    
+    \item \textbf{Cloud deployment và scalability:} Triển khai hệ thống lên cloud platform (AWS, Azure, GCP) với khả năng tự động scale.
+    
+    \item \textbf{Multi-language support:} Hỗ trợ đa ngôn ngữ để mở rộng thị trường quốc tế.
+\end{itemize}
+
+\subsection{Kết luận}
+
+Hệ thống quản lý kho đã được xây dựng thành công với đầy đủ các chức năng cơ bản, đáp ứng nhu cầu quản lý kho cho doanh nghiệp vừa và nhỏ. Tuy nhiên, để trở thành một giải pháp hoàn chỉnh và cạnh tranh trên thị trường, hệ thống cần được phát triển thêm nhiều tính năng nâng cao và tối ưu hóa hiệu suất. Với lộ trình phát triển rõ ràng, hệ thống có tiềm năng trở thành một công cụ quản lý kho toàn diện, hỗ trợ đắc lực cho các doanh nghiệp trong việc tối ưu hóa hoạt động kho bãi.
+
+\end{document}

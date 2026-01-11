@@ -27,124 +27,33 @@
 \addvspace {10pt}
 \contentsline {table}{\numberline {2.1}{\ignorespaces Danh sách các Actor sử dụng trong hệ thống}}{53}{table.2.1}%
 \contentsline {table}{\numberline {2.2}{\ignorespaces Danh sách các Use Case chi tiết trong hệ thống}}{60}{table.2.2}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Bảng UC01-01}}{61}{table.caption.36}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Bảng UC01-02}}{62}{table.caption.37}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces Bảng UC01-03}}{63}{table.caption.38}%
-\contentsline {table}{\numberline {2.6}{\ignorespaces Bảng UC01-04}}{64}{table.caption.39}%
-\contentsline {table}{\numberline {2.7}{\ignorespaces Bảng UC01-05}}{65}{table.caption.40}%
-\contentsline {table}{\numberline {2.8}{\ignorespaces Bảng UC01-06}}{66}{table.caption.41}%
-\contentsline {table}{\numberline {2.9}{\ignorespaces Bảng UC01-07}}{67}{table.caption.42}%
-\contentsline {table}{\numberline {2.10}{\ignorespaces Bảng UC01-08}}{68}{table.caption.43}%
-\contentsline {table}{\numberline {2.11}{\ignorespaces Bảng UC01-09}}{69}{table.caption.44}%
-\contentsline {table}{\numberline {2.12}{\ignorespaces Bảng UC01-10}}{70}{table.caption.45}%
-\contentsline {table}{\numberline {2.13}{\ignorespaces Bảng UC01-11}}{71}{table.caption.46}%
-\contentsline {table}{\numberline {2.14}{\ignorespaces Bảng UC01-12}}{72}{table.caption.47}%
-\contentsline {table}{\numberline {2.15}{\ignorespaces Bảng UC01-13}}{73}{table.caption.48}%
-\contentsline {table}{\numberline {2.16}{\ignorespaces Bảng UC02-01}}{74}{table.caption.49}%
-\contentsline {table}{\numberline {2.17}{\ignorespaces Bảng UC02-02}}{75}{table.caption.50}%
-\contentsline {table}{\numberline {2.18}{\ignorespaces Bảng UC02-03}}{76}{table.caption.51}%
-\contentsline {table}{\numberline {2.19}{\ignorespaces Bảng UC02-04}}{77}{table.caption.52}%
-\contentsline {table}{\numberline {2.20}{\ignorespaces Bảng UC02-05}}{78}{table.caption.53}%
-\contentsline {table}{\numberline {2.21}{\ignorespaces Bảng UC02-06}}{79}{table.caption.54}%
-\contentsline {table}{\numberline {2.22}{\ignorespaces Bảng UC02-07}}{80}{table.caption.55}%
-\contentsline {table}{\numberline {2.23}{\ignorespaces Bảng UC02-08}}{81}{table.caption.56}%
-\contentsline {table}{\numberline {2.24}{\ignorespaces Bảng UC02-09}}{82}{table.caption.57}%
-\contentsline {table}{\numberline {2.25}{\ignorespaces Bảng UC02-10}}{83}{table.caption.58}%
-\contentsline {table}{\numberline {2.26}{\ignorespaces Bảng UC02-11}}{84}{table.caption.59}%
-\contentsline {table}{\numberline {2.27}{\ignorespaces Bảng UC02-12}}{85}{table.caption.60}%
-\contentsline {table}{\numberline {2.28}{\ignorespaces Bảng UC02-13}}{86}{table.caption.61}%
-\contentsline {table}{\numberline {2.29}{\ignorespaces Bảng UC02-14}}{87}{table.caption.62}%
-\contentsline {table}{\numberline {2.30}{\ignorespaces Bảng UC02-15}}{88}{table.caption.63}%
-\contentsline {table}{\numberline {2.31}{\ignorespaces Bảng UC02-16}}{89}{table.caption.64}%
-\contentsline {table}{\numberline {2.32}{\ignorespaces Bảng UC02-17}}{90}{table.caption.65}%
-\contentsline {table}{\numberline {2.33}{\ignorespaces Bảng UC02-18}}{91}{table.caption.66}%
-\contentsline {table}{\numberline {2.34}{\ignorespaces Bảng UC02-19}}{92}{table.caption.67}%
-\contentsline {table}{\numberline {2.35}{\ignorespaces Bảng UC03-01}}{93}{table.caption.68}%
-\contentsline {table}{\numberline {2.36}{\ignorespaces Bảng UC03-02}}{94}{table.caption.69}%
-\contentsline {table}{\numberline {2.37}{\ignorespaces Bảng UC03-03}}{95}{table.caption.70}%
-\contentsline {table}{\numberline {2.38}{\ignorespaces Bảng UC03-04}}{96}{table.caption.71}%
-\contentsline {table}{\numberline {2.39}{\ignorespaces Bảng UC03-05}}{97}{table.caption.72}%
-\contentsline {table}{\numberline {2.40}{\ignorespaces Bảng UC03-06}}{98}{table.caption.73}%
-\contentsline {table}{\numberline {2.41}{\ignorespaces Bảng UC04-01}}{99}{table.caption.74}%
-\contentsline {table}{\numberline {2.42}{\ignorespaces Bảng UC04-02}}{100}{table.caption.75}%
-\contentsline {table}{\numberline {2.43}{\ignorespaces Bảng UC04-03}}{101}{table.caption.76}%
-\contentsline {table}{\numberline {2.44}{\ignorespaces Bảng UC04-04}}{102}{table.caption.77}%
-\contentsline {table}{\numberline {2.45}{\ignorespaces Bảng UC04-05}}{103}{table.caption.78}%
-\contentsline {table}{\numberline {2.46}{\ignorespaces Bảng UC04-06}}{104}{table.caption.79}%
-\contentsline {table}{\numberline {2.47}{\ignorespaces Bảng UC05-01}}{105}{table.caption.80}%
-\contentsline {table}{\numberline {2.48}{\ignorespaces Bảng UC05-02}}{106}{table.caption.81}%
-\contentsline {table}{\numberline {2.49}{\ignorespaces Bảng UC05-03}}{107}{table.caption.82}%
-\contentsline {table}{\numberline {2.50}{\ignorespaces Bảng UC05-04}}{108}{table.caption.83}%
-\contentsline {table}{\numberline {2.51}{\ignorespaces Bảng UC05-05}}{109}{table.caption.84}%
-\contentsline {table}{\numberline {2.52}{\ignorespaces Bảng UC05-06}}{110}{table.caption.85}%
-\contentsline {table}{\numberline {2.53}{\ignorespaces Bảng UC05-07}}{111}{table.caption.86}%
-\contentsline {table}{\numberline {2.54}{\ignorespaces Bảng UC05-08}}{112}{table.caption.87}%
-\contentsline {table}{\numberline {2.55}{\ignorespaces Bảng UC05-09}}{113}{table.caption.88}%
-\contentsline {table}{\numberline {2.56}{\ignorespaces Bảng UC05-10}}{114}{table.caption.89}%
-\contentsline {table}{\numberline {2.57}{\ignorespaces Bảng UC06-01}}{115}{table.caption.90}%
-\contentsline {table}{\numberline {2.58}{\ignorespaces Bảng UC06-02}}{116}{table.caption.91}%
-\contentsline {table}{\numberline {2.59}{\ignorespaces Bảng UC06-03}}{117}{table.caption.92}%
-\contentsline {table}{\numberline {2.60}{\ignorespaces Bảng UC06-04}}{118}{table.caption.93}%
-\contentsline {table}{\numberline {2.61}{\ignorespaces Bảng UC06-05}}{119}{table.caption.94}%
-\contentsline {table}{\numberline {2.62}{\ignorespaces Bảng UC06-06}}{120}{table.caption.95}%
-\contentsline {table}{\numberline {2.63}{\ignorespaces Bảng UC06-07}}{121}{table.caption.96}%
-\contentsline {table}{\numberline {2.64}{\ignorespaces Bảng UC07-01}}{122}{table.caption.97}%
-\contentsline {table}{\numberline {2.65}{\ignorespaces Bảng UC07-02}}{123}{table.caption.98}%
-\contentsline {table}{\numberline {2.66}{\ignorespaces Bảng UC07-03}}{124}{table.caption.99}%
-\contentsline {table}{\numberline {2.67}{\ignorespaces Bảng UC07-04}}{125}{table.caption.100}%
-\contentsline {table}{\numberline {2.68}{\ignorespaces Bảng UC07-05}}{126}{table.caption.101}%
-\contentsline {table}{\numberline {2.69}{\ignorespaces Bảng UC07-06}}{127}{table.caption.102}%
-\contentsline {table}{\numberline {2.70}{\ignorespaces Bảng UC07-07}}{128}{table.caption.103}%
-\contentsline {table}{\numberline {2.71}{\ignorespaces Bảng UC07-08}}{129}{table.caption.104}%
-\contentsline {table}{\numberline {2.72}{\ignorespaces Bảng UC07-09}}{130}{table.caption.105}%
-\contentsline {table}{\numberline {2.73}{\ignorespaces Bảng UC07-10}}{131}{table.caption.106}%
-\contentsline {table}{\numberline {2.74}{\ignorespaces Bảng UC08-01}}{132}{table.caption.107}%
-\contentsline {table}{\numberline {2.75}{\ignorespaces Bảng UC08-02}}{133}{table.caption.108}%
-\contentsline {table}{\numberline {2.76}{\ignorespaces Bảng UC08-03}}{134}{table.caption.109}%
-\contentsline {table}{\numberline {2.77}{\ignorespaces Bảng UC08-04}}{135}{table.caption.110}%
-\contentsline {table}{\numberline {2.78}{\ignorespaces Bảng UC08-05}}{136}{table.caption.111}%
-\contentsline {table}{\numberline {2.79}{\ignorespaces Bảng UC09-01}}{137}{table.caption.112}%
-\contentsline {table}{\numberline {2.80}{\ignorespaces Bảng UC09-02}}{138}{table.caption.113}%
-\contentsline {table}{\numberline {2.81}{\ignorespaces Bảng UC09-03}}{139}{table.caption.114}%
-\contentsline {table}{\numberline {2.82}{\ignorespaces Bảng UC09-04}}{140}{table.caption.115}%
-\contentsline {table}{\numberline {2.83}{\ignorespaces Bảng UC09-05}}{141}{table.caption.116}%
-\contentsline {table}{\numberline {2.84}{\ignorespaces Bảng UC09-06}}{142}{table.caption.117}%
-\contentsline {table}{\numberline {2.85}{\ignorespaces Bảng UC09-07}}{143}{table.caption.118}%
-\contentsline {table}{\numberline {2.86}{\ignorespaces Bảng UC10-01}}{144}{table.caption.119}%
-\contentsline {table}{\numberline {2.87}{\ignorespaces Bảng UC10-02}}{145}{table.caption.120}%
-\contentsline {table}{\numberline {2.88}{\ignorespaces Bảng UC10-03}}{146}{table.caption.121}%
-\contentsline {table}{\numberline {2.89}{\ignorespaces Bảng UC10-06}}{147}{table.caption.122}%
-\contentsline {table}{\numberline {2.90}{\ignorespaces Bảng UC10-07}}{148}{table.caption.123}%
-\contentsline {table}{\numberline {2.91}{\ignorespaces Bảng UC10-09}}{149}{table.caption.124}%
-\contentsline {table}{\numberline {2.92}{\ignorespaces Bảng UC11-01}}{150}{table.caption.125}%
-\contentsline {table}{\numberline {2.93}{\ignorespaces Bảng UC11-02}}{151}{table.caption.126}%
-\contentsline {table}{\numberline {2.94}{\ignorespaces Bảng UC11-03}}{152}{table.caption.127}%
-\contentsline {table}{\numberline {2.95}{\ignorespaces Bảng UC11-04}}{153}{table.caption.128}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Bảng Organization}}{156}{table.caption.130}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Bảng Branch}}{156}{table.caption.131}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Bảng User}}{156}{table.caption.132}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Bảng Role}}{157}{table.caption.133}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Bảng Permission}}{157}{table.caption.134}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Bảng Audit Log}}{157}{table.caption.135}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Bảng Product}}{157}{table.caption.136}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Bảng Product Variant}}{158}{table.caption.137}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces Bảng Category}}{158}{table.caption.138}%
-\contentsline {table}{\numberline {3.10}{\ignorespaces Bảng Brand}}{158}{table.caption.139}%
-\contentsline {table}{\numberline {3.11}{\ignorespaces Bảng Supplier}}{158}{table.caption.140}%
-\contentsline {table}{\numberline {3.12}{\ignorespaces Bảng Purchase Order}}{159}{table.caption.141}%
-\contentsline {table}{\numberline {3.13}{\ignorespaces Bảng Purchase Order Item}}{159}{table.caption.142}%
-\contentsline {table}{\numberline {3.14}{\ignorespaces Bảng Transfer Order}}{159}{table.caption.143}%
-\contentsline {table}{\numberline {3.15}{\ignorespaces Bảng Transfer Order Item}}{160}{table.caption.144}%
-\contentsline {table}{\numberline {3.16}{\ignorespaces Bảng Storage Zone}}{160}{table.caption.145}%
-\contentsline {table}{\numberline {3.17}{\ignorespaces Bảng Inventory Batch}}{160}{table.caption.146}%
-\contentsline {table}{\numberline {3.18}{\ignorespaces Bảng Inventory Transaction}}{161}{table.caption.147}%
-\contentsline {table}{\numberline {3.19}{\ignorespaces Bảng Storage Requirement}}{161}{table.caption.148}%
-\contentsline {table}{\numberline {3.20}{\ignorespaces Bảng Unit of Measure}}{161}{table.caption.149}%
-\contentsline {table}{\numberline {3.21}{\ignorespaces Bảng Purchase Order Status}}{161}{table.caption.150}%
-\contentsline {table}{\numberline {3.22}{\ignorespaces Bảng Transfer Status}}{161}{table.caption.151}%
-\contentsline {table}{\numberline {3.23}{\ignorespaces Bảng Batch Status}}{161}{table.caption.152}%
-\contentsline {table}{\numberline {3.24}{\ignorespaces Bảng Transaction Type}}{162}{table.caption.153}%
-\contentsline {table}{\numberline {3.25}{\ignorespaces Bảng Zone Type}}{162}{table.caption.154}%
-\contentsline {table}{\numberline {3.26}{\ignorespaces Bảng Action Type}}{162}{table.caption.155}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Bảng Organization}}{64}{table.caption.37}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Bảng Branch}}{65}{table.caption.38}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Bảng User}}{65}{table.caption.39}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Bảng Role}}{65}{table.caption.40}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Bảng Permission}}{65}{table.caption.41}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Bảng Audit Log}}{66}{table.caption.42}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Bảng Product}}{66}{table.caption.43}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Bảng Product Variant}}{66}{table.caption.44}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Bảng Category}}{67}{table.caption.45}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces Bảng Brand}}{67}{table.caption.46}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces Bảng Supplier}}{67}{table.caption.47}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces Bảng Purchase Order}}{67}{table.caption.48}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces Bảng Purchase Order Item}}{68}{table.caption.49}%
+\contentsline {table}{\numberline {3.14}{\ignorespaces Bảng Transfer Order}}{68}{table.caption.50}%
+\contentsline {table}{\numberline {3.15}{\ignorespaces Bảng Transfer Order Item}}{68}{table.caption.51}%
+\contentsline {table}{\numberline {3.16}{\ignorespaces Bảng Storage Zone}}{69}{table.caption.52}%
+\contentsline {table}{\numberline {3.17}{\ignorespaces Bảng Inventory Batch}}{69}{table.caption.53}%
+\contentsline {table}{\numberline {3.18}{\ignorespaces Bảng Inventory Transaction}}{70}{table.caption.54}%
+\contentsline {table}{\numberline {3.19}{\ignorespaces Bảng Storage Requirement}}{70}{table.caption.55}%
+\contentsline {table}{\numberline {3.20}{\ignorespaces Bảng Unit of Measure}}{70}{table.caption.56}%
+\contentsline {table}{\numberline {3.21}{\ignorespaces Bảng Purchase Order Status}}{70}{table.caption.57}%
+\contentsline {table}{\numberline {3.22}{\ignorespaces Bảng Transfer Status}}{70}{table.caption.58}%
+\contentsline {table}{\numberline {3.23}{\ignorespaces Bảng Batch Status}}{70}{table.caption.59}%
+\contentsline {table}{\numberline {3.24}{\ignorespaces Bảng Transaction Type}}{71}{table.caption.60}%
+\contentsline {table}{\numberline {3.25}{\ignorespaces Bảng Zone Type}}{71}{table.caption.61}%
+\contentsline {table}{\numberline {3.26}{\ignorespaces Bảng Action Type}}{71}{table.caption.62}%
+\addvspace {10pt}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Bảng phân công công việc nhóm}}{89}{table.caption.64}%
 \addvspace {10pt}

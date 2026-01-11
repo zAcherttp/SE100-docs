@@ -1,20 +1,49 @@
 \documentclass[../../main.tex]{subfiles}
 \usepackage{array}
 \usepackage{float}
+\usepackage{longtable}
+\usepackage{subfiles}
+\usepackage[table]{xcolor}
+
+% Define colors
+\definecolor{headerblue}{RGB}{67, 113, 183}
 
 \begin{document}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\chapter{Sơ đồ cơ sở dữ liệu tổng quát}
+\chapter{Thiết kế}
+
+\section{Thiết kế giao diện}
+
+Phần thiết kế giao diện bao gồm sơ đồ liên kết các giao diện và thiết kế chi tiết một số giao diện tiêu biểu tương ứng với các nghiệp vụ chính của hệ thống.
+
+\subsection{Sơ đồ liên kết các giao diện}
+
+\textit{Ghi chú: Phần này sẽ được hoàn thiện trong giai đoạn tiếp theo.}
+
+\subsection{Thiết kế giao diện đăng nhập}
+
+\textit{Ghi chú: Phần này sẽ được hoàn thiện trong giai đoạn tiếp theo.}
+
+\subsection{Thiết kế giao diện quản lý kho}
+
+\textit{Ghi chú: Phần này sẽ được hoàn thiện trong giai đoạn tiếp theo.}
+
+\section{Thiết kế cơ sở dữ liệu}
+
+Thiết kế cơ sở dữ liệu của hệ thống quản lý kho được xây dựng dựa trên mô hình quan hệ, đảm bảo tính toàn vẹn dữ liệu và hiệu suất truy vấn. Cơ sở dữ liệu gồm các bảng chính để quản lý thông tin tổ chức, chi nhánh, sản phẩm, nhà cung cấp, đơn hàng, kho bãi và giao dịch kho.
+
+\subsection{Sơ đồ cơ sở dữ liệu tổng quát}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{../../assets/cover/database.png}
-    \label{Sơ đồ cơ sở dữ liệu tổng quan}
+    \caption{Sơ đồ cơ sở dữ liệu tổng quan}
+    \label{fig:database-diagram}
 \end{figure}
 
-
-\section{Bảng cơ sở dữ liệu chi tiết}
+\subsection{Bảng cơ sở dữ liệu chi tiết}
 
 % Organization Table
 \begin{table}[htbp]
@@ -547,5 +576,97 @@
 \end{tabular}
 \caption{Bảng Action Type}
 \end{table}
+
+\section{Thiết kế lớp}
+
+Thiết kế lớp của hệ thống được mô tả thông qua sơ đồ lớp UML (Class Diagram), thể hiện cấu trúc các lớp đối tượng, thuộc tính, phương thức và mối quan hệ giữa chúng.
+
+\subsection{Sơ đồ lớp tổng quát}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=0.52\textheight,keepaspectratio]{../../assets/cover/UML.png}
+    \caption{Class Diagram (UML)}
+    \label{fig:class-diagram}
+\end{figure}
+
+\subsection{Mô tả các lớp chính}
+
+Hệ thống bao gồm các nhóm lớp chính sau:
+
+\begin{itemize}
+    \item \textbf{Nhóm quản lý tổ chức:} Organization, Branch - quản lý thông tin tổ chức và chi nhánh
+    \item \textbf{Nhóm quản lý sản phẩm:} Product, ProductVariant, Category, Brand - quản lý thông tin sản phẩm
+    \item \textbf{Nhóm quản lý nhà cung cấp:} Supplier - quản lý thông tin nhà cung cấp
+    \item \textbf{Nhóm quản lý đơn hàng:} PurchaseOrder, PurchaseOrderItem, TransferOrder, TransferOrderItem - quản lý đơn mua hàng và chuyển kho
+    \item \textbf{Nhóm quản lý kho:} StorageZone, InventoryBatch, InventoryTransaction - quản lý kho bãi và giao dịch kho
+    \item \textbf{Nhóm quản lý người dùng:} User, Role, Permission, AuditLog - quản lý người dùng và phân quyền
+\end{itemize}
+
+\subsection{Đặc tả chi tiết các lớp}
+
+Dưới đây là đặc tả chi tiết các lớp trong hệ thống, bao gồm thuộc tính và phương thức của từng lớp.
+
+\subfile{../Chuong4/subfiles/organization}
+\subfile{../Chuong4/subfiles/branch}
+\subfile{../Chuong4/subfiles/product}
+\subfile{../Chuong4/subfiles/productvariant}
+\subfile{../Chuong4/subfiles/category}
+\subfile{../Chuong4/subfiles/brand}
+\subfile{../Chuong4/subfiles/supplier}
+\subfile{../Chuong4/subfiles/purchaseorder}
+\subfile{../Chuong4/subfiles/purchaseorderitem}
+\subfile{../Chuong4/subfiles/transferorder}
+\subfile{../Chuong4/subfiles/transferorderitem}
+\subfile{../Chuong4/subfiles/storagezone}
+\subfile{../Chuong4/subfiles/inventorybatch}
+\subfile{../Chuong4/subfiles/inventorytransaction}
+\subfile{../Chuong4/subfiles/user}
+\subfile{../Chuong4/subfiles/role}
+\subfile{../Chuong4/subfiles/permission}
+\subfile{../Chuong4/subfiles/auditlog}
+
+\subsection{Các kiểu liệt kê (Enumeration Types)}
+
+Hệ thống sử dụng các kiểu liệt kê sau để định nghĩa các giá trị cố định:
+
+\subfile{../Chuong4/subfiles/purchaseorderstatus}
+\subfile{../Chuong4/subfiles/transferstatus}
+\subfile{../Chuong4/subfiles/batchstatus}
+\subfile{../Chuong4/subfiles/transactiontype}
+\subfile{../Chuong4/subfiles/zonetype}
+\subfile{../Chuong4/subfiles/storagerequirement}
+\subfile{../Chuong4/subfiles/unitofmeasure}
+\subfile{../Chuong4/subfiles/actiontype}
+
+\section{Thiết kế kiến trúc}
+
+Hệ thống quản lý kho được thiết kế theo mô hình kiến trúc phân lớp (Layered Architecture), bao gồm các lớp chính:
+
+\subsection{Mô hình kiến trúc tổng quan}
+
+Hệ thống áp dụng mô hình Client-Server kết hợp với kiến trúc phân lớp:
+
+\begin{itemize}
+    \item \textbf{Presentation Layer (Tầng giao diện):} Xử lý giao diện người dùng, tương tác với người dùng thông qua trình duyệt web. Được xây dựng dưới dạng ứng dụng web responsive hỗ trợ đa thiết bị.
+    
+    \item \textbf{Business Logic Layer (Tầng nghiệp vụ):} Xử lý các nghiệp vụ của hệ thống như quản lý đơn hàng, quản lý kho, tính toán tồn kho, xử lý phân quyền. Tầng này đảm bảo các quy tắc nghiệp vụ được thực thi đúng đắn.
+    
+    \item \textbf{Data Access Layer (Tầng truy cập dữ liệu):} Xử lý các thao tác với cơ sở dữ liệu, cung cấp các phương thức truy vấn, thêm, sửa, xóa dữ liệu.
+    
+    \item \textbf{Database Layer (Tầng cơ sở dữ liệu):} Lưu trữ toàn bộ dữ liệu của hệ thống trong cơ sở dữ liệu quan hệ.
+\end{itemize}
+
+\subsection{Đặc điểm kiến trúc}
+
+\begin{itemize}
+    \item \textbf{Multi-tenant:} Hỗ trợ nhiều tổ chức (workspace) sử dụng cùng một hệ thống với việc cô lập dữ liệu dựa trên organization\_id.
+    
+    \item \textbf{RESTful API:} Tầng nghiệp vụ cung cấp các API RESTful để client tương tác, đảm bảo tính mở rộng và dễ tích hợp.
+    
+    \item \textbf{Real-time Updates:} Hỗ trợ cập nhật dữ liệu theo thời gian thực cho các thao tác quan trọng như cập nhật tồn kho.
+    
+    \item \textbf{Security:} Áp dụng cơ chế xác thực và phân quyền dựa trên vai trò (Role-Based Access Control).
+\end{itemize}
 
 \end{document}

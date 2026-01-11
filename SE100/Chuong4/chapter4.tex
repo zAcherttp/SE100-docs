@@ -11,11 +11,6 @@
 \usepackage{geometry}
 \geometry{margin=2.5cm}
 
-% graphics search path (relative to this file)
-\ifdefined\providegraphicspath\else
-	\makeatletter\def\Ginput@path{{../../../assets/}}{{}}\makeatother
-\fi
-
 % Define colors
 \definecolor{headerblue}{RGB}{67, 113, 183}
 
@@ -25,51 +20,217 @@
 
 \begin{document}
 
-\chapter{Class Diagram}
+\chapter{Xây dựng và triển khai ứng dụng}
 
-\section{Class Diagram}
+\section{Tổng quan công nghệ}
 
-\begin{figure}[H]
-	\centering
-	% relative path: ../../assets/cover/UML.png
-	% scale to fit page while preserving aspect ratio
-	\includegraphics[width=\textwidth,height=0.52\textheight,keepaspectratio]{../../assets/cover/UML.png}
-	\caption{Class Diagram (UML)}
-	\label{fig:class-diagram}
-\end{figure}
+Hệ thống quản lý kho được xây dựng với các công nghệ hiện đại, đảm bảo khả năng mở rộng và bảo trì. Dưới đây là các công nghệ chính được sử dụng trong dự án.
 
-\section{Class Diagram Explanation}
+\subsection{Frontend}
 
-% Core entity subsections
-\subfile{subfiles/organization}
-\subfile{subfiles/branch}
-\subfile{subfiles/product}
-\subfile{subfiles/productvariant}
-\subfile{subfiles/category}
-\subfile{subfiles/brand}
-\subfile{subfiles/supplier}
-\subfile{subfiles/purchaseorder}
-\subfile{subfiles/purchaseorderitem}
-\subfile{subfiles/transferorder}
-\subfile{subfiles/transferorderitem}
-\subfile{subfiles/storagezone}
-\subfile{subfiles/inventorybatch}
-\subfile{subfiles/inventorytransaction}
-\subfile{subfiles/user}
-\subfile{subfiles/role}
-\subfile{subfiles/permission}
-\subfile{subfiles/auditlog}
+\begin{itemize}
+    \item \textbf{Framework:} React.js - thư viện JavaScript phổ biến để xây dựng giao diện người dùng động và tương tác cao
+    \item \textbf{UI Library:} Material-UI hoặc Ant Design - cung cấp các component giao diện sẵn có, đảm bảo tính nhất quán
+    \item \textbf{State Management:} Redux hoặc Context API - quản lý trạng thái ứng dụng
+    \item \textbf{Routing:} React Router - quản lý điều hướng trong ứng dụng
+    \item \textbf{HTTP Client:} Axios - thực hiện các request HTTP tới backend
+\end{itemize}
 
-\section{Enumeration Types}
+\subsection{Backend}
 
-% Enumeration subsections
-\subfile{subfiles/purchaseorderstatus}
-\subfile{subfiles/transferstatus}
-\subfile{subfiles/batchstatus}
-\subfile{subfiles/transactiontype}
-\subfile{subfiles/zonetype}
-\subfile{subfiles/storagerequirement}
-\subfile{subfiles/unitofmeasure}
-\subfile{subfiles/actiontype}
+\begin{itemize}
+    \item \textbf{Runtime:} Node.js - môi trường thực thi JavaScript phía server
+    \item \textbf{Framework:} Express.js hoặc NestJS - framework web mạnh mẽ cho Node.js
+    \item \textbf{ORM:} TypeORM hoặc Prisma - tương tác với cơ sở dữ liệu thông qua mô hình đối tượng
+    \item \textbf{Authentication:} JWT (JSON Web Tokens) - xác thực và ủy quyền người dùng
+    \item \textbf{Validation:} Joi hoặc class-validator - kiểm tra tính hợp lệ của dữ liệu đầu vào
+\end{itemize}
+
+\subsection{Database}
+
+\begin{itemize}
+    \item \textbf{RDBMS:} PostgreSQL - hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ, hỗ trợ JSONB và các tính năng nâng cao
+    \item \textbf{Migration Tools:} TypeORM migrations hoặc Prisma Migrate - quản lý phiên bản schema database
+\end{itemize}
+
+\subsection{Công cụ hỗ trợ}
+
+\begin{itemize}
+    \item \textbf{Version Control:} Git, GitHub - quản lý mã nguồn và cộng tác nhóm
+    \item \textbf{Package Manager:} npm hoặc yarn - quản lý các thư viện dependencies
+    \item \textbf{API Testing:} Postman hoặc Insomnia - kiểm thử API
+    \item \textbf{Code Editor:} Visual Studio Code - môi trường phát triển tích hợp
+\end{itemize}
+
+\section{Sơ đồ thành phần}
+
+Sơ đồ thành phần (Component Diagram) mô tả cấu trúc các thành phần chính của hệ thống và mối quan hệ giữa chúng.
+
+\subsection{Các thành phần chính}
+
+Hệ thống được chia thành các thành phần độc lập sau:
+
+\begin{itemize}
+    \item \textbf{Web Client:} Giao diện người dùng chạy trên trình duyệt
+    \begin{itemize}
+        \item Authentication Module - Xử lý đăng nhập, đăng xuất
+        \item Dashboard Module - Hiển thị tổng quan hệ thống
+        \item Inventory Module - Quản lý kho, tồn kho
+        \item Order Module - Quản lý đơn hàng, đơn chuyển kho
+        \item Master Data Module - Quản lý danh mục sản phẩm, nhà cung cấp
+        \item Report Module - Báo cáo, thống kê
+    \end{itemize}
+    
+    \item \textbf{API Server:} Máy chủ backend cung cấp RESTful API
+    \begin{itemize}
+        \item Auth Service - Xác thực và phân quyền
+        \item User Service - Quản lý người dùng, vai trò
+        \item Product Service - Quản lý sản phẩm, danh mục
+        \item Inventory Service - Quản lý kho, lô hàng, giao dịch
+        \item Order Service - Quản lý đơn hàng mua, đơn chuyển kho
+        \item Report Service - Tạo báo cáo, thống kê
+    \end{itemize}
+    
+    \item \textbf{Database:} Cơ sở dữ liệu PostgreSQL lưu trữ toàn bộ dữ liệu hệ thống
+    
+    \item \textbf{File Storage:} Lưu trữ các file đính kèm (hình ảnh sản phẩm, tài liệu)
+\end{itemize}
+
+\subsection{Giao tiếp giữa các thành phần}
+
+\begin{itemize}
+    \item Web Client giao tiếp với API Server thông qua HTTP/HTTPS sử dụng định dạng JSON
+    \item API Server truy cập Database thông qua ORM
+    \item API Server truy cập File Storage để lưu/đọc file
+    \item Mọi request từ Web Client đều được xác thực bằng JWT token
+\end{itemize}
+
+\section{Sơ đồ triển khai}
+
+Sơ đồ triển khai (Deployment Diagram) mô tả cách các thành phần phần mềm được triển khai trên hạ tầng phần cứng.
+
+\subsection{Môi trường triển khai}
+
+Hệ thống được triển khai trên kiến trúc Client-Server với các node sau:
+
+\begin{itemize}
+    \item \textbf{Client Node:} Máy tính cá nhân hoặc thiết bị di động của người dùng
+    \begin{itemize}
+        \item Chạy trình duyệt web (Chrome, Firefox, Safari, Edge)
+        \item Truy cập ứng dụng thông qua HTTPS
+        \item Hỗ trợ quét mã vạch qua camera (cho thiết bị di động)
+    \end{itemize}
+    
+    \item \textbf{Web Server Node:} Máy chủ web phục vụ file tĩnh
+    \begin{itemize}
+        \item Nginx hoặc Apache - web server
+        \item Phục vụ các file HTML, CSS, JavaScript của ứng dụng React
+        \item Cấu hình HTTPS với SSL certificate
+    \end{itemize}
+    
+    \item \textbf{Application Server Node:} Máy chủ ứng dụng chạy backend
+    \begin{itemize}
+        \item Node.js runtime
+        \item Express.js/NestJS application
+        \item Xử lý business logic và RESTful API
+    \end{itemize}
+    
+    \item \textbf{Database Server Node:} Máy chủ cơ sở dữ liệu
+    \begin{itemize}
+        \item PostgreSQL server
+        \item Lưu trữ dữ liệu ứng dụng
+        \item Cấu hình backup tự động
+    \end{itemize}
+\end{itemize}
+
+\subsection{Kết nối mạng}
+
+\begin{itemize}
+    \item Client kết nối tới Web Server qua HTTPS (port 443)
+    \item Web Server proxy request API tới Application Server qua HTTP (port 3000 hoặc 5000)
+    \item Application Server kết nối tới Database Server qua TCP (port 5432 cho PostgreSQL)
+    \item Firewall bảo vệ Application Server và Database Server, chỉ cho phép kết nối từ Web Server
+\end{itemize}
+
+\subsection{Chiến lược triển khai}
+
+\begin{itemize}
+    \item \textbf{Development:} Môi trường phát triển local trên máy tính cá nhân
+    \item \textbf{Staging:} Môi trường kiểm thử trước khi triển khai production
+    \item \textbf{Production:} Môi trường sản xuất phục vụ người dùng thực tế
+    \item \textbf{CI/CD:} Sử dụng GitHub Actions hoặc GitLab CI để tự động hóa quá trình build, test và deploy
+\end{itemize}
+
+\section{Bảng phân công công việc}
+
+Bảng dưới đây mô tả phân công công việc cho các thành viên trong nhóm phát triển.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|C{0.8cm}|L{3.5cm}|L{5cm}|L{3cm}|C{2cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{STT}} & 
+\textcolor{white}{\textbf{Thành viên}} & 
+\textcolor{white}{\textbf{Công việc}} & 
+\textcolor{white}{\textbf{Module}} & 
+\textcolor{white}{\textbf{Tiến độ}} \\
+\hline
+1 & Thành viên 1 & Phân tích yêu cầu, thiết kế hệ thống & Tất cả & 100\% \\
+\hline
+2 & Thành viên 2 & Thiết kế cơ sở dữ liệu, backend API & Database, Backend & 100\% \\
+\hline
+3 & Thành viên 3 & Phát triển giao diện người dùng & Frontend & 100\% \\
+\hline
+4 & Thành viên 4 & Phát triển module quản lý kho & Inventory Module & 100\% \\
+\hline
+5 & Thành viên 5 & Phát triển module đơn hàng & Order Module & 100\% \\
+\hline
+6 & Tất cả & Kiểm thử, tích hợp, triển khai & Tất cả & 100\% \\
+\hline
+\end{tabular}
+\caption{Bảng phân công công việc nhóm}
+\end{table}
+
+\subsection{Chi tiết phân công theo giai đoạn}
+
+\subsubsection{Giai đoạn 1: Phân tích và Thiết kế (Tuần 1-2)}
+
+\begin{itemize}
+    \item Thu thập yêu cầu, phân tích nghiệp vụ quản lý kho
+    \item Thiết kế Use Case Diagram, Class Diagram
+    \item Thiết kế cơ sở dữ liệu, thiết kế kiến trúc hệ thống
+    \item Thiết kế mockup giao diện người dùng
+\end{itemize}
+
+\subsubsection{Giai đoạn 2: Phát triển Backend (Tuần 3-5)}
+
+\begin{itemize}
+    \item Thiết lập project Node.js, cấu hình database
+    \item Phát triển module xác thực và phân quyền
+    \item Phát triển RESTful API cho các module: Product, Inventory, Order, User
+    \item Viết unit test cho các service
+\end{itemize}
+
+\subsubsection{Giai đoạn 3: Phát triển Frontend (Tuần 4-6)}
+
+\begin{itemize}
+    \item Thiết lập project React, cấu hình routing
+    \item Phát triển các component giao diện chung (Header, Sidebar, Footer)
+    \item Phát triển các trang: Dashboard, Quản lý sản phẩm, Quản lý kho, Quản lý đơn hàng
+    \item Tích hợp với backend API
+    \item Responsive design cho mobile
+\end{itemize}
+
+\subsubsection{Giai đoạn 4: Kiểm thử và Triển khai (Tuần 7-8)}
+
+\begin{itemize}
+    \item Kiểm thử chức năng (Functional Testing)
+    \item Kiểm thử tích hợp (Integration Testing)
+    \item Kiểm thử giao diện người dùng (UI/UX Testing)
+    \item Sửa lỗi và tối ưu hóa
+    \item Triển khai lên môi trường staging
+    \item Triển khai lên môi trường production
+\end{itemize}
 
 \end{document}
