@@ -18,77 +18,45 @@
 
 \section{Kết quả đạt được}
 
-Sau quá trình nghiên cứu, phân tích và phát triển, nhóm đã hoàn thành hệ thống quản lý kho với các chức năng chính sau:
+Sau quá trình nghiên cứu, khảo sát, phân tích yêu cầu và phát triển kéo dài trong suốt học kỳ, nhóm đã hoàn thành việc xây dựng hệ thống quản lý kho Next-WMS (Warehouse Management System). Đây là một hệ thống phần mềm toàn diện được thiết kế nhằm hỗ trợ các doanh nghiệp trong việc quản lý hoạt động kho bãi một cách hiệu quả, từ quy mô nhỏ đến vừa và lớn.
 
-\subsection{Các chức năng đã hoàn thành}
+Xuất phát từ việc khảo sát thực trạng các giải pháp quản lý kho hiện có trên thị trường (đã trình bày chi tiết trong Chương 1), nhóm nhận thấy nhu cầu cấp thiết về một hệ thống quản lý kho với giao diện thân thiện, chi phí hợp lý, và khả năng tùy biến cao phù hợp với đặc thù của doanh nghiệp Việt Nam. Dựa trên cơ sở đó, hệ thống Next-WMS đã được phát triển với các mục tiêu cốt lõi: đơn giản hóa quy trình nghiệp vụ, tự động hóa các tác vụ lặp đi lặp lại, cung cấp thông tin chính xác theo thời gian thực, và hỗ trợ ra quyết định dựa trên dữ liệu.
 
-\subsubsection{Quản lý tổ chức và chi nhánh}
+\subsection{Tổng quan kết quả}
 
+Về mặt chức năng, hệ thống đã triển khai thành công \textbf{100 use case} được phân bổ vào \textbf{11 nhóm chức năng chính} như đã mô tả chi tiết trong Chương 2. Các nhóm chức năng này bao phủ toàn bộ vòng đời quản lý kho, từ thiết lập hệ thống ban đầu, quản lý dữ liệu nền tảng, cho đến các nghiệp vụ cốt lõi như nhập kho, xuất kho, kiểm kê, điều chuyển nội bộ, và báo cáo phân tích.
+
+Về mặt kỹ thuật, hệ thống được xây dựng trên nền tảng công nghệ hiện đại bao gồm:
 \begin{itemize}
-    \item Tạo và quản lý thông tin tổ chức (workspace)
-    \item Quản lý nhiều chi nhánh trong cùng một tổ chức
-    \item Cấu hình cài đặt riêng cho từng tổ chức và chi nhánh
-    \item Hệ thống mời người dùng tham gia workspace thông qua mã mời
+    \item \textbf{Frontend:} Next.js 14 với App Router, React 18, TypeScript, và thư viện giao diện shadcn/ui
+    \item \textbf{Backend:} Convex - nền tảng Backend-as-a-Service với real-time database và serverless functions
+    \item \textbf{Authentication:} Better Auth với hỗ trợ xác thực đa phương thức (email/password, OTP)
+    \item \textbf{Database:} Convex Database (NoSQL) kết hợp với Neon PostgreSQL cho authentication
+    \item \textbf{Deployment:} Vercel (frontend) và Convex Cloud (backend)
 \end{itemize}
 
-\subsubsection{Quản lý người dùng và phân quyền}
+\subsection{Các thành quả nổi bật}
+
+Trong quá trình phát triển, nhóm đã đạt được các thành quả đáng chú ý sau:
 
 \begin{itemize}
-    \item Đăng nhập, đăng xuất, quản lý phiên làm việc
-    \item Quản lý người dùng: thêm, sửa, xóa, khóa tài khoản
-    \item Phân quyền dựa trên vai trò (Role-Based Access Control)
-    \item Quản lý vai trò và quyền hạn chi tiết
-    \item Lưu nhật ký hoạt động người dùng (Audit Log)
-\end{itemize}
-
-\subsubsection{Quản lý sản phẩm}
-
-\begin{itemize}
-    \item Quản lý danh mục sản phẩm theo cấu trúc phân cấp
-    \item Quản lý thương hiệu sản phẩm
-    \item Quản lý sản phẩm và các biến thể (SKU)
-    \item Quản lý nhiều mã vạch cho mỗi SKU
-    \item Theo dõi sản phẩm theo lô (batch tracking)
-    \item Quản lý yêu cầu lưu trữ đặc biệt (nhiệt độ, độ ẩm, v.v.)
-\end{itemize}
-
-\subsubsection{Quản lý nhà cung cấp}
-
-\begin{itemize}
-    \item Quản lý thông tin nhà cung cấp
-    \item Theo dõi lịch sử giao dịch với nhà cung cấp
-    \item Đánh giá hiệu suất giao hàng của nhà cung cấp
-\end{itemize}
-
-\subsubsection{Quản lý đơn hàng}
-
-\begin{itemize}
-    \item Tạo và quản lý đơn mua hàng (Purchase Order)
-    \item Theo dõi trạng thái đơn hàng: Đang đặt, Đang giao, Đã nhận, Hoàn thành
-    \item Nhập kho theo đơn mua hàng
-    \item Tạo và quản lý đơn chuyển kho giữa các chi nhánh
-    \item Theo dõi quá trình chuyển kho: Đang chuẩn bị, Đang vận chuyển, Đã nhận
-\end{itemize}
-
-\subsubsection{Quản lý kho bãi}
-
-\begin{itemize}
-    \item Quản lý khu vực lưu trữ theo cấu trúc phân cấp
-    \item Quản lý lô hàng (inventory batch) với thông tin chi tiết
-    \item Theo dõi số lượng tồn kho theo thời gian thực
-    \item Ghi nhận các giao dịch kho: Nhập, Xuất, Chuyển kho, Điều chỉnh
-    \item Cảnh báo hàng sắp hết hạn
-    \item Cảnh báo hàng dưới mức tồn kho tối thiểu (reorder point)
-\end{itemize}
-
-\subsubsection{Báo cáo và thống kê}
-
-\begin{itemize}
-    \item Báo cáo tồn kho theo sản phẩm, theo khu vực
-    \item Báo cáo xuất nhập tồn theo kỳ
-    \item Báo cáo hiệu suất nhà cung cấp
-    \item Thống kê doanh thu, chi phí
-    \item Dashboard tổng quan hệ thống
+    \item \textbf{Xây dựng thành công kiến trúc đa tổ chức (Multi-tenant):} Hệ thống cho phép nhiều tổ chức (doanh nghiệp) hoạt động độc lập trên cùng một nền tảng. Mỗi tổ chức có không gian làm việc (workspace) riêng biệt với dữ liệu được cô lập hoàn toàn, đảm bảo tính bảo mật và riêng tư. Một tổ chức có thể quản lý nhiều chi nhánh kho với cấu hình và quyền hạn riêng.
+    
+    \item \textbf{Triển khai hệ thống phân quyền chi tiết:} Hệ thống RBAC (Role-Based Access Control) được thiết kế với 3 cấp độ cơ bản (Owner, Admin, Member) và hỗ trợ tạo vai trò tùy chỉnh. Quyền hạn được kiểm soát ở mức chi tiết thông qua permission bits, cho phép cấu hình linh hoạt theo nhu cầu từng tổ chức.
+    
+    \item \textbf{Cập nhật dữ liệu thời gian thực:} Nhờ tích hợp Convex với WebSocket subscriptions, mọi thay đổi dữ liệu được đồng bộ ngay lập tức đến tất cả người dùng đang trực tuyến mà không cần refresh trang. Điều này đặc biệt quan trọng trong môi trường kho nơi nhiều nhân viên cùng làm việc đồng thời.
+    
+    \item \textbf{Hỗ trợ theo dõi hàng hóa đa dạng:} Hệ thống hỗ trợ theo dõi hàng hóa theo nhiều phương thức: theo số lượng đơn thuần, theo lô hàng (batch tracking) với ngày sản xuất và hạn sử dụng, hoặc theo số sê-ri (serial number) cho các sản phẩm có giá trị cao cần truy xuất nguồn gốc.
+    
+    \item \textbf{Số hóa toàn bộ quy trình nghiệp vụ:} Các quy trình nghiệp vụ như nhập kho, xuất kho, kiểm kê, điều chuyển đều được số hóa với workflow rõ ràng, bao gồm các trạng thái, bước phê duyệt, và ghi nhận lịch sử thay đổi.
+    
+    \item \textbf{Hệ thống thông báo và cảnh báo thông minh:} Hệ thống tự động phát hiện và cảnh báo các vấn đề quan trọng như hàng sắp hết hạn, tồn kho dưới mức an toàn, các yêu cầu chờ phê duyệt, giúp người dùng chủ động xử lý kịp thời.
+    
+    \item \textbf{Ghi nhật ký hoạt động (Audit Log) đầy đủ:} Mọi thao tác trên hệ thống đều được ghi lại chi tiết, bao gồm người thực hiện, thời gian, giá trị trước và sau khi thay đổi, phục vụ cho việc kiểm tra, đối soát và tuân thủ quy định.
+    
+    \item \textbf{Thiết kế cơ sở dữ liệu chuẩn hóa:} Cơ sở dữ liệu được thiết kế với 23 bảng chính, đảm bảo tính toàn vẹn dữ liệu, hỗ trợ mở rộng trong tương lai, và tối ưu cho các truy vấn phổ biến.
+    
+    \item \textbf{Giao diện người dùng hiện đại và thân thiện:} Giao diện được xây dựng theo nguyên tắc thiết kế hiện đại, hỗ trợ responsive trên nhiều kích thước màn hình, có chế độ sáng/tối (dark mode), và đảm bảo khả năng tiếp cận (accessibility).
 \end{itemize}
 
 \subsection{Thông tin triển khai}
@@ -105,37 +73,45 @@ Sau quá trình nghiên cứu, phân tích và phát triển, nhóm đã hoàn t
 \subsection{Ưu điểm}
 
 \begin{itemize}
-    \item \textbf{Giao diện thân thiện:} Giao diện được thiết kế theo chuẩn Material Design, dễ sử dụng, hỗ trợ responsive cho nhiều thiết bị.
+    \item \textbf{Giao diện hiện đại với shadcn/ui:} Sử dụng shadcn/ui dựa trên Radix UI, đảm bảo accessibility (a11y) và có thể tùy chỉnh cao. Hỗ trợ dark mode và responsive design.
     
-    \item \textbf{Kiến trúc rõ ràng:} Áp dụng kiến trúc phân lớp, dễ bảo trì và mở rộng. Tách biệt rõ ràng giữa frontend, backend và database.
+    \item \textbf{Realtime updates với Convex:} Mọi thay đổi dữ liệu được đồng bộ realtime qua WebSocket, người dùng thấy cập nhật ngay lập tức mà không cần refresh.
     
-    \item \textbf{Quản lý đa tổ chức:} Hỗ trợ multi-tenant, cho phép nhiều tổ chức sử dụng cùng một hệ thống với dữ liệu được cô lập.
+    \item \textbf{Type-safe toàn bộ stack:} Sử dụng TypeScript từ frontend đến backend với Convex schema validation, giảm thiểu lỗi runtime.
     
-    \item \textbf{Phân quyền linh hoạt:} Hệ thống phân quyền chi tiết dựa trên vai trò, cho phép kiểm soát chặt chẽ quyền truy cập.
+    \item \textbf{Kiến trúc Monorepo với Turborepo:} Quản lý code hiệu quả, shared packages, và incremental builds giúp tăng tốc độ phát triển.
     
-    \item \textbf{Theo dõi lô hàng:} Hỗ trợ theo dõi sản phẩm theo lô, giúp quản lý hàng hóa có hạn sử dụng hiệu quả.
+    \item \textbf{Quản lý đa tổ chức (Multi-tenant):} Hỗ trợ nhiều organization với dữ liệu được cô lập, phù hợp cho SaaS.
     
-    \item \textbf{Báo cáo phong phú:} Cung cấp nhiều loại báo cáo và thống kê, hỗ trợ ra quyết định kinh doanh.
+    \item \textbf{Phân quyền chi tiết:} Hệ thống RBAC với permission bits cho phép kiểm soát quyền truy cập ở mức chi tiết.
     
-    \item \textbf{Cảnh báo tự động:} Hệ thống tự động cảnh báo khi hàng sắp hết hạn hoặc dưới mức tồn kho tối thiểu.
+    \item \textbf{Theo dõi lô hàng và serial:} Hỗ trợ batch tracking và serial number tracking, phù hợp cho ngành dược phẩm, thực phẩm.
+    
+    \item \textbf{Audit logging đầy đủ:} Ghi nhận mọi thay đổi với old/new value, hỗ trợ compliance và troubleshooting.
+    
+    \item \textbf{Cảnh báo tự động:} Scheduled jobs kiểm tra hàng sắp hết hạn và gửi thông báo tự động.
+    
+    \item \textbf{Serverless architecture:} Không cần quản lý server, tự động scale với Convex và Vercel.
 \end{itemize}
 
 \subsection{Khuyết điểm}
 
 \begin{itemize}
-    \item \textbf{Chưa hỗ trợ quét mã vạch tích hợp:} Tính năng quét mã vạch qua camera trên thiết bị di động chưa được triển khai đầy đủ, cần phát triển thêm để tối ưu quy trình nhập xuất kho.
+    \item \textbf{Chưa hỗ trợ quét mã vạch tích hợp:} Tính năng quét mã vạch qua camera chưa được triển khai, cần phát triển thêm để tối ưu quy trình nhập xuất kho.
     
-    \item \textbf{Thiếu tính năng dự báo nhu cầu:} Hệ thống chưa có module dự báo nhu cầu hàng hóa dựa trên dữ liệu lịch sử.
+    \item \textbf{Thiếu module dự báo nhu cầu:} Bảng demand\_forecasts đã được thiết kế nhưng chưa triển khai logic dự báo dựa trên dữ liệu lịch sử.
     
-    \item \textbf{Chưa tích hợp với hệ thống bên ngoài:} Chưa có API tích hợp với các hệ thống kế toán, ERP hoặc nền tảng thương mại điện tử.
+    \item \textbf{Chưa tích hợp API bên ngoài:} Chưa có public API cho phép tích hợp với hệ thống ERP, kế toán hoặc e-commerce platforms.
     
-    \item \textbf{Hiệu suất với dữ liệu lớn:} Chưa được kiểm thử kỹ lưỡng với khối lượng dữ liệu lớn (hàng triệu giao dịch).
+    \item \textbf{Thiếu giao diện 2D warehouse layout:} Chưa có tính năng visualize sơ đồ kho với drag-and-drop zone management.
     
-    \item \textbf{Thiếu giao diện 2D warehouse layout:} Chưa triển khai tính năng hiển thị sơ đồ kho 2D với vị trí các khu vực lưu trữ.
+    \item \textbf{Phụ thuộc vào Convex:} Sử dụng BaaS (Backend-as-a-Service) tạo vendor lock-in, khó migrate sang platform khác.
     
-    \item \textbf{Chưa hỗ trợ offline mode:} Ứng dụng yêu cầu kết nối internet liên tục, chưa hỗ trợ làm việc offline.
+    \item \textbf{Chưa hỗ trợ offline mode:} Ứng dụng yêu cầu kết nối internet liên tục, chưa có PWA offline capabilities.
     
-    \item \textbf{Tài liệu người dùng chưa đầy đủ:} Tài liệu hướng dẫn sử dụng cho người dùng cuối còn hạn chế.
+    \item \textbf{Tài liệu người dùng chưa đầy đủ:} Chỉ có documentation kỹ thuật, thiếu user manual cho end users.
+    
+    \item \textbf{Chưa có unit tests đầy đủ:} Test coverage còn hạn chế, cần bổ sung tests cho critical functions.
 \end{itemize}
 
 \section{Hướng phát triển}
@@ -145,47 +121,73 @@ Dựa trên các khuyết điểm hiện tại và nhu cầu thực tế, hệ t
 \subsection{Ngắn hạn (3-6 tháng)}
 
 \begin{itemize}
-    \item \textbf{Hoàn thiện tính năng quét mã vạch:} Phát triển module quét mã vạch tích hợp trên ứng dụng mobile, hỗ trợ nhiều định dạng mã vạch (Code 39, Code 128, QR Code).
+    \item \textbf{Tích hợp quét mã vạch:} Sử dụng thư viện như html5-qrcode hoặc @scandit/websdk để quét barcode trực tiếp trong browser.
     
-    \item \textbf{Tối ưu hóa hiệu suất:} Thực hiện indexing cơ sở dữ liệu, áp dụng caching (Redis) cho các truy vấn thường xuyên.
+    \item \textbf{Bổ sung unit tests:} Viết tests cho Convex functions với convex-test, đạt coverage tối thiểu 80\%.
     
-    \item \textbf{Bổ sung tài liệu:} Viết tài liệu hướng dẫn sử dụng chi tiết cho từng chức năng.
+    \item \textbf{Tối ưu performance:} Implement pagination cho các list queries, sử dụng Convex indexes hiệu quả hơn.
     
-    \item \textbf{Cải thiện UI/UX:} Thu thập feedback từ người dùng thực tế, cải thiện trải nghiệm người dùng.
+    \item \textbf{Hoàn thiện Reports module:} Bổ sung các báo cáo chi tiết với export Excel/PDF.
+    
+    \item \textbf{User documentation:} Viết hướng dẫn sử dụng với screenshots và video tutorials.
 \end{itemize}
 
 \subsection{Trung hạn (6-12 tháng)}
 
 \begin{itemize}
-    \item \textbf{Module dự báo nhu cầu:} Phát triển tính năng phân tích dữ liệu lịch sử và dự báo nhu cầu hàng hóa.
+    \item \textbf{Module dự báo nhu cầu:} Triển khai demand forecasting sử dụng historical data và simple moving average.
     
-    \item \textbf{Giao diện 2D warehouse layout:} Triển khai tính năng vẽ và hiển thị sơ đồ kho 2D.
+    \item \textbf{2D Warehouse Layout:} Phát triển interactive warehouse map với React Flow hoặc Konva.js.
     
-    \item \textbf{API tích hợp:} Xây dựng API public cho phép tích hợp với các hệ thống bên ngoài.
+    \item \textbf{Public REST API:} Xây dựng API layer với Next.js API routes cho third-party integrations.
     
-    \item \textbf{Mobile App native:} Phát triển ứng dụng di động native (iOS, Android) với đầy đủ tính năng.
+    \item \textbf{Mobile App với React Native:} Phát triển app mobile sử dụng React Native với shared logic từ web.
     
-    \item \textbf{Báo cáo nâng cao:} Bổ sung các báo cáo phân tích chuyên sâu như ABC analysis, phân tích chu kỳ tồn kho.
+    \item \textbf{Advanced Analytics:} Tích hợp ABC analysis, inventory turnover analysis, và custom dashboards.
+    
+    \item \textbf{Email reports:} Scheduled email reports hàng ngày/tuần với React Email templates.
 \end{itemize}
 
 \subsection{Dài hạn (1-2 năm)}
 
 \begin{itemize}
-    \item \textbf{AI và Automation:} Áp dụng AI để tự động phân loại sản phẩm, gợi ý vị trí lưu trữ tối ưu.
+    \item \textbf{AI-powered features:}
+    \begin{itemize}
+        \item Gợi ý vị trí lưu trữ tối ưu dựa trên AI
+        \item Anomaly detection cho inventory discrepancies
+        \item Demand forecasting với machine learning
+    \end{itemize}
     
-    \item \textbf{IoT Integration:} Tích hợp với các thiết bị IoT như cảm biến nhiệt độ, độ ẩm, cân điện tử, RFID reader.
+    \item \textbf{IoT Integration:}
+    \begin{itemize}
+        \item Tích hợp cảm biến nhiệt độ, độ ẩm qua MQTT
+        \item RFID reader integration cho asset tracking
+        \item Cân điện tử kết nối cho weight-based inventory
+    \end{itemize}
     
-    \item \textbf{Blockchain cho truy xuất nguồn gốc:} Áp dụng công nghệ blockchain để đảm bảo tính minh bạch và truy xuất nguồn gốc hàng hóa.
+    \item \textbf{PWA với Offline Support:}
+    \begin{itemize}
+        \item Service Worker cho offline caching
+        \item Background sync khi có mạng trở lại
+        \item IndexedDB cho local data storage
+    \end{itemize}
     
-    \item \textbf{Route optimization:} Phát triển thuật toán tối ưu hóa tuyến đường picking trong kho.
+    \item \textbf{Route Optimization:} Thuật toán tối ưu picking path trong warehouse.
     
-    \item \textbf{Cloud deployment và scalability:} Triển khai hệ thống lên cloud platform (AWS, Azure, GCP) với khả năng tự động scale.
+    \item \textbf{Multi-language Support:} i18n với next-intl, hỗ trợ tiếng Việt và tiếng Anh.
     
-    \item \textbf{Multi-language support:} Hỗ trợ đa ngôn ngữ để mở rộng thị trường quốc tế.
+    \item \textbf{Advanced Security:}
+    \begin{itemize}
+        \item Two-factor authentication (2FA)
+        \item IP whitelisting
+        \item Session management nâng cao
+    \end{itemize}
 \end{itemize}
 
 \subsection{Kết luận}
 
-Hệ thống quản lý kho đã được xây dựng thành công với đầy đủ các chức năng cơ bản, đáp ứng nhu cầu quản lý kho cho doanh nghiệp vừa và nhỏ. Tuy nhiên, để trở thành một giải pháp hoàn chỉnh và cạnh tranh trên thị trường, hệ thống cần được phát triển thêm nhiều tính năng nâng cao và tối ưu hóa hiệu suất. Với lộ trình phát triển rõ ràng, hệ thống có tiềm năng trở thành một công cụ quản lý kho toàn diện, hỗ trợ đắc lực cho các doanh nghiệp trong việc tối ưu hóa hoạt động kho bãi.
+Hệ thống quản lý kho Next-WMS đã được xây dựng thành công với kiến trúc hiện đại sử dụng Next.js, Convex, và Better Auth. Hệ thống đáp ứng đầy đủ các chức năng cơ bản và nâng cao cho quản lý kho doanh nghiệp, bao gồm: quản lý sản phẩm đa dạng với variants và barcodes, theo dõi tồn kho realtime với batch tracking, quy trình nhận hàng và cycle count có hệ thống, phân quyền chi tiết theo role và branch, cùng hệ thống cảnh báo tự động.
+
+Với nền tảng công nghệ serverless và type-safe, hệ thống có khả năng mở rộng tốt và dễ bảo trì. Tuy còn một số hạn chế như thiếu offline mode và barcode scanning, nhưng với lộ trình phát triển rõ ràng, Next-WMS có tiềm năng trở thành một giải pháp quản lý kho toàn diện, cạnh tranh được với các sản phẩm thương mại trên thị trường.
 
 \end{document}

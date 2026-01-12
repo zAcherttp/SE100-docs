@@ -29,36 +29,63 @@ Hệ thống quản lý kho được xây dựng với các công nghệ hiện 
 \subsection{Frontend}
 
 \begin{itemize}
-    \item \textbf{Framework:} React.js - thư viện JavaScript phổ biến để xây dựng giao diện người dùng động và tương tác cao
-    \item \textbf{UI Library:} Material-UI hoặc Ant Design - cung cấp các component giao diện sẵn có, đảm bảo tính nhất quán
-    \item \textbf{State Management:} Redux hoặc Context API - quản lý trạng thái ứng dụng
-    \item \textbf{Routing:} React Router - quản lý điều hướng trong ứng dụng
-    \item \textbf{HTTP Client:} Axios - thực hiện các request HTTP tới backend
+    \item \textbf{Framework:} Next.js 15 - framework React full-stack hỗ trợ Server Components, App Router và Server Actions
+    \item \textbf{UI Library:} shadcn/ui - thư viện component dựa trên Radix UI, cung cấp các component accessible và có thể tùy chỉnh cao
+    \item \textbf{Styling:} Tailwind CSS 4 - utility-first CSS framework cho việc styling nhanh chóng và nhất quán
+    \item \textbf{State Management:} 
+    \begin{itemize}
+        \item Zustand - thư viện quản lý state nhẹ và đơn giản
+        \item TanStack React Query - quản lý server state, caching và đồng bộ dữ liệu
+    \end{itemize}
+    \item \textbf{Forms:} React Hook Form + TanStack Form - xử lý form validation và quản lý state form
+    \item \textbf{Animation:} Motion (Framer Motion) - thư viện animation mạnh mẽ cho React
+    \item \textbf{Charts:} Recharts - thư viện biểu đồ dựa trên React và D3
+    \item \textbf{Icons:} Lucide React - bộ icon SVG nhẹ và đẹp
 \end{itemize}
 
 \subsection{Backend}
 
 \begin{itemize}
-    \item \textbf{Runtime:} Node.js - môi trường thực thi JavaScript phía server
-    \item \textbf{Framework:} Express.js hoặc NestJS - framework web mạnh mẽ cho Node.js
-    \item \textbf{ORM:} TypeORM hoặc Prisma - tương tác với cơ sở dữ liệu thông qua mô hình đối tượng
-    \item \textbf{Authentication:} JWT (JSON Web Tokens) - xác thực và ủy quyền người dùng
-    \item \textbf{Validation:} Joi hoặc class-validator - kiểm tra tính hợp lệ của dữ liệu đầu vào
+    \item \textbf{Backend Platform:} Convex - nền tảng Backend-as-a-Service (BaaS) cung cấp:
+    \begin{itemize}
+        \item Realtime database với tính năng reactive queries
+        \item Serverless functions (mutations và queries)
+        \item File storage tích hợp
+        \item Scheduled jobs (cron tasks)
+    \end{itemize}
+    \item \textbf{Authentication:} Better Auth - giải pháp xác thực hiện đại cho TypeScript hỗ trợ:
+    \begin{itemize}
+        \item Email + Password authentication
+        \item Email OTP verification
+        \item Organization và multi-tenancy
+        \item Role-based access control (RBAC)
+    \end{itemize}
+    \item \textbf{Validation:} Zod - thư viện schema validation TypeScript-first
 \end{itemize}
 
 \subsection{Database}
 
 \begin{itemize}
-    \item \textbf{RDBMS:} PostgreSQL - hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ, hỗ trợ JSONB và các tính năng nâng cao
-    \item \textbf{Migration Tools:} TypeORM migrations hoặc Prisma Migrate - quản lý phiên bản schema database
+    \item \textbf{Primary Database:} Convex Database - document database với các tính năng:
+    \begin{itemize}
+        \item Schema định nghĩa bằng TypeScript
+        \item Automatic indexing và query optimization
+        \item Realtime subscriptions
+        \item ACID transactions
+    \end{itemize}
+    \item \textbf{Auth Database:} Neon PostgreSQL - serverless PostgreSQL cho Better Auth
+    \item \textbf{ORM:} Drizzle ORM - TypeScript ORM nhẹ và type-safe cho PostgreSQL
+    \item \textbf{Migration:} Drizzle Kit - công cụ migration cho Drizzle ORM
 \end{itemize}
 
-\subsection{Công cụ hỗ trợ}
+\subsection{Công cụ phát triển}
 
 \begin{itemize}
+    \item \textbf{Monorepo:} Turborepo - công cụ build system cho monorepo, tối ưu caching và parallel builds
+    \item \textbf{Package Manager:} pnpm - package manager nhanh và tiết kiệm dung lượng
+    \item \textbf{Language:} TypeScript - JavaScript với static typing
+    \item \textbf{Linter/Formatter:} Biome - công cụ linting và formatting nhanh, thay thế ESLint + Prettier
     \item \textbf{Version Control:} Git, GitHub - quản lý mã nguồn và cộng tác nhóm
-    \item \textbf{Package Manager:} npm hoặc yarn - quản lý các thư viện dependencies
-    \item \textbf{API Testing:} Postman hoặc Insomnia - kiểm thử API
     \item \textbf{Code Editor:} Visual Studio Code - môi trường phát triển tích hợp
 \end{itemize}
 
@@ -71,38 +98,45 @@ Sơ đồ thành phần (Component Diagram) mô tả cấu trúc các thành ph�
 Hệ thống được chia thành các thành phần độc lập sau:
 
 \begin{itemize}
-    \item \textbf{Web Client:} Giao diện người dùng chạy trên trình duyệt
+    \item \textbf{Web Application (apps/web):} Ứng dụng Next.js chạy trên trình duyệt
     \begin{itemize}
-        \item Authentication Module - Xử lý đăng nhập, đăng xuất
-        \item Dashboard Module - Hiển thị tổng quan hệ thống
-        \item Inventory Module - Quản lý kho, tồn kho
-        \item Order Module - Quản lý đơn hàng, đơn chuyển kho
-        \item Master Data Module - Quản lý danh mục sản phẩm, nhà cung cấp
-        \item Report Module - Báo cáo, thống kê
+        \item Authentication Pages - Đăng nhập, đăng ký, xác thực OTP
+        \item Dashboard Module - Hiển thị tổng quan hệ thống với biểu đồ
+        \item Master Data Module - Quản lý danh mục, thương hiệu, sản phẩm, nhà cung cấp
+        \item Purchase Orders Module - Quản lý đơn đặt hàng từ nhà cung cấp
+        \item Receiving Sessions Module - Quản lý phiên nhận hàng
+        \item Inventory Module - Quản lý tồn kho, lô hàng, vị trí lưu trữ
+        \item Picking Sessions Module - Quản lý phiên lấy hàng
+        \item Return Requests Module - Quản lý yêu cầu trả hàng
+        \item Reports Module - Báo cáo và thống kê
+        \item System Settings - Cài đặt hệ thống và phân quyền
     \end{itemize}
     
-    \item \textbf{API Server:} Máy chủ backend cung cấp RESTful API
+    \item \textbf{Backend Package (packages/backend):} Xử lý logic nghiệp vụ
     \begin{itemize}
-        \item Auth Service - Xác thực và phân quyền
-        \item User Service - Quản lý người dùng, vai trò
-        \item Product Service - Quản lý sản phẩm, danh mục
-        \item Inventory Service - Quản lý kho, lô hàng, giao dịch
-        \item Order Service - Quản lý đơn hàng mua, đơn chuyển kho
-        \item Report Service - Tạo báo cáo, thống kê
+        \item Convex Functions - Queries và mutations cho database operations
+        \item Auth Module - Xử lý xác thực và phân quyền với Better Auth
+        \item Permissions Library - Định nghĩa quyền và vai trò người dùng
     \end{itemize}
     
-    \item \textbf{Database:} Cơ sở dữ liệu PostgreSQL lưu trữ toàn bộ dữ liệu hệ thống
+    \item \textbf{Config Package (packages/config):} Cấu hình chung cho toàn bộ monorepo
     
-    \item \textbf{File Storage:} Lưu trữ các file đính kèm (hình ảnh sản phẩm, tài liệu)
+    \item \textbf{External Services:}
+    \begin{itemize}
+        \item Convex Cloud - Lưu trữ dữ liệu ứng dụng và serverless functions
+        \item Neon PostgreSQL - Lưu trữ dữ liệu xác thực
+        \item Resend - Dịch vụ gửi email (OTP, invitations)
+    \end{itemize}
 \end{itemize}
 
 \subsection{Giao tiếp giữa các thành phần}
 
 \begin{itemize}
-    \item Web Client giao tiếp với API Server thông qua HTTP/HTTPS sử dụng định dạng JSON
-    \item API Server truy cập Database thông qua ORM
-    \item API Server truy cập File Storage để lưu/đọc file
-    \item Mọi request từ Web Client đều được xác thực bằng JWT token
+    \item Web Application giao tiếp với Convex thông qua Convex Client với WebSocket realtime connection
+    \item Convex Functions truy cập Convex Database trực tiếp với type-safe queries
+    \item Better Auth sử dụng Drizzle ORM để truy cập Neon PostgreSQL
+    \item Auth data được đồng bộ từ Better Auth sang Convex Database để sử dụng trong ứng dụng
+    \item Email notifications được gửi qua Resend API
 \end{itemize}
 
 \section{Sơ đồ triển khai}
@@ -111,54 +145,78 @@ Sơ đồ triển khai (Deployment Diagram) mô tả cách các thành phần ph
 
 \subsection{Môi trường triển khai}
 
-Hệ thống được triển khai trên kiến trúc Client-Server với các node sau:
+Hệ thống sử dụng kiến trúc Serverless với các node sau:
 
 \begin{itemize}
-    \item \textbf{Client Node:} Máy tính cá nhân hoặc thiết bị di động của người dùng
+    \item \textbf{Client Node:} Thiết bị của người dùng cuối
     \begin{itemize}
-        \item Chạy trình duyệt web (Chrome, Firefox, Safari, Edge)
-        \item Truy cập ứng dụng thông qua HTTPS
-        \item Hỗ trợ quét mã vạch qua camera (cho thiết bị di động)
+        \item Trình duyệt web hiện đại (Chrome, Firefox, Safari, Edge)
+        \item Hỗ trợ responsive design cho mobile và tablet
+        \item WebSocket connection cho realtime updates
     \end{itemize}
     
-    \item \textbf{Web Server Node:} Máy chủ web phục vụ file tĩnh
+    \item \textbf{Vercel Edge Network:} Hosting cho Next.js application
     \begin{itemize}
-        \item Nginx hoặc Apache - web server
-        \item Phục vụ các file HTML, CSS, JavaScript của ứng dụng React
-        \item Cấu hình HTTPS với SSL certificate
+        \item Next.js App deployed dưới dạng serverless functions
+        \item Edge caching cho static assets
+        \item Automatic HTTPS với SSL certificates
+        \item Global CDN distribution
     \end{itemize}
     
-    \item \textbf{Application Server Node:} Máy chủ ứng dụng chạy backend
+    \item \textbf{Convex Cloud:} Backend-as-a-Service
     \begin{itemize}
-        \item Node.js runtime
-        \item Express.js/NestJS application
-        \item Xử lý business logic và RESTful API
+        \item Convex Database - document database
+        \item Serverless Functions - queries, mutations, actions
+        \item File Storage - lưu trữ hình ảnh và tài liệu
+        \item Scheduled Functions - cron jobs cho automated tasks
     \end{itemize}
     
-    \item \textbf{Database Server Node:} Máy chủ cơ sở dữ liệu
+    \item \textbf{Neon:} Serverless PostgreSQL
     \begin{itemize}
-        \item PostgreSQL server
-        \item Lưu trữ dữ liệu ứng dụng
-        \item Cấu hình backup tự động
+        \item Better Auth data storage
+        \item Automatic scaling và connection pooling
+        \item Point-in-time recovery
+    \end{itemize}
+    
+    \item \textbf{Resend:} Email Service
+    \begin{itemize}
+        \item Transactional emails (OTP, invitations)
+        \item Email templates với React Email
     \end{itemize}
 \end{itemize}
 
 \subsection{Kết nối mạng}
 
 \begin{itemize}
-    \item Client kết nối tới Web Server qua HTTPS (port 443)
-    \item Web Server proxy request API tới Application Server qua HTTP (port 3000 hoặc 5000)
-    \item Application Server kết nối tới Database Server qua TCP (port 5432 cho PostgreSQL)
-    \item Firewall bảo vệ Application Server và Database Server, chỉ cho phép kết nối từ Web Server
+    \item Client kết nối tới Vercel qua HTTPS (port 443)
+    \item Next.js Server gọi Better Auth API routes qua internal network
+    \item Convex Client sử dụng WebSocket connection tới Convex Cloud
+    \item Better Auth kết nối tới Neon PostgreSQL qua connection pooling
+    \item Serverless functions gọi Resend API qua HTTPS
 \end{itemize}
 
 \subsection{Chiến lược triển khai}
 
 \begin{itemize}
-    \item \textbf{Development:} Môi trường phát triển local trên máy tính cá nhân
-    \item \textbf{Staging:} Môi trường kiểm thử trước khi triển khai production
-    \item \textbf{Production:} Môi trường sản xuất phục vụ người dùng thực tế
-    \item \textbf{CI/CD:} Sử dụng GitHub Actions hoặc GitLab CI để tự động hóa quá trình build, test và deploy
+    \item \textbf{Development:} 
+    \begin{itemize}
+        \item Local Next.js development server (port 3000)
+        \item Convex dev mode với local sync
+        \item Drizzle Studio cho database management
+    \end{itemize}
+    \item \textbf{Preview:} Vercel Preview Deployments cho mỗi Pull Request
+    \item \textbf{Production:} 
+    \begin{itemize}
+        \item Vercel Production deployment
+        \item Convex Production environment
+        \item Neon Production database
+    \end{itemize}
+    \item \textbf{CI/CD:} 
+    \begin{itemize}
+        \item GitHub Actions cho automated testing
+        \item Vercel Git Integration cho automatic deployments
+        \item Turborepo remote caching
+    \end{itemize}
 \end{itemize}
 
 \section{Bảng phân công công việc}
@@ -176,15 +234,15 @@ Bảng dưới đây mô tả phân công công việc cho các thành viên tro
 \textcolor{white}{\textbf{Module}} & 
 \textcolor{white}{\textbf{Tiến độ}} \\
 \hline
-1 & Thành viên 1 & Phân tích yêu cầu, thiết kế hệ thống & Tất cả & 100\% \\
+1 & Đặng Minh Nhật & Phân tích yêu cầu, thiết kế hệ thống & Tất cả & 100\% \\
 \hline
-2 & Thành viên 2 & Thiết kế cơ sở dữ liệu, backend API & Database, Backend & 100\% \\
+2 & Trương Lê Nguyên & Thiết kế database schema, Convex backend & Database, Backend & 100\% \\
 \hline
-3 & Thành viên 3 & Phát triển giao diện người dùng & Frontend & 100\% \\
+3 & Nguyễn Đức Nhân & Phát triển giao diện với Next.js, shadcn/ui & Frontend & 100\% \\
 \hline
-4 & Thành viên 4 & Phát triển module quản lý kho & Inventory Module & 100\% \\
+4 & Thang Tuấn Phát & Phát triển module quản lý kho, nhận hàng & Inventory, Receiving & 100\% \\
 \hline
-5 & Thành viên 5 & Phát triển module đơn hàng & Order Module & 100\% \\
+5 & Dương Đình Hiếu & Phát triển module đơn hàng, trả hàng & Orders, Returns & 100\% \\
 \hline
 6 & Tất cả & Kiểm thử, tích hợp, triển khai & Tất cả & 100\% \\
 \hline
@@ -199,38 +257,40 @@ Bảng dưới đây mô tả phân công công việc cho các thành viên tro
 \begin{itemize}
     \item Thu thập yêu cầu, phân tích nghiệp vụ quản lý kho
     \item Thiết kế Use Case Diagram, Class Diagram
-    \item Thiết kế cơ sở dữ liệu, thiết kế kiến trúc hệ thống
-    \item Thiết kế mockup giao diện người dùng
+    \item Thiết kế Convex database schema với TypeScript
+    \item Thiết kế UI/UX với Figma, xác định component structure
 \end{itemize}
 
-\subsubsection{Giai đoạn 2: Phát triển Backend (Tuần 3-5)}
+\subsubsection{Giai đoạn 2: Setup Infrastructure và Backend (Tuần 3-5)}
 
 \begin{itemize}
-    \item Thiết lập project Node.js, cấu hình database
-    \item Phát triển module xác thực và phân quyền
-    \item Phát triển RESTful API cho các module: Product, Inventory, Order, User
-    \item Viết unit test cho các service
+    \item Thiết lập monorepo với Turborepo và pnpm
+    \item Cấu hình Convex project, định nghĩa schema
+    \item Thiết lập Better Auth với Neon PostgreSQL
+    \item Phát triển Convex functions cho các module: Products, Inventory, Orders
+    \item Cấu hình permissions và role-based access control
 \end{itemize}
 
 \subsubsection{Giai đoạn 3: Phát triển Frontend (Tuần 4-6)}
 
 \begin{itemize}
-    \item Thiết lập project React, cấu hình routing
-    \item Phát triển các component giao diện chung (Header, Sidebar, Footer)
-    \item Phát triển các trang: Dashboard, Quản lý sản phẩm, Quản lý kho, Quản lý đơn hàng
-    \item Tích hợp với backend API
-    \item Responsive design cho mobile
+    \item Thiết lập Next.js project với App Router
+    \item Cấu hình shadcn/ui, Tailwind CSS, theme system
+    \item Phát triển layout components (Sidebar, Header, Navigation)
+    \item Phát triển các trang: Dashboard, Master Data, Purchase Orders, Inventory
+    \item Tích hợp Convex realtime queries với TanStack Query
+    \item Responsive design và mobile optimization
 \end{itemize}
 
 \subsubsection{Giai đoạn 4: Kiểm thử và Triển khai (Tuần 7-8)}
 
 \begin{itemize}
-    \item Kiểm thử chức năng (Functional Testing)
-    \item Kiểm thử tích hợp (Integration Testing)
-    \item Kiểm thử giao diện người dùng (UI/UX Testing)
-    \item Sửa lỗi và tối ưu hóa
-    \item Triển khai lên môi trường staging
-    \item Triển khai lên môi trường production
+    \item Kiểm thử chức năng với Convex Dashboard
+    \item Kiểm thử tích hợp giữa Frontend và Backend
+    \item Kiểm thử giao diện người dùng trên nhiều thiết bị
+    \item Performance optimization với React Compiler
+    \item Deploy lên Vercel production
+    \item Cấu hình Convex production environment
 \end{itemize}
 
 \end{document}
